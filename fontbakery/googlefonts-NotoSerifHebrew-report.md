@@ -5,7 +5,7 @@ Fontbakery version: 0.8.9
 <details><summary><b>[3] Family checks</b></summary><div><details><summary>🔥 <b>FAIL:</b> Checking all files are in the same directory. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/single_directory">com.google.fonts/check/family/single_directory</a>)</summary><div>
 
 
-* 🔥 **FAIL** Not all fonts passed in the command line are in the same directory. This may lead to bad results as the tool will interpret all font files as belonging to a single font family. The detected directories are: ['fonts/NotoSerifHebrew/googlefonts/slim-variable-ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf', 'fonts/NotoSerifHebrew/googlefonts/variable-ttf'] [code: single-directory]
+* 🔥 **FAIL** Not all fonts passed in the command line are in the same directory. This may lead to bad results as the tool will interpret all font files as belonging to a single font family. The detected directories are: ['fonts/NotoSerifHebrew/googlefonts/ttf', 'fonts/NotoSerifHebrew/googlefonts/variable-ttf'] [code: single-directory]
 </div></details><details><summary>🔥 <b>FAIL:</b> Fonts have consistent PANOSE proportion? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/os2.html#com.google.fonts/check/family/panose_proportion">com.google.fonts/check/family/panose_proportion</a>)</summary><div>
 
 
@@ -14,144 +14,19 @@ Fontbakery version: 0.8.9
 
 
 * 🔥 **FAIL** PANOSE family type is not the same across this family. In order to fix this, please make sure that the panose.bFamilyType value is the same in the OS/2 table of all of this family font files. [code: inconsistency]
-</div></details><br></div></details><details><summary><b>[13] NotoSerifHebrew[wght].ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[11] NotoSerifHebrew-Black.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
 
 
 * 💔 **ERROR** Failed with IndexError: list index out of range
-</div></details><details><summary>💔 <b>ERROR:</b> Validate STAT particle names and values match the fallback names in GFAxisRegistry.  (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/STAT/gf-axisregistry">com.google.fonts/check/STAT/gf-axisregistry</a>)</summary><div>
-
-
-* 💔 **ERROR** Failed with AttributeError: 'NoneType' object has no attribute 'toUnicode'
-</div></details><details><summary>🔥 <b>FAIL:</b> Checking file is named canonically. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/canonical_filename">com.google.fonts/check/canonical_filename</a>)</summary><div>
-
-
-* 🔥 **FAIL** The file 'NotoSerifHebrew[wght].ttf' must be renamed to 'NotoSerifHebrew[wdth,wght].ttf' according to the Google Fonts naming policy for variable fonts. [code: bad-varfont-filename]
-</div></details><details><summary>🔥 <b>FAIL:</b> Check copyright namerecords match license file. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/license">com.google.fonts/check/name/license</a>)</summary><div>
-
-
-* 🔥 **FAIL** License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software." Must be changed to "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" [code: wrong]
-</div></details><details><summary>🔥 <b>FAIL:</b> OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/os2/use_typo_metrics">com.google.fonts/check/os2/use_typo_metrics</a>)</summary><div>
-
-
-* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSerifHebrew/googlefonts/slim-variable-ttf/NotoSerifHebrew[wght].ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-Black.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-Bold.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-ExtraBold.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-ExtraLight.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-Light.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-Medium.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-Regular.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-SemiBold.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-Thin.ttf', 'fonts/NotoSerifHebrew/googlefonts/variable-ttf/NotoSerifHebrew[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
 </div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
 * 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 979, but got 896 instead [code: ascent]
-</div></details><details><summary>🔥 <b>FAIL:</b> Checking with fontTools.ttx (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/ttx-roundtrip">com.google.fonts/check/ttx-roundtrip</a>)</summary><div>
-
-
-* 🔥 **FAIL** name id 259 missing from name table
-* 🔥 **FAIL** name id 260 missing from name table
-* 🔥 **FAIL** name id 261 missing from name table
-* 🔥 **FAIL** name id 262 missing from name table
-* 🔥 **FAIL** name id 263 missing from name table
-* 🔥 **FAIL** name id 264 missing from name table
-</div></details><details><summary>🔥 <b>FAIL:</b> Ensure dotted circle glyph is present and can attach marks. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/dotted_circle">com.google.fonts/check/dotted_circle</a>)</summary><div>
-
-
-* 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
-
-	- uni05A9
-
-	- uni059A
-
-	- uni05B9
-
-	- uniFB1E
-
-	- uni05A2
-
-	- uni05C7
-
-	- uni059F
-
-	- uni0594
-
-	- uni05C1
-
-	- uni05BD 
-
-	- And 42 more.
-
-Use -F or --full-lists to disable shortening of long lists. [code: unattached-dotted-circle-marks]
-</div></details><details><summary>🔥 <b>FAIL:</b> Validates that when an instance record is included for the default instance, its subfamilyNameID value is set to either 2 or 17, and its postScriptNameID value is set to 6. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/fvar.html#com.adobe.fonts/check/varfont/valid_default_instance_nameids">com.adobe.fonts/check/varfont/valid_default_instance_nameids</a>)</summary><div>
-
-
-* 🔥 **FAIL** 'Regular' instance has the same coordinates as the default instance; its subfamilyNameID should be either 2 or 17, instead of 283. [code: invalid-default-instance-subfamily-nameid:283]
-</div></details><details><summary>⚠ <b>WARN:</b> Ensure fonts have ScriptLangTags declared on the 'meta' table. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/meta/script_lang_tags">com.google.fonts/check/meta/script_lang_tags</a>)</summary><div>
-
-
-* ⚠ **WARN** This font file does not have a 'meta' table. [code: lacks-meta-table]
-</div></details><details><summary>⚠ <b>WARN:</b> Checking with ots-sanitize. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/ots">com.google.fonts/check/ots</a>)</summary><div>
-
-
-* ⚠ **WARN** ots-sanitize passed this file, however warnings were printed:
-
-ERROR: STAT: Invalid nameID: 259
-ERROR: Table discarded
- [code: ots-sanitize-warn]
-</div></details><details><summary>⚠ <b>WARN:</b> Glyph names are all valid? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/valid_glyphnames">com.google.fonts/check/valid_glyphnames</a>)</summary><div>
-
-
-* ⚠ **WARN** The following glyph names may be too long for some legacy systems which may expect a maximum 31-char length limit:
-hatafpatah_zerowidthjoiner_siluqlefthb, hatafqamats_zerowidthjoiner_siluqlefthb and hatafsegol_zerowidthjoiner_siluqlefthb [code: legacy-long-names]
-</div></details><details><summary>⚠ <b>WARN:</b> Check mark characters are in GDEF mark glyph class. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_mark_chars">com.google.fonts/check/gdef_mark_chars</a>)</summary><div>
-
-
-* ⚠ **WARN** The following mark characters could be in the GDEF mark glyph class:
-	 acutecomb (U+0301), gravecomb (U+0300), tildecomb (U+0303), uni0302 (U+0302), uni0304 (U+0304), uni0306 (U+0306), uni0307 (U+0307), uni0308 (U+0308), uni030A (U+030A), uni030B (U+030B) and 5 more.
-
-Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]
-</div></details><br></div></details><details><summary><b>[14] NotoSerifHebrew-Black.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
-
-
-* 💔 **ERROR** Failed with IndexError: list index out of range
-</div></details><details><summary>🔥 <b>FAIL:</b> Check copyright namerecords match license file. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/license">com.google.fonts/check/name/license</a>)</summary><div>
-
-
-* 🔥 **FAIL** License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software." Must be changed to "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" [code: wrong]
-</div></details><details><summary>🔥 <b>FAIL:</b> OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/os2/use_typo_metrics">com.google.fonts/check/os2/use_typo_metrics</a>)</summary><div>
-
-
-* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSerifHebrew/googlefonts/slim-variable-ttf/NotoSerifHebrew[wght].ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-Black.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-Bold.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-ExtraBold.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-ExtraLight.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-Light.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-Medium.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-Regular.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-SemiBold.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-Thin.ttf', 'fonts/NotoSerifHebrew/googlefonts/variable-ttf/NotoSerifHebrew[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
-</div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
-
-
-* 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 979, but got 896 instead [code: ascent]
-</div></details><details><summary>🔥 <b>FAIL:</b> Ensure dotted circle glyph is present and can attach marks. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/dotted_circle">com.google.fonts/check/dotted_circle</a>)</summary><div>
-
-
-* 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
-
-	- uni05A9
-
-	- uni059A
-
-	- uni05B9
-
-	- uniFB1E
-
-	- uni05A2
-
-	- uni05C7
-
-	- uni059F
-
-	- uni0594
-
-	- uni05C1
-
-	- uni05BD 
-
-	- And 42 more.
-
-Use -F or --full-lists to disable shortening of long lists. [code: unattached-dotted-circle-marks]
 </div></details><details><summary>⚠ <b>WARN:</b> Glyphs are similiar to Google Fonts version? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/production_glyphs_similarity">com.google.fonts/check/production_glyphs_similarity</a>)</summary><div>
 
 
 * ⚠ **WARN** Following glyphs differ greatly from Google Fonts version:
-	* uniFB2F and uniFB20
+	* uniFB20 and uniFB2F
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
 
 
@@ -252,50 +127,14 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 	* uniFB23 (U+FB23): L<<140.0,310.0>--<141.0,30.0>> 
 
 	* And uniFB34 (U+FB34): L<<140.0,310.0>--<141.0,30.0>> [code: found-semi-vertical]
-</div></details><br></div></details><details><summary><b>[12] NotoSerifHebrew-Bold.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[9] NotoSerifHebrew-Bold.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
 
 
 * 💔 **ERROR** Failed with IndexError: list index out of range
-</div></details><details><summary>🔥 <b>FAIL:</b> Check copyright namerecords match license file. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/license">com.google.fonts/check/name/license</a>)</summary><div>
-
-
-* 🔥 **FAIL** License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software." Must be changed to "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" [code: wrong]
-</div></details><details><summary>🔥 <b>FAIL:</b> OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/os2/use_typo_metrics">com.google.fonts/check/os2/use_typo_metrics</a>)</summary><div>
-
-
-* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSerifHebrew/googlefonts/slim-variable-ttf/NotoSerifHebrew[wght].ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-Black.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-Bold.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-ExtraBold.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-ExtraLight.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-Light.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-Medium.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-Regular.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-SemiBold.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-Thin.ttf', 'fonts/NotoSerifHebrew/googlefonts/variable-ttf/NotoSerifHebrew[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
 </div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
 * 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 979, but got 896 instead [code: ascent]
-</div></details><details><summary>🔥 <b>FAIL:</b> Ensure dotted circle glyph is present and can attach marks. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/dotted_circle">com.google.fonts/check/dotted_circle</a>)</summary><div>
-
-
-* 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
-
-	- uni05A9
-
-	- uni059A
-
-	- uni05B9
-
-	- uniFB1E
-
-	- uni05A2
-
-	- uni05C7
-
-	- uni059F
-
-	- uni0594
-
-	- uni05C1
-
-	- uni05BD 
-
-	- And 42 more.
-
-Use -F or --full-lists to disable shortening of long lists. [code: unattached-dotted-circle-marks]
 </div></details><details><summary>⚠ <b>WARN:</b> Ensure fonts have ScriptLangTags declared on the 'meta' table. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/meta/script_lang_tags">com.google.fonts/check/meta/script_lang_tags</a>)</summary><div>
 
 
@@ -377,50 +216,14 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 	* uniFB23 (U+FB23): L<<143.0,321.0>--<144.0,30.0>> 
 
 	* And uniFB34 (U+FB34): L<<143.0,321.0>--<144.0,30.0>> [code: found-semi-vertical]
-</div></details><br></div></details><details><summary><b>[13] NotoSerifHebrew-ExtraBold.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[10] NotoSerifHebrew-ExtraBold.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
 
 
 * 💔 **ERROR** Failed with IndexError: list index out of range
-</div></details><details><summary>🔥 <b>FAIL:</b> Check copyright namerecords match license file. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/license">com.google.fonts/check/name/license</a>)</summary><div>
-
-
-* 🔥 **FAIL** License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software." Must be changed to "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" [code: wrong]
-</div></details><details><summary>🔥 <b>FAIL:</b> OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/os2/use_typo_metrics">com.google.fonts/check/os2/use_typo_metrics</a>)</summary><div>
-
-
-* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSerifHebrew/googlefonts/slim-variable-ttf/NotoSerifHebrew[wght].ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-Black.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-Bold.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-ExtraBold.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-ExtraLight.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-Light.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-Medium.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-Regular.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-SemiBold.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-Thin.ttf', 'fonts/NotoSerifHebrew/googlefonts/variable-ttf/NotoSerifHebrew[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
 </div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
 * 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 979, but got 896 instead [code: ascent]
-</div></details><details><summary>🔥 <b>FAIL:</b> Ensure dotted circle glyph is present and can attach marks. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/dotted_circle">com.google.fonts/check/dotted_circle</a>)</summary><div>
-
-
-* 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
-
-	- uni05A9
-
-	- uni059A
-
-	- uni05B9
-
-	- uniFB1E
-
-	- uni05A2
-
-	- uni05C7
-
-	- uni059F
-
-	- uni0594
-
-	- uni05C1
-
-	- uni05BD 
-
-	- And 42 more.
-
-Use -F or --full-lists to disable shortening of long lists. [code: unattached-dotted-circle-marks]
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
 
 
@@ -521,50 +324,14 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 	* uniFB23 (U+FB23): L<<141.0,315.0>--<142.0,30.0>> 
 
 	* And uniFB34 (U+FB34): L<<141.0,315.0>--<142.0,30.0>> [code: found-semi-vertical]
-</div></details><br></div></details><details><summary><b>[13] NotoSerifHebrew-ExtraLight.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[10] NotoSerifHebrew-ExtraLight.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
 
 
 * 💔 **ERROR** Failed with IndexError: list index out of range
-</div></details><details><summary>🔥 <b>FAIL:</b> Check copyright namerecords match license file. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/license">com.google.fonts/check/name/license</a>)</summary><div>
-
-
-* 🔥 **FAIL** License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software." Must be changed to "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" [code: wrong]
-</div></details><details><summary>🔥 <b>FAIL:</b> OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/os2/use_typo_metrics">com.google.fonts/check/os2/use_typo_metrics</a>)</summary><div>
-
-
-* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSerifHebrew/googlefonts/slim-variable-ttf/NotoSerifHebrew[wght].ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-Black.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-Bold.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-ExtraBold.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-ExtraLight.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-Light.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-Medium.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-Regular.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-SemiBold.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-Thin.ttf', 'fonts/NotoSerifHebrew/googlefonts/variable-ttf/NotoSerifHebrew[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
 </div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
 * 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 979, but got 896 instead [code: ascent]
-</div></details><details><summary>🔥 <b>FAIL:</b> Ensure dotted circle glyph is present and can attach marks. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/dotted_circle">com.google.fonts/check/dotted_circle</a>)</summary><div>
-
-
-* 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
-
-	- uni05A9
-
-	- uni059A
-
-	- uni05B9
-
-	- uniFB1E
-
-	- uni05A2
-
-	- uni05C7
-
-	- uni059F
-
-	- uni0594
-
-	- uni05C1
-
-	- uni05BD 
-
-	- And 42 more.
-
-Use -F or --full-lists to disable shortening of long lists. [code: unattached-dotted-circle-marks]
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
 
 
@@ -661,50 +428,14 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 	* uniFB43 (U+FB43): L<<445.0,508.0>--<451.0,-221.0>> 
 
 	* And uniFB47 (U+FB47): L<<132.0,372.0>--<137.0,-221.0>> [code: found-semi-vertical]
-</div></details><br></div></details><details><summary><b>[12] NotoSerifHebrew-Light.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[9] NotoSerifHebrew-Light.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
 
 
 * 💔 **ERROR** Failed with IndexError: list index out of range
-</div></details><details><summary>🔥 <b>FAIL:</b> Check copyright namerecords match license file. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/license">com.google.fonts/check/name/license</a>)</summary><div>
-
-
-* 🔥 **FAIL** License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software." Must be changed to "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" [code: wrong]
-</div></details><details><summary>🔥 <b>FAIL:</b> OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/os2/use_typo_metrics">com.google.fonts/check/os2/use_typo_metrics</a>)</summary><div>
-
-
-* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSerifHebrew/googlefonts/slim-variable-ttf/NotoSerifHebrew[wght].ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-Black.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-Bold.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-ExtraBold.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-ExtraLight.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-Light.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-Medium.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-Regular.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-SemiBold.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-Thin.ttf', 'fonts/NotoSerifHebrew/googlefonts/variable-ttf/NotoSerifHebrew[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
 </div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
 * 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 979, but got 896 instead [code: ascent]
-</div></details><details><summary>🔥 <b>FAIL:</b> Ensure dotted circle glyph is present and can attach marks. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/dotted_circle">com.google.fonts/check/dotted_circle</a>)</summary><div>
-
-
-* 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
-
-	- uni05A9
-
-	- uni059A
-
-	- uni05B9
-
-	- uniFB1E
-
-	- uni05A2
-
-	- uni05C7
-
-	- uni059F
-
-	- uni0594
-
-	- uni05C1
-
-	- uni05BD 
-
-	- And 42 more.
-
-Use -F or --full-lists to disable shortening of long lists. [code: unattached-dotted-circle-marks]
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
 
 
@@ -791,50 +522,14 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 	* uniFB34 (U+FB34): L<<131.0,355.0>--<132.0,19.0>> 
 
 	* And uniFB3C (U+FB3C): L<<432.0,519.0>--<431.0,351.0>> [code: found-semi-vertical]
-</div></details><br></div></details><details><summary><b>[11] NotoSerifHebrew-Medium.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[8] NotoSerifHebrew-Medium.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
 
 
 * 💔 **ERROR** Failed with IndexError: list index out of range
-</div></details><details><summary>🔥 <b>FAIL:</b> Check copyright namerecords match license file. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/license">com.google.fonts/check/name/license</a>)</summary><div>
-
-
-* 🔥 **FAIL** License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software." Must be changed to "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" [code: wrong]
-</div></details><details><summary>🔥 <b>FAIL:</b> OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/os2/use_typo_metrics">com.google.fonts/check/os2/use_typo_metrics</a>)</summary><div>
-
-
-* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSerifHebrew/googlefonts/slim-variable-ttf/NotoSerifHebrew[wght].ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-Black.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-Bold.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-ExtraBold.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-ExtraLight.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-Light.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-Medium.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-Regular.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-SemiBold.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-Thin.ttf', 'fonts/NotoSerifHebrew/googlefonts/variable-ttf/NotoSerifHebrew[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
 </div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
 * 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 979, but got 896 instead [code: ascent]
-</div></details><details><summary>🔥 <b>FAIL:</b> Ensure dotted circle glyph is present and can attach marks. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/dotted_circle">com.google.fonts/check/dotted_circle</a>)</summary><div>
-
-
-* 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
-
-	- uni05A9
-
-	- uni059A
-
-	- uni05B9
-
-	- uniFB1E
-
-	- uni05A2
-
-	- uni05C7
-
-	- uni059F
-
-	- uni0594
-
-	- uni05C1
-
-	- uni05BD 
-
-	- And 42 more.
-
-Use -F or --full-lists to disable shortening of long lists. [code: unattached-dotted-circle-marks]
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
 
 
@@ -893,50 +588,14 @@ Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]
 	* uniFB34 (U+FB34): L<<145.0,332.0>--<146.0,29.0>> 
 
 	* And uniFB3C (U+FB3C): L<<453.0,490.0>--<452.0,352.0>> [code: found-semi-vertical]
-</div></details><br></div></details><details><summary><b>[11] NotoSerifHebrew-Regular.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[8] NotoSerifHebrew-Regular.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
 
 
 * 💔 **ERROR** Failed with IndexError: list index out of range
-</div></details><details><summary>🔥 <b>FAIL:</b> Check copyright namerecords match license file. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/license">com.google.fonts/check/name/license</a>)</summary><div>
-
-
-* 🔥 **FAIL** License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software." Must be changed to "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" [code: wrong]
-</div></details><details><summary>🔥 <b>FAIL:</b> OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/os2/use_typo_metrics">com.google.fonts/check/os2/use_typo_metrics</a>)</summary><div>
-
-
-* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSerifHebrew/googlefonts/slim-variable-ttf/NotoSerifHebrew[wght].ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-Black.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-Bold.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-ExtraBold.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-ExtraLight.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-Light.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-Medium.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-Regular.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-SemiBold.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-Thin.ttf', 'fonts/NotoSerifHebrew/googlefonts/variable-ttf/NotoSerifHebrew[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
 </div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
 * 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 979, but got 896 instead [code: ascent]
-</div></details><details><summary>🔥 <b>FAIL:</b> Ensure dotted circle glyph is present and can attach marks. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/dotted_circle">com.google.fonts/check/dotted_circle</a>)</summary><div>
-
-
-* 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
-
-	- uni05A9
-
-	- uni059A
-
-	- uni05B9
-
-	- uniFB1E
-
-	- uni05A2
-
-	- uni05C7
-
-	- uni059F
-
-	- uni0594
-
-	- uni05C1
-
-	- uni05BD 
-
-	- And 42 more.
-
-Use -F or --full-lists to disable shortening of long lists. [code: unattached-dotted-circle-marks]
 </div></details><details><summary>⚠ <b>WARN:</b> Ensure fonts have ScriptLangTags declared on the 'meta' table. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/meta/script_lang_tags">com.google.fonts/check/meta/script_lang_tags</a>)</summary><div>
 
 
@@ -1016,50 +675,14 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 	* uniFB34 (U+FB34): L<<146.0,336.0>--<147.0,29.0>> 
 
 	* And uniFB3C (U+FB3C): L<<447.0,493.0>--<446.0,359.0>> [code: found-semi-vertical]
-</div></details><br></div></details><details><summary><b>[13] NotoSerifHebrew-SemiBold.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[10] NotoSerifHebrew-SemiBold.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
 
 
 * 💔 **ERROR** Failed with IndexError: list index out of range
-</div></details><details><summary>🔥 <b>FAIL:</b> Check copyright namerecords match license file. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/license">com.google.fonts/check/name/license</a>)</summary><div>
-
-
-* 🔥 **FAIL** License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software." Must be changed to "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" [code: wrong]
-</div></details><details><summary>🔥 <b>FAIL:</b> OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/os2/use_typo_metrics">com.google.fonts/check/os2/use_typo_metrics</a>)</summary><div>
-
-
-* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSerifHebrew/googlefonts/slim-variable-ttf/NotoSerifHebrew[wght].ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-Black.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-Bold.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-ExtraBold.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-ExtraLight.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-Light.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-Medium.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-Regular.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-SemiBold.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-Thin.ttf', 'fonts/NotoSerifHebrew/googlefonts/variable-ttf/NotoSerifHebrew[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
 </div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
 * 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 979, but got 896 instead [code: ascent]
-</div></details><details><summary>🔥 <b>FAIL:</b> Ensure dotted circle glyph is present and can attach marks. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/dotted_circle">com.google.fonts/check/dotted_circle</a>)</summary><div>
-
-
-* 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
-
-	- uni05A9
-
-	- uni059A
-
-	- uni05B9
-
-	- uniFB1E
-
-	- uni05A2
-
-	- uni05C7
-
-	- uni059F
-
-	- uni0594
-
-	- uni05C1
-
-	- uni05BD 
-
-	- And 42 more.
-
-Use -F or --full-lists to disable shortening of long lists. [code: unattached-dotted-circle-marks]
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
 
 
@@ -1156,50 +779,14 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-misalig
 	* uniFB34 (U+FB34): L<<144.0,327.0>--<145.0,29.0>> 
 
 	* And uniFB3C (U+FB3C): L<<460.0,486.0>--<459.0,343.0>> [code: found-semi-vertical]
-</div></details><br></div></details><details><summary><b>[12] NotoSerifHebrew-Thin.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[9] NotoSerifHebrew-Thin.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
 
 
 * 💔 **ERROR** Failed with IndexError: list index out of range
-</div></details><details><summary>🔥 <b>FAIL:</b> Check copyright namerecords match license file. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/license">com.google.fonts/check/name/license</a>)</summary><div>
-
-
-* 🔥 **FAIL** License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software." Must be changed to "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" [code: wrong]
-</div></details><details><summary>🔥 <b>FAIL:</b> OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/os2/use_typo_metrics">com.google.fonts/check/os2/use_typo_metrics</a>)</summary><div>
-
-
-* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSerifHebrew/googlefonts/slim-variable-ttf/NotoSerifHebrew[wght].ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-Black.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-Bold.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-ExtraBold.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-ExtraLight.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-Light.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-Medium.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-Regular.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-SemiBold.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-Thin.ttf', 'fonts/NotoSerifHebrew/googlefonts/variable-ttf/NotoSerifHebrew[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
 </div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
 * 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 979, but got 896 instead [code: ascent]
-</div></details><details><summary>🔥 <b>FAIL:</b> Ensure dotted circle glyph is present and can attach marks. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/dotted_circle">com.google.fonts/check/dotted_circle</a>)</summary><div>
-
-
-* 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
-
-	- uni05A9
-
-	- uni059A
-
-	- uni05B9
-
-	- uniFB1E
-
-	- uni05A2
-
-	- uni05C7
-
-	- uni059F
-
-	- uni0594
-
-	- uni05C1
-
-	- uni05BD 
-
-	- And 42 more.
-
-Use -F or --full-lists to disable shortening of long lists. [code: unattached-dotted-circle-marks]
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
 
 
@@ -1278,66 +865,14 @@ Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]
 	* And 18 more.
 
 Use -F or --full-lists to disable shortening of long lists. [code: found-semi-vertical]
-</div></details><br></div></details><details><summary><b>[12] NotoSerifHebrew[wdth,wght].ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[6] NotoSerifHebrew[wdth,wght].ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
 
 
 * 💔 **ERROR** Failed with IndexError: list index out of range
-</div></details><details><summary>💔 <b>ERROR:</b> Validate STAT particle names and values match the fallback names in GFAxisRegistry.  (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/STAT/gf-axisregistry">com.google.fonts/check/STAT/gf-axisregistry</a>)</summary><div>
-
-
-* 💔 **ERROR** Failed with AttributeError: 'NoneType' object has no attribute 'toUnicode'
-</div></details><details><summary>🔥 <b>FAIL:</b> Check copyright namerecords match license file. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/license">com.google.fonts/check/name/license</a>)</summary><div>
-
-
-* 🔥 **FAIL** License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software." Must be changed to "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" [code: wrong]
-</div></details><details><summary>🔥 <b>FAIL:</b> OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/os2/use_typo_metrics">com.google.fonts/check/os2/use_typo_metrics</a>)</summary><div>
-
-
-* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSerifHebrew/googlefonts/slim-variable-ttf/NotoSerifHebrew[wght].ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-Black.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-Bold.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-ExtraBold.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-ExtraLight.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-Light.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-Medium.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-Regular.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-SemiBold.ttf', 'fonts/NotoSerifHebrew/googlefonts/ttf/NotoSerifHebrew-Thin.ttf', 'fonts/NotoSerifHebrew/googlefonts/variable-ttf/NotoSerifHebrew[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
 </div></details><details><summary>🔥 <b>FAIL:</b> Checking OS/2 usWinAscent & usWinDescent. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/win_ascent_and_descent">com.google.fonts/check/family/win_ascent_and_descent</a>)</summary><div>
 
 
 * 🔥 **FAIL** OS/2.usWinAscent value should be equal or greater than 979, but got 896 instead [code: ascent]
-</div></details><details><summary>🔥 <b>FAIL:</b> Checking with fontTools.ttx (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/ttx-roundtrip">com.google.fonts/check/ttx-roundtrip</a>)</summary><div>
-
-
-* 🔥 **FAIL** name id 258 missing from name table
-* 🔥 **FAIL** name id 259 missing from name table
-* 🔥 **FAIL** name id 260 missing from name table
-* 🔥 **FAIL** name id 261 missing from name table
-* 🔥 **FAIL** name id 262 missing from name table
-* 🔥 **FAIL** name id 263 missing from name table
-* 🔥 **FAIL** name id 264 missing from name table
-* 🔥 **FAIL** name id 265 missing from name table
-* 🔥 **FAIL** name id 266 missing from name table
-</div></details><details><summary>🔥 <b>FAIL:</b> Ensure dotted circle glyph is present and can attach marks. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/dotted_circle">com.google.fonts/check/dotted_circle</a>)</summary><div>
-
-
-* 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
-
-	- uni05A9
-
-	- uni059A
-
-	- uni05B9
-
-	- uniFB1E
-
-	- uni05A2
-
-	- uni05C7
-
-	- uni059F
-
-	- uni0594
-
-	- uni05C1
-
-	- uni05BD 
-
-	- And 42 more.
-
-Use -F or --full-lists to disable shortening of long lists. [code: unattached-dotted-circle-marks]
 </div></details><details><summary>🔥 <b>FAIL:</b> Validates that when an instance record is included for the default instance, its subfamilyNameID value is set to either 2 or 17, and its postScriptNameID value is set to 6. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/fvar.html#com.adobe.fonts/check/varfont/valid_default_instance_nameids">com.adobe.fonts/check/varfont/valid_default_instance_nameids</a>)</summary><div>
 
 
@@ -1346,14 +881,6 @@ Use -F or --full-lists to disable shortening of long lists. [code: unattached-do
 
 
 * ⚠ **WARN** This font file does not have a 'meta' table. [code: lacks-meta-table]
-</div></details><details><summary>⚠ <b>WARN:</b> Checking with ots-sanitize. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/ots">com.google.fonts/check/ots</a>)</summary><div>
-
-
-* ⚠ **WARN** ots-sanitize passed this file, however warnings were printed:
-
-ERROR: STAT: Invalid nameID: 258
-ERROR: Table discarded
- [code: ots-sanitize-warn]
 </div></details><details><summary>⚠ <b>WARN:</b> Glyph names are all valid? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/valid_glyphnames">com.google.fonts/check/valid_glyphnames</a>)</summary><div>
 
 
@@ -1371,8 +898,8 @@ Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]
 
 | 💔 ERROR | 🔥 FAIL | ⚠ WARN | 💤 SKIP | ℹ INFO | 🍞 PASS | 🔎 DEBUG |
 |:-----:|:----:|:----:|:----:|:----:|:----:|:----:|
-| 13 | 52 | 74 | 1233 | 69 | 994 | 0 |
-| 1% | 2% | 3% | 51% | 3% | 41% | 0% |
+| 10 | 14 | 69 | 1120 | 62 | 940 | 0 |
+| 0% | 1% | 3% | 51% | 3% | 42% | 0% |
 
 **Note:** The following loglevels were omitted in this report:
 * **SKIP**

@@ -5,7 +5,7 @@ Fontbakery version: 0.8.9
 <details><summary><b>[3] Family checks</b></summary><div><details><summary>🔥 <b>FAIL:</b> Checking all files are in the same directory. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/family/single_directory">com.google.fonts/check/family/single_directory</a>)</summary><div>
 
 
-* 🔥 **FAIL** Not all fonts passed in the command line are in the same directory. This may lead to bad results as the tool will interpret all font files as belonging to a single font family. The detected directories are: ['fonts/NotoSansHebrew/googlefonts/slim-variable-ttf', 'fonts/NotoSansHebrew/googlefonts/ttf', 'fonts/NotoSansHebrew/googlefonts/variable-ttf'] [code: single-directory]
+* 🔥 **FAIL** Not all fonts passed in the command line are in the same directory. This may lead to bad results as the tool will interpret all font files as belonging to a single font family. The detected directories are: ['fonts/NotoSansHebrew/googlefonts/ttf', 'fonts/NotoSansHebrew/googlefonts/variable-ttf'] [code: single-directory]
 </div></details><details><summary>🔥 <b>FAIL:</b> Fonts have consistent PANOSE proportion? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/os2.html#com.google.fonts/check/family/panose_proportion">com.google.fonts/check/family/panose_proportion</a>)</summary><div>
 
 
@@ -14,97 +14,6 @@ Fontbakery version: 0.8.9
 
 
 * 🔥 **FAIL** PANOSE family type is not the same across this family. In order to fix this, please make sure that the panose.bFamilyType value is the same in the OS/2 table of all of this family font files. [code: inconsistency]
-</div></details><br></div></details><details><summary><b>[13] NotoSansHebrew[wght].ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
-
-
-* 💔 **ERROR** Failed with IndexError: list index out of range
-</div></details><details><summary>💔 <b>ERROR:</b> Validate STAT particle names and values match the fallback names in GFAxisRegistry.  (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/STAT/gf-axisregistry">com.google.fonts/check/STAT/gf-axisregistry</a>)</summary><div>
-
-
-* 💔 **ERROR** Failed with AttributeError: 'NoneType' object has no attribute 'toUnicode'
-</div></details><details><summary>🔥 <b>FAIL:</b> Checking file is named canonically. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/canonical_filename">com.google.fonts/check/canonical_filename</a>)</summary><div>
-
-
-* 🔥 **FAIL** The file 'NotoSansHebrew[wght].ttf' must be renamed to 'NotoSansHebrew[wdth,wght].ttf' according to the Google Fonts naming policy for variable fonts. [code: bad-varfont-filename]
-</div></details><details><summary>🔥 <b>FAIL:</b> Check copyright namerecords match license file. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/license">com.google.fonts/check/name/license</a>)</summary><div>
-
-
-* 🔥 **FAIL** License file OFL.txt exists but NameID 13 (LICENSE DESCRIPTION) value on platform 3 (WINDOWS) is not specified for that. Value was: "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software." Must be changed to "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" [code: wrong]
-</div></details><details><summary>🔥 <b>FAIL:</b> Copyright notices match canonical pattern in fonts (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/font_copyright">com.google.fonts/check/font_copyright</a>)</summary><div>
-
-
-* 🔥 **FAIL** Name Table entry: Copyright notices should match a pattern similar to: "Copyright 2019 The Familyname Project Authors (git url)"
-But instead we have got:
-"Copyright 2015-2021 Google Inc. All Rights Reserved." [code: bad-notice-format]
-</div></details><details><summary>🔥 <b>FAIL:</b> OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/os2/use_typo_metrics">com.google.fonts/check/os2/use_typo_metrics</a>)</summary><div>
-
-
-* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSansHebrew/googlefonts/slim-variable-ttf/NotoSansHebrew[wght].ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Black.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Bold.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-ExtraBold.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-ExtraLight.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Light.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Medium.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Regular.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-SemiBold.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Thin.ttf', 'fonts/NotoSansHebrew/googlefonts/variable-ttf/NotoSansHebrew[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
-</div></details><details><summary>🔥 <b>FAIL:</b> Checking with fontTools.ttx (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/ttx-roundtrip">com.google.fonts/check/ttx-roundtrip</a>)</summary><div>
-
-
-* 🔥 **FAIL** name id 259 missing from name table
-* 🔥 **FAIL** name id 260 missing from name table
-* 🔥 **FAIL** name id 261 missing from name table
-* 🔥 **FAIL** name id 262 missing from name table
-* 🔥 **FAIL** name id 263 missing from name table
-* 🔥 **FAIL** name id 264 missing from name table
-</div></details><details><summary>🔥 <b>FAIL:</b> Ensure dotted circle glyph is present and can attach marks. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/dotted_circle">com.google.fonts/check/dotted_circle</a>)</summary><div>
-
-
-* 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
-
-	- uni0599
-
-	- uni05AD
-
-	- uni05AA
-
-	- uni059A
-
-	- uni05B3
-
-	- uni05C1
-
-	- uni05A5
-
-	- uni05C5
-
-	- uni05AB
-
-	- uni0597 
-
-	- And 42 more.
-
-Use -F or --full-lists to disable shortening of long lists. [code: unattached-dotted-circle-marks]
-</div></details><details><summary>🔥 <b>FAIL:</b> Validates that when an instance record is included for the default instance, its subfamilyNameID value is set to either 2 or 17, and its postScriptNameID value is set to 6. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/fvar.html#com.adobe.fonts/check/varfont/valid_default_instance_nameids">com.adobe.fonts/check/varfont/valid_default_instance_nameids</a>)</summary><div>
-
-
-* 🔥 **FAIL** 'Regular' instance has the same coordinates as the default instance; its subfamilyNameID should be either 2 or 17, instead of 283. [code: invalid-default-instance-subfamily-nameid:283]
-</div></details><details><summary>⚠ <b>WARN:</b> Ensure fonts have ScriptLangTags declared on the 'meta' table. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/meta/script_lang_tags">com.google.fonts/check/meta/script_lang_tags</a>)</summary><div>
-
-
-* ⚠ **WARN** This font file does not have a 'meta' table. [code: lacks-meta-table]
-</div></details><details><summary>⚠ <b>WARN:</b> Checking with ots-sanitize. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/ots">com.google.fonts/check/ots</a>)</summary><div>
-
-
-* ⚠ **WARN** ots-sanitize passed this file, however warnings were printed:
-
-ERROR: STAT: Invalid nameID: 259
-ERROR: Table discarded
- [code: ots-sanitize-warn]
-</div></details><details><summary>⚠ <b>WARN:</b> Glyph names are all valid? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/valid_glyphnames">com.google.fonts/check/valid_glyphnames</a>)</summary><div>
-
-
-* ⚠ **WARN** The following glyph names may be too long for some legacy systems which may expect a maximum 31-char length limit:
-hatafpatah_zerowidthjoiner_siluqlefthb, hatafqamats_zerowidthjoiner_siluqlefthb and hatafsegol_zerowidthjoiner_siluqlefthb [code: legacy-long-names]
-</div></details><details><summary>⚠ <b>WARN:</b> Check mark characters are in GDEF mark glyph class. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_mark_chars">com.google.fonts/check/gdef_mark_chars</a>)</summary><div>
-
-
-* ⚠ **WARN** The following mark characters could be in the GDEF mark glyph class:
-	 acutecomb (U+0301), gravecomb (U+0300), tildecomb (U+0303), uni0302 (U+0302), uni0304 (U+0304), uni0306 (U+0306), uni0307 (U+0307), uni0308 (U+0308), uni030A (U+030A), uni030B (U+030B) and 5 more.
-
-Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]
 </div></details><br></div></details><details><summary><b>[12] NotoSansHebrew-Black.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
 
 
@@ -122,31 +31,31 @@ But instead we have got:
 </div></details><details><summary>🔥 <b>FAIL:</b> OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/os2/use_typo_metrics">com.google.fonts/check/os2/use_typo_metrics</a>)</summary><div>
 
 
-* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSansHebrew/googlefonts/slim-variable-ttf/NotoSansHebrew[wght].ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Black.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Bold.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-ExtraBold.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-ExtraLight.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Light.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Medium.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Regular.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-SemiBold.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Thin.ttf', 'fonts/NotoSansHebrew/googlefonts/variable-ttf/NotoSansHebrew[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
+* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Black.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Bold.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-ExtraBold.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-ExtraLight.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Light.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Medium.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Regular.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-SemiBold.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Thin.ttf', 'fonts/NotoSansHebrew/googlefonts/variable-ttf/NotoSansHebrew[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
 </div></details><details><summary>🔥 <b>FAIL:</b> Ensure dotted circle glyph is present and can attach marks. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/dotted_circle">com.google.fonts/check/dotted_circle</a>)</summary><div>
 
 
 * 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
 
-	- uni0599
+	- uni059F
+
+	- uni0594
+
+	- uni05AF
 
 	- uni05AD
 
 	- uni05AA
 
-	- uni059A
+	- uni05C2
 
-	- uni05B3
+	- uni05A9
 
-	- uni05C1
+	- uni059D
 
-	- uni05A5
+	- uni05B6
 
-	- uni05C5
-
-	- uni05AB
-
-	- uni0597 
+	- uni0593 
 
 	- And 42 more.
 
@@ -155,16 +64,16 @@ Use -F or --full-lists to disable shortening of long lists. [code: unattached-do
 
 
 * ⚠ **WARN** Following glyphs differ greatly from Google Fonts version:
-	* uniFB3A
-	* uni05B3
-	* uniFB22
-	* uniFB34
-	* uniFB28
-	* uni05BB
-	* uniFB1D
+	* uni05EA
+	* uniFB3B
+	* uni05E1
+	* hatafqamats_zerowidthjoiner_siluqlefthb
 	* uniFB2E
-	* uni05D7
-	* uniFB3B and 52 more.
+	* uniFB28
+	* uniFB46
+	* uni05C7
+	* uniFB2F
+	* uni05B2 and 52 more.
 
 Use -F or --full-lists to disable shortening of long lists.
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
@@ -250,31 +159,31 @@ But instead we have got:
 </div></details><details><summary>🔥 <b>FAIL:</b> OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/os2/use_typo_metrics">com.google.fonts/check/os2/use_typo_metrics</a>)</summary><div>
 
 
-* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSansHebrew/googlefonts/slim-variable-ttf/NotoSansHebrew[wght].ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Black.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Bold.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-ExtraBold.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-ExtraLight.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Light.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Medium.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Regular.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-SemiBold.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Thin.ttf', 'fonts/NotoSansHebrew/googlefonts/variable-ttf/NotoSansHebrew[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
+* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Black.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Bold.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-ExtraBold.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-ExtraLight.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Light.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Medium.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Regular.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-SemiBold.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Thin.ttf', 'fonts/NotoSansHebrew/googlefonts/variable-ttf/NotoSansHebrew[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
 </div></details><details><summary>🔥 <b>FAIL:</b> Ensure dotted circle glyph is present and can attach marks. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/dotted_circle">com.google.fonts/check/dotted_circle</a>)</summary><div>
 
 
 * 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
 
-	- uni0599
+	- uni059F
+
+	- uni0594
+
+	- uni05AF
 
 	- uni05AD
 
 	- uni05AA
 
-	- uni059A
+	- uni05C2
 
-	- uni05B3
+	- uni05A9
 
-	- uni05C1
+	- uni059D
 
-	- uni05A5
+	- uni05B6
 
-	- uni05C5
-
-	- uni05AB
-
-	- uni0597 
+	- uni0593 
 
 	- And 42 more.
 
@@ -283,16 +192,16 @@ Use -F or --full-lists to disable shortening of long lists. [code: unattached-do
 
 
 * ⚠ **WARN** Following glyphs differ greatly from Google Fonts version:
-	* uniFB3A
-	* uniFB28
-	* uniFB1D
-	* uni05D7
+	* uniFB26
+	* uni05EA
 	* uniFB3B
-	* uniFB32
-	* uni05E6
-	* uni05D8
-	* uniFB38
-	* uni05F2 and 34 more.
+	* uni05E1
+	* uniFB28
+	* uniFB46
+	* uniFB35
+	* uniFB41
+	* uni05D5
+	* uni05E6 and 34 more.
 
 Use -F or --full-lists to disable shortening of long lists.
 </div></details><details><summary>⚠ <b>WARN:</b> Ensure fonts have ScriptLangTags declared on the 'meta' table. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/meta/script_lang_tags">com.google.fonts/check/meta/script_lang_tags</a>)</summary><div>
@@ -427,31 +336,31 @@ But instead we have got:
 </div></details><details><summary>🔥 <b>FAIL:</b> OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/os2/use_typo_metrics">com.google.fonts/check/os2/use_typo_metrics</a>)</summary><div>
 
 
-* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSansHebrew/googlefonts/slim-variable-ttf/NotoSansHebrew[wght].ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Black.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Bold.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-ExtraBold.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-ExtraLight.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Light.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Medium.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Regular.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-SemiBold.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Thin.ttf', 'fonts/NotoSansHebrew/googlefonts/variable-ttf/NotoSansHebrew[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
+* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Black.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Bold.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-ExtraBold.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-ExtraLight.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Light.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Medium.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Regular.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-SemiBold.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Thin.ttf', 'fonts/NotoSansHebrew/googlefonts/variable-ttf/NotoSansHebrew[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
 </div></details><details><summary>🔥 <b>FAIL:</b> Ensure dotted circle glyph is present and can attach marks. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/dotted_circle">com.google.fonts/check/dotted_circle</a>)</summary><div>
 
 
 * 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
 
-	- uni0599
+	- uni059F
+
+	- uni0594
+
+	- uni05AF
 
 	- uni05AD
 
 	- uni05AA
 
-	- uni059A
+	- uni05C2
 
-	- uni05B3
+	- uni05A9
 
-	- uni05C1
+	- uni059D
 
-	- uni05A5
+	- uni05B6
 
-	- uni05C5
-
-	- uni05AB
-
-	- uni0597 
+	- uni0593 
 
 	- And 42 more.
 
@@ -460,16 +369,16 @@ Use -F or --full-lists to disable shortening of long lists. [code: unattached-do
 
 
 * ⚠ **WARN** Following glyphs differ greatly from Google Fonts version:
-	* uniFB3A
-	* uniFB28
-	* uniFB1D
-	* uniFB2E
-	* uni05D7
+	* uniFB26
+	* uni05EA
 	* uniFB3B
-	* uniFB32
-	* uni05E6
-	* uni05D0
-	* uni05D8 and 42 more.
+	* uni05E1
+	* hatafqamats_zerowidthjoiner_siluqlefthb
+	* uniFB2E
+	* uniFB28
+	* uniFB46
+	* uniFB2F
+	* uniFB35 and 42 more.
 
 Use -F or --full-lists to disable shortening of long lists.
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
@@ -609,31 +518,31 @@ But instead we have got:
 </div></details><details><summary>🔥 <b>FAIL:</b> OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/os2/use_typo_metrics">com.google.fonts/check/os2/use_typo_metrics</a>)</summary><div>
 
 
-* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSansHebrew/googlefonts/slim-variable-ttf/NotoSansHebrew[wght].ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Black.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Bold.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-ExtraBold.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-ExtraLight.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Light.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Medium.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Regular.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-SemiBold.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Thin.ttf', 'fonts/NotoSansHebrew/googlefonts/variable-ttf/NotoSansHebrew[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
+* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Black.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Bold.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-ExtraBold.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-ExtraLight.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Light.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Medium.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Regular.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-SemiBold.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Thin.ttf', 'fonts/NotoSansHebrew/googlefonts/variable-ttf/NotoSansHebrew[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
 </div></details><details><summary>🔥 <b>FAIL:</b> Ensure dotted circle glyph is present and can attach marks. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/dotted_circle">com.google.fonts/check/dotted_circle</a>)</summary><div>
 
 
 * 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
 
-	- uni0599
+	- uni059F
+
+	- uni0594
+
+	- uni05AF
 
 	- uni05AD
 
 	- uni05AA
 
-	- uni059A
+	- uni05C2
 
-	- uni05B3
+	- uni05A9
 
-	- uni05C1
+	- uni059D
 
-	- uni05A5
+	- uni05B6
 
-	- uni05C5
-
-	- uni05AB
-
-	- uni0597 
+	- uni0593 
 
 	- And 42 more.
 
@@ -642,16 +551,16 @@ Use -F or --full-lists to disable shortening of long lists. [code: unattached-do
 
 
 * ⚠ **WARN** Following glyphs differ greatly from Google Fonts version:
+	* uniFB26
+	* uni05EA
 	* uniFB28
-	* uni05D7
-	* uni05F2
+	* uniFB35
 	* uni05DD
-	* uniFB4A
-	* uniFB20
-	* uni05F1
-	* uniFB3E
+	* uni05D5
 	* uniFB4B
-	* uni05F0 and 7 more.
+	* uni05E7
+	* uni05F1
+	* uniFB4A and 7 more.
 
 Use -F or --full-lists to disable shortening of long lists.
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
@@ -737,31 +646,31 @@ But instead we have got:
 </div></details><details><summary>🔥 <b>FAIL:</b> OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/os2/use_typo_metrics">com.google.fonts/check/os2/use_typo_metrics</a>)</summary><div>
 
 
-* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSansHebrew/googlefonts/slim-variable-ttf/NotoSansHebrew[wght].ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Black.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Bold.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-ExtraBold.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-ExtraLight.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Light.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Medium.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Regular.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-SemiBold.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Thin.ttf', 'fonts/NotoSansHebrew/googlefonts/variable-ttf/NotoSansHebrew[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
+* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Black.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Bold.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-ExtraBold.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-ExtraLight.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Light.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Medium.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Regular.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-SemiBold.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Thin.ttf', 'fonts/NotoSansHebrew/googlefonts/variable-ttf/NotoSansHebrew[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
 </div></details><details><summary>🔥 <b>FAIL:</b> Ensure dotted circle glyph is present and can attach marks. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/dotted_circle">com.google.fonts/check/dotted_circle</a>)</summary><div>
 
 
 * 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
 
-	- uni0599
+	- uni059F
+
+	- uni0594
+
+	- uni05AF
 
 	- uni05AD
 
 	- uni05AA
 
-	- uni059A
+	- uni05C2
 
-	- uni05B3
+	- uni05A9
 
-	- uni05C1
+	- uni059D
 
-	- uni05A5
+	- uni05B6
 
-	- uni05C5
-
-	- uni05AB
-
-	- uni0597 
+	- uni0593 
 
 	- And 42 more.
 
@@ -770,16 +679,16 @@ Use -F or --full-lists to disable shortening of long lists. [code: unattached-do
 
 
 * ⚠ **WARN** Following glyphs differ greatly from Google Fonts version:
-	* uniFB28
-	* uniFB1D
+	* uniFB26
+	* uni05EA
 	* uniFB2E
-	* uni05D7
-	* uni05E6
-	* uni05D0
-	* uni05F2
+	* uniFB28
+	* uniFB2F
+	* uniFB35
 	* uni05DD
-	* uni05D9
-	* uniFB4A and 15 more.
+	* uni05D5
+	* uni05D0
+	* uni05E6 and 15 more.
 
 Use -F or --full-lists to disable shortening of long lists.
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
@@ -873,31 +782,31 @@ But instead we have got:
 </div></details><details><summary>🔥 <b>FAIL:</b> OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/os2/use_typo_metrics">com.google.fonts/check/os2/use_typo_metrics</a>)</summary><div>
 
 
-* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSansHebrew/googlefonts/slim-variable-ttf/NotoSansHebrew[wght].ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Black.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Bold.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-ExtraBold.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-ExtraLight.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Light.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Medium.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Regular.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-SemiBold.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Thin.ttf', 'fonts/NotoSansHebrew/googlefonts/variable-ttf/NotoSansHebrew[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
+* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Black.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Bold.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-ExtraBold.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-ExtraLight.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Light.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Medium.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Regular.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-SemiBold.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Thin.ttf', 'fonts/NotoSansHebrew/googlefonts/variable-ttf/NotoSansHebrew[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
 </div></details><details><summary>🔥 <b>FAIL:</b> Ensure dotted circle glyph is present and can attach marks. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/dotted_circle">com.google.fonts/check/dotted_circle</a>)</summary><div>
 
 
 * 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
 
-	- uni0599
+	- uni059F
+
+	- uni0594
+
+	- uni05AF
 
 	- uni05AD
 
 	- uni05AA
 
-	- uni059A
+	- uni05C2
 
-	- uni05B3
+	- uni05A9
 
-	- uni05C1
+	- uni059D
 
-	- uni05A5
+	- uni05B6
 
-	- uni05C5
-
-	- uni05AB
-
-	- uni0597 
+	- uni0593 
 
 	- And 42 more.
 
@@ -906,16 +815,16 @@ Use -F or --full-lists to disable shortening of long lists. [code: unattached-do
 
 
 * ⚠ **WARN** Following glyphs differ greatly from Google Fonts version:
-	* uniFB3A
-	* uniFB28
-	* uniFB1D
-	* uni05D7
+	* uniFB26
+	* uni05EA
 	* uniFB3B
+	* uniFB28
+	* uniFB35
+	* uni05D5
 	* uni05E6
-	* uniFB38
-	* uni05F2
-	* uni05E3
-	* uni05D9 and 20 more.
+	* uniFB4B
+	* uniFB39
+	* uni05B1 and 20 more.
 
 Use -F or --full-lists to disable shortening of long lists.
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
@@ -1029,31 +938,31 @@ But instead we have got:
 </div></details><details><summary>🔥 <b>FAIL:</b> OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/os2/use_typo_metrics">com.google.fonts/check/os2/use_typo_metrics</a>)</summary><div>
 
 
-* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSansHebrew/googlefonts/slim-variable-ttf/NotoSansHebrew[wght].ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Black.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Bold.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-ExtraBold.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-ExtraLight.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Light.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Medium.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Regular.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-SemiBold.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Thin.ttf', 'fonts/NotoSansHebrew/googlefonts/variable-ttf/NotoSansHebrew[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
+* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Black.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Bold.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-ExtraBold.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-ExtraLight.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Light.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Medium.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Regular.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-SemiBold.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Thin.ttf', 'fonts/NotoSansHebrew/googlefonts/variable-ttf/NotoSansHebrew[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
 </div></details><details><summary>🔥 <b>FAIL:</b> Ensure dotted circle glyph is present and can attach marks. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/dotted_circle">com.google.fonts/check/dotted_circle</a>)</summary><div>
 
 
 * 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
 
-	- uni0599
+	- uni059F
+
+	- uni0594
+
+	- uni05AF
 
 	- uni05AD
 
 	- uni05AA
 
-	- uni059A
+	- uni05C2
 
-	- uni05B3
+	- uni05A9
 
-	- uni05C1
+	- uni059D
 
-	- uni05A5
+	- uni05B6
 
-	- uni05C5
-
-	- uni05AB
-
-	- uni0597 
+	- uni0593 
 
 	- And 42 more.
 
@@ -1062,16 +971,16 @@ Use -F or --full-lists to disable shortening of long lists. [code: unattached-do
 
 
 * ⚠ **WARN** Following glyphs differ greatly from Google Fonts version:
-	* uniFB3A
-	* uniFB2C
-	* uniFB28
-	* uni05AF
-	* uniFB1D
-	* uni05D7
+	* uni05EA
 	* uniFB3B
-	* uniFB2B
-	* uni05D8
-	* hatafqamats_zerowidthjoiner_siluqlefthb and 34 more.
+	* uni05E1
+	* hatafqamats_zerowidthjoiner_siluqlefthb
+	* uniFB28
+	* uniFB2C
+	* uniFB35
+	* uniFB49
+	* uniFB41
+	* uni05D5 and 34 more.
 
 Use -F or --full-lists to disable shortening of long lists.
 </div></details><details><summary>⚠ <b>WARN:</b> Ensure fonts have ScriptLangTags declared on the 'meta' table. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/meta/script_lang_tags">com.google.fonts/check/meta/script_lang_tags</a>)</summary><div>
@@ -1150,31 +1059,31 @@ But instead we have got:
 </div></details><details><summary>🔥 <b>FAIL:</b> OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/os2/use_typo_metrics">com.google.fonts/check/os2/use_typo_metrics</a>)</summary><div>
 
 
-* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSansHebrew/googlefonts/slim-variable-ttf/NotoSansHebrew[wght].ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Black.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Bold.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-ExtraBold.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-ExtraLight.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Light.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Medium.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Regular.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-SemiBold.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Thin.ttf', 'fonts/NotoSansHebrew/googlefonts/variable-ttf/NotoSansHebrew[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
+* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Black.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Bold.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-ExtraBold.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-ExtraLight.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Light.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Medium.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Regular.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-SemiBold.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Thin.ttf', 'fonts/NotoSansHebrew/googlefonts/variable-ttf/NotoSansHebrew[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
 </div></details><details><summary>🔥 <b>FAIL:</b> Ensure dotted circle glyph is present and can attach marks. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/dotted_circle">com.google.fonts/check/dotted_circle</a>)</summary><div>
 
 
 * 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
 
-	- uni0599
+	- uni059F
+
+	- uni0594
+
+	- uni05AF
 
 	- uni05AD
 
 	- uni05AA
 
-	- uni059A
+	- uni05C2
 
-	- uni05B3
+	- uni05A9
 
-	- uni05C1
+	- uni059D
 
-	- uni05A5
+	- uni05B6
 
-	- uni05C5
-
-	- uni05AB
-
-	- uni0597 
+	- uni0593 
 
 	- And 42 more.
 
@@ -1183,16 +1092,16 @@ Use -F or --full-lists to disable shortening of long lists. [code: unattached-do
 
 
 * ⚠ **WARN** Following glyphs differ greatly from Google Fonts version:
-	* uniFB3A
-	* uniFB28
-	* uniFB1D
-	* uni05D7
+	* uniFB26
+	* uni05EA
 	* uniFB3B
+	* uniFB28
+	* uniFB46
+	* uniFB35
+	* uni05D5
 	* uni05E6
-	* uni05D8
-	* uniFB38
-	* uni05F2
-	* uni05E3 and 25 more.
+	* uniFB4B
+	* uniFB39 and 25 more.
 
 Use -F or --full-lists to disable shortening of long lists.
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
@@ -1330,31 +1239,31 @@ But instead we have got:
 </div></details><details><summary>🔥 <b>FAIL:</b> OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/os2/use_typo_metrics">com.google.fonts/check/os2/use_typo_metrics</a>)</summary><div>
 
 
-* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSansHebrew/googlefonts/slim-variable-ttf/NotoSansHebrew[wght].ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Black.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Bold.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-ExtraBold.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-ExtraLight.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Light.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Medium.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Regular.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-SemiBold.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Thin.ttf', 'fonts/NotoSansHebrew/googlefonts/variable-ttf/NotoSansHebrew[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
+* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Black.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Bold.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-ExtraBold.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-ExtraLight.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Light.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Medium.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Regular.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-SemiBold.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Thin.ttf', 'fonts/NotoSansHebrew/googlefonts/variable-ttf/NotoSansHebrew[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
 </div></details><details><summary>🔥 <b>FAIL:</b> Ensure dotted circle glyph is present and can attach marks. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/dotted_circle">com.google.fonts/check/dotted_circle</a>)</summary><div>
 
 
 * 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
 
-	- uni0599
+	- uni059F
+
+	- uni0594
+
+	- uni05AF
 
 	- uni05AD
 
 	- uni05AA
 
-	- uni059A
+	- uni05C2
 
-	- uni05B3
+	- uni05A9
 
-	- uni05C1
+	- uni059D
 
-	- uni05A5
+	- uni05B6
 
-	- uni05C5
-
-	- uni05AB
-
-	- uni0597 
+	- uni0593 
 
 	- And 42 more.
 
@@ -1363,15 +1272,15 @@ Use -F or --full-lists to disable shortening of long lists. [code: unattached-do
 
 
 * ⚠ **WARN** Following glyphs differ greatly from Google Fonts version:
+	* uniFB26
 	* uniFB28
-	* uni05D7
-	* uni05F2
 	* uni05DD
-	* uni05F1
-	* uni05F0
 	* uni05E7
-	* uni05DE
-	* uniFB1F and uniFB26
+	* uni05F1
+	* uni05F2
+	* uni05F0
+	* uniFB1F
+	* uni05DE and uni05D7
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
 
 
@@ -1422,14 +1331,10 @@ Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]
 	* exclamdown (U+00A1): L<<122.0,354.0>--<124.0,-186.0>> 
 
 	* And exclamdown (U+00A1): L<<96.0,-186.0>--<98.0,354.0>> [code: found-semi-vertical]
-</div></details><br></div></details><details><summary><b>[12] NotoSansHebrew[wdth,wght].ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
+</div></details><br></div></details><details><summary><b>[9] NotoSansHebrew[wdth,wght].ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Check Google Fonts glyph coverage. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyph_coverage">com.google.fonts/check/glyph_coverage</a>)</summary><div>
 
 
 * 💔 **ERROR** Failed with IndexError: list index out of range
-</div></details><details><summary>💔 <b>ERROR:</b> Validate STAT particle names and values match the fallback names in GFAxisRegistry.  (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/STAT/gf-axisregistry">com.google.fonts/check/STAT/gf-axisregistry</a>)</summary><div>
-
-
-* 💔 **ERROR** Failed with AttributeError: 'NoneType' object has no attribute 'toUnicode'
 </div></details><details><summary>🔥 <b>FAIL:</b> Check copyright namerecords match license file. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/license">com.google.fonts/check/name/license</a>)</summary><div>
 
 
@@ -1443,43 +1348,31 @@ But instead we have got:
 </div></details><details><summary>🔥 <b>FAIL:</b> OS/2.fsSelection bit 7 (USE_TYPO_METRICS) is set in all fonts. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/os2/use_typo_metrics">com.google.fonts/check/os2/use_typo_metrics</a>)</summary><div>
 
 
-* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSansHebrew/googlefonts/slim-variable-ttf/NotoSansHebrew[wght].ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Black.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Bold.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-ExtraBold.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-ExtraLight.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Light.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Medium.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Regular.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-SemiBold.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Thin.ttf', 'fonts/NotoSansHebrew/googlefonts/variable-ttf/NotoSansHebrew[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
-</div></details><details><summary>🔥 <b>FAIL:</b> Checking with fontTools.ttx (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/ttx-roundtrip">com.google.fonts/check/ttx-roundtrip</a>)</summary><div>
-
-
-* 🔥 **FAIL** name id 258 missing from name table
-* 🔥 **FAIL** name id 259 missing from name table
-* 🔥 **FAIL** name id 260 missing from name table
-* 🔥 **FAIL** name id 261 missing from name table
-* 🔥 **FAIL** name id 262 missing from name table
-* 🔥 **FAIL** name id 263 missing from name table
-* 🔥 **FAIL** name id 264 missing from name table
-* 🔥 **FAIL** name id 265 missing from name table
-* 🔥 **FAIL** name id 266 missing from name table
+* 🔥 **FAIL** OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Black.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Bold.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-ExtraBold.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-ExtraLight.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Light.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Medium.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Regular.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-SemiBold.ttf', 'fonts/NotoSansHebrew/googlefonts/ttf/NotoSansHebrew-Thin.ttf', 'fonts/NotoSansHebrew/googlefonts/variable-ttf/NotoSansHebrew[wdth,wght].ttf']. [code: missing-os2-fsselection-bit7]
 </div></details><details><summary>🔥 <b>FAIL:</b> Ensure dotted circle glyph is present and can attach marks. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/dotted_circle">com.google.fonts/check/dotted_circle</a>)</summary><div>
 
 
 * 🔥 **FAIL** The following glyphs could not be attached to the dotted circle glyph:
 
-	- uni0599
+	- uni059F
+
+	- uni0594
+
+	- uni05AF
 
 	- uni05AD
 
 	- uni05AA
 
-	- uni059A
+	- uni05C2
 
-	- uni05B3
+	- uni05A9
 
-	- uni05C1
+	- uni059D
 
-	- uni05A5
+	- uni05B6
 
-	- uni05C5
-
-	- uni05AB
-
-	- uni0597 
+	- uni0593 
 
 	- And 42 more.
 
@@ -1492,14 +1385,6 @@ Use -F or --full-lists to disable shortening of long lists. [code: unattached-do
 
 
 * ⚠ **WARN** This font file does not have a 'meta' table. [code: lacks-meta-table]
-</div></details><details><summary>⚠ <b>WARN:</b> Checking with ots-sanitize. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/ots">com.google.fonts/check/ots</a>)</summary><div>
-
-
-* ⚠ **WARN** ots-sanitize passed this file, however warnings were printed:
-
-ERROR: STAT: Invalid nameID: 258
-ERROR: Table discarded
- [code: ots-sanitize-warn]
 </div></details><details><summary>⚠ <b>WARN:</b> Glyph names are all valid? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/valid_glyphnames">com.google.fonts/check/valid_glyphnames</a>)</summary><div>
 
 
@@ -1517,8 +1402,8 @@ Use -F or --full-lists to disable shortening of long lists. [code: mark-chars]
 
 | 💔 ERROR | 🔥 FAIL | ⚠ WARN | 💤 SKIP | ℹ INFO | 🍞 PASS | 🔎 DEBUG |
 |:-----:|:----:|:----:|:----:|:----:|:----:|:----:|
-| 13 | 52 | 77 | 1233 | 69 | 991 | 0 |
-| 1% | 2% | 3% | 51% | 3% | 41% | 0% |
+| 10 | 44 | 72 | 1130 | 62 | 897 | 0 |
+| 0% | 2% | 3% | 51% | 3% | 40% | 0% |
 
 **Note:** The following loglevels were omitted in this report:
 * **SKIP**
