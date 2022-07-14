@@ -8,7 +8,7 @@ DisplayStrings = (
 "/lamed-hb/qamats-hb/hiriq-hb/hiriq-hb.alt/finalmem-hb/finalmem-hb_hiriq-hb.alt",
 "/holam-hb/alef-hb/bet-hb/gimel-hb/dalet-hb/he-hb/vav-hb/holamhaser-hb/zayin-hb/het-hb/tet-hb/yod-hb/finalkaf-hb/kaf-hb/lamed-hb/finalmem-hb/mem-hb/finalnun-hb/nun-hb/samekh-hb/ayin-hb/finalpe-hb/pe-hb/finaltsadi-hb/tsadi-hb/qof-hb/resh-hb/holam-hb/shin-hb/sindot-hb/tav-hb \012/lamed-hb/dalet-hb/zayin-hb/finalkaf-hb/kaf-hb/finalnun-hb/samekh-hb/finalpe-hb/pe-hb/finaltsadi-hb/resh-hb"
 );
-copyright = "Copyright 2015-2021 Google Inc. All Rights Reserved.";
+copyright = "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/hebrew)";
 customParameters = (
 {
 name = glyphOrder;
@@ -197,11 +197,11 @@ value = "Designed by Monotype design team.";
 },
 {
 name = license;
-value = "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.";
+value = "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL";
 },
 {
 name = licenseURL;
-value = "http://scripts.sil.org/OFL";
+value = "https://scripts.sil.org/OFL";
 },
 {
 name = vendorID;
@@ -213,20 +213,11 @@ value = "Noto is a trademark of Google Inc.";
 },
 {
 name = versionString;
-value = "Version 2.002";
+value = "Version 2.003";
 },
 {
-name = Axes;
-value = (
-{
-Name = Weight;
-Tag = wght;
-},
-{
-Name = Width;
-Tag = wdth;
-}
-);
+name = "Use Typo Metrics";
+value = 1;
 }
 );
 date = "2021-08-01 17:52:00 +0000";
@@ -48612,5 +48603,5 @@ manufacturer = "Monotype Imaging Inc.";
 manufacturerURL = "http://www.google.com/get/noto/";
 unitsPerEm = 1000;
 versionMajor = 2;
-versionMinor = 2;
+versionMinor = 3;
 }
