@@ -1,12 +1,12 @@
 {
-.appVersion = "1357";
+.appVersion = "3109";
 DisplayStrings = (
 "/he-hb/lamed-hb/yod-hb/lamed-hb/he-hb/space/shin-hb/space/sindot-hb/space/holam-hb/space/holamhaser-hb/space/lamed-hb/vav-hb/holamhaser-hb/space/kaf-hb/vav-hb/kaf-hb/bet-hb/het-hb/siluqleft-hb/hatafsegol_zerowidthjoiner_siluqleft-hb/hatafpatah_zerowidthjoiner_siluqleft-hb/hatafqamats_zerowidthjoiner_siluqleft-hb",
 "/segolta-hb",
 "/uni25CC",
 "/alef-hb/space/holam-hb \012/bet-hb/holam-hb \012/gimel-hb/holam-hb \012/dalet-hb/holam-hb \012/he-hb/holam-hb \012/vav-hb/holam-hb \012/zayin-hb/holam-hb \012/het-hb/holam-hb \012/tet-hb/holam-hb \012/yod-hb/holam-hb \012/finalkaf-hb/holam-hb \012/kaf-hb/holam-hb \012/lamed-hb/holam-hb \012/finalmem-hb/holam-hb \012/mem-hb/holam-hb \012/finalnun-hb/holam-hb \012/nun-hb/holam-hb \012/samekh-hb/holam-hb \012/ayin-hb/holam-hb \012/finalpe-hb/holam-hb \012/pe-hb/holam-hb \012/finaltsadi-hb/holam-hb \012/tsadi-hb/holam-hb \012/qof-hb/holam-hb \012/resh-hb/holam-hb \012/shin-hb/holam-hb \012/tav-hb/holam-hb \012/u034F",
 "/lamed-hb/qamats-hb/hiriq-hb/hiriq-hb.alt/finalmem-hb/finalmem-hb_hiriq-hb.alt",
-"/holam-hb/alef-hb/bet-hb/gimel-hb/dalet-hb/he-hb/vav-hb/holamhaser-hb/zayin-hb/het-hb/tet-hb/yod-hb/finalkaf-hb/kaf-hb/lamed-hb/finalmem-hb/mem-hb/finalnun-hb/nun-hb/samekh-hb/ayin-hb/finalpe-hb/pe-hb/finaltsadi-hb/tsadi-hb/qof-hb/resh-hb/holam-hb/shin-hb/sindot-hb/tav-hb \012/lamed-hb/dalet-hb/zayin-hb/finalkaf-hb/kaf-hb/finalnun-hb/samekh-hb/finalpe-hb/pe-hb/finaltsadi-hb/resh-hb"
+"/uni25CC/alef-hb/bet-hb/gimel-hb/dalet-hb/he-hb/vav-hb/holamhaser-hb/zayin-hb/het-hb/tet-hb/yod-hb/finalkaf-hb/kaf-hb/lamed-hb/finalmem-hb/mem-hb/finalnun-hb/nun-hb/samekh-hb/ayin-hb/finalpe-hb/pe-hb/finaltsadi-hb/tsadi-hb/qof-hb/resh-hb/holam-hb/shin-hb/sindot-hb/tav-hb \012/lamed-hb/dalet-hb/zayin-hb/finalkaf-hb/kaf-hb/finalnun-hb/samekh-hb/finalpe-hb/pe-hb/finaltsadi-hb/resh-hb"
 );
 copyright = "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/hebrew)";
 customParameters = (
@@ -192,6 +192,10 @@ name = "Has WWS Names";
 value = 1;
 },
 {
+name = "Use Typo Metrics";
+value = 1;
+},
+{
 name = description;
 value = "Designed by Monotype design team.";
 },
@@ -216,8 +220,17 @@ name = versionString;
 value = "Version 2.003";
 },
 {
-name = "Use Typo Metrics";
-value = 1;
+name = Axes;
+value = (
+{
+Name = Weight;
+Tag = wght;
+},
+{
+Name = Width;
+Tag = wdth;
+}
+);
 }
 );
 date = "2021-08-01 17:52:00 +0000";
@@ -3755,9 +3768,39 @@ unicode = 20AA;
 },
 {
 glyphname = uni25CC;
-lastChange = "2016-07-07 18:36:03 +0000";
+lastChange = "2022-07-15 07:34:55 +0000";
 layers = (
 {
+anchors = (
+{
+name = bottom;
+position = "{468, 7}";
+},
+{
+name = bottomleft;
+position = "{105, 0}";
+},
+{
+name = center;
+position = "{329, 282}";
+},
+{
+name = hiriq;
+position = "{666, 0}";
+},
+{
+name = top;
+position = "{439, 528}";
+},
+{
+name = topleft;
+position = "{69, 528}";
+},
+{
+name = topright;
+position = "{620, 528}";
+}
+);
 layerId = "1F954AD7-537E-453D-9D07-161C7E95D0AA";
 paths = (
 {
@@ -4036,6 +4079,36 @@ nodes = (
 width = 594;
 },
 {
+anchors = (
+{
+name = bottom;
+position = "{385, 8}";
+},
+{
+name = bottomleft;
+position = "{71, 0}";
+},
+{
+name = center;
+position = "{275, 288}";
+},
+{
+name = hiriq;
+position = "{627, 0}";
+},
+{
+name = top;
+position = "{371, 536}";
+},
+{
+name = topleft;
+position = "{29, 536}";
+},
+{
+name = topright;
+position = "{589, 536}";
+}
+);
 layerId = "0C04772A-F31D-4E86-90EF-3402D1EA39CA";
 paths = (
 {
@@ -4314,6 +4387,36 @@ nodes = (
 width = 594;
 },
 {
+anchors = (
+{
+name = bottom;
+position = "{352, 8}";
+},
+{
+name = bottomleft;
+position = "{38, 0}";
+},
+{
+name = center;
+position = "{250, 293}";
+},
+{
+name = hiriq;
+position = "{602, 0}";
+},
+{
+name = top;
+position = "{341, 546}";
+},
+{
+name = topleft;
+position = "{19, 546}";
+},
+{
+name = topright;
+position = "{560, 546}";
+}
+);
 layerId = "206B8059-80C9-426C-870D-7DCC5D63B771";
 paths = (
 {
@@ -4592,6 +4695,36 @@ nodes = (
 width = 594;
 },
 {
+anchors = (
+{
+name = bottom;
+position = "{332, 8}";
+},
+{
+name = bottomleft;
+position = "{49, 0}";
+},
+{
+name = center;
+position = "{232, 293}";
+},
+{
+name = hiriq;
+position = "{590, 0}";
+},
+{
+name = top;
+position = "{332, 553}";
+},
+{
+name = topleft;
+position = "{15, 553}";
+},
+{
+name = topright;
+position = "{539, 553}";
+}
+);
 layerId = "3FB868F8-5CDC-4A46-BA32-95627737ABE0";
 paths = (
 {
@@ -4870,6 +5003,36 @@ nodes = (
 width = 594;
 },
 {
+anchors = (
+{
+name = bottom;
+position = "{332, 8}";
+},
+{
+name = bottomleft;
+position = "{49, 0}";
+},
+{
+name = center;
+position = "{232, 293}";
+},
+{
+name = hiriq;
+position = "{590, 0}";
+},
+{
+name = top;
+position = "{332, 553}";
+},
+{
+name = topleft;
+position = "{15, 553}";
+},
+{
+name = topright;
+position = "{539, 553}";
+}
+);
 layerId = "BD31AAF9-E65B-4A30-ACC0-7018B0C27C60";
 paths = (
 {
@@ -5148,6 +5311,36 @@ nodes = (
 width = 594;
 },
 {
+anchors = (
+{
+name = bottom;
+position = "{371, 8}";
+},
+{
+name = bottomleft;
+position = "{54, 0}";
+},
+{
+name = center;
+position = "{256, 283}";
+},
+{
+name = hiriq;
+position = "{617, 0}";
+},
+{
+name = top;
+position = "{368, 536}";
+},
+{
+name = topleft;
+position = "{80, 536}";
+},
+{
+name = topright;
+position = "{565, 536}";
+}
+);
 layerId = "E193C3F6-581C-4255-BA06-39B2C55FEA85";
 paths = (
 {
@@ -5426,6 +5619,36 @@ nodes = (
 width = 594;
 },
 {
+anchors = (
+{
+name = bottom;
+position = "{351, 8}";
+},
+{
+name = bottomleft;
+position = "{29, 0}";
+},
+{
+name = center;
+position = "{237, 287}";
+},
+{
+name = hiriq;
+position = "{597, 0}";
+},
+{
+name = top;
+position = "{342, 546}";
+},
+{
+name = topleft;
+position = "{18, 546}";
+},
+{
+name = topright;
+position = "{537, 546}";
+}
+);
 layerId = "4D9C3FAB-40EB-4CCF-A752-6D6FE9920038";
 paths = (
 {
@@ -5704,6 +5927,36 @@ nodes = (
 width = 594;
 },
 {
+anchors = (
+{
+name = bottom;
+position = "{339, 8}";
+},
+{
+name = bottomleft;
+position = "{44, 0}";
+},
+{
+name = center;
+position = "{219, 290}";
+},
+{
+name = hiriq;
+position = "{576, 0}";
+},
+{
+name = top;
+position = "{337, 553}";
+},
+{
+name = topleft;
+position = "{15, 553}";
+},
+{
+name = topright;
+position = "{521, 553}";
+}
+);
 layerId = "AD6F6DAA-2D58-4E1D-98AF-ACAAF76D7B9E";
 paths = (
 {
