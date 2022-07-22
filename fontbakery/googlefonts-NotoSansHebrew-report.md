@@ -22,16 +22,16 @@ Fontbakery version: 0.8.9
 
 
 * ⚠ **WARN** Following glyphs differ greatly from Google Fonts version:
-	* uniFB35
-	* uniFB20
+	* uni05EA
+	* uni05D1
+	* uniFB34
+	* uniFB41
+	* uniFB46
 	* uniFB4A
-	* uni05DB
-	* uni05D8
+	* uni05E3
+	* uniFB1D
 	* uni05D7
-	* uniFB3A
-	* uniFB2F
-	* uni05E8
-	* uniFB44 and 49 more.
+	* uni05D9 and 49 more.
 
 Use -F or --full-lists to disable shortening of long lists.
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
@@ -103,16 +103,16 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-jaggy-s
 
 
 * ⚠ **WARN** Following glyphs differ greatly from Google Fonts version:
-	* uniFB35
-	* uniFB20
+	* uni05EA
+	* uni05D1
+	* uniFB41
+	* uniFB46
 	* uniFB4A
-	* uni05DB
-	* uni05D8
+	* uni05E3
+	* uniFB1D
 	* uni05D7
-	* uniFB3A
-	* uni05E8
-	* uniFB44
-	* uni05F1 and 33 more.
+	* uni05D9
+	* uniFB33 and 33 more.
 
 Use -F or --full-lists to disable shortening of long lists.
 </div></details><details><summary>⚠ <b>WARN:</b> Ensure fonts have ScriptLangTags declared on the 'meta' table. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/meta/script_lang_tags">com.google.fonts/check/meta/script_lang_tags</a>)</summary><div>
@@ -233,16 +233,16 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-jaggy-s
 
 
 * ⚠ **WARN** Following glyphs differ greatly from Google Fonts version:
-	* uniFB35
-	* uniFB20
+	* uni05EA
+	* uni05D1
+	* uniFB41
+	* uniFB46
 	* uniFB4A
-	* uni05DB
-	* uni05D8
+	* uni05E3
+	* uniFB1D
 	* uni05D7
-	* uniFB3A
-	* uniFB2F
-	* uni05E8
-	* uniFB44 and 40 more.
+	* uni05D9
+	* uniFB33 and 40 more.
 
 Use -F or --full-lists to disable shortening of long lists.
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
@@ -368,16 +368,16 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-short-s
 
 
 * ⚠ **WARN** Following glyphs differ greatly from Google Fonts version:
-	* uniFB35
-	* uniFB20
+	* uniFB3E
+	* uni05EA
 	* uniFB4A
 	* uni05D7
-	* uni05F1
-	* uniFB28
 	* uni05E7
-	* uniFB26
+	* uniFB28
+	* uni05F0
 	* uni05D5
-	* uniFB4B and 7 more.
+	* uni05F2
+	* uniFB1F and 7 more.
 
 Use -F or --full-lists to disable shortening of long lists.
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
@@ -449,16 +449,16 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-short-s
 
 
 * ⚠ **WARN** Following glyphs differ greatly from Google Fonts version:
-	* uniFB35
-	* uniFB20
+	* uniFB3E
+	* uni05EA
 	* uniFB4A
-	* uni05D7
-	* uniFB2F
-	* uni05F1
-	* uniFB28
-	* uni05E7
 	* uniFB1D
-	* uniFB26 and 15 more.
+	* uni05D7
+	* uni05D9
+	* uniFB23
+	* uni05E7
+	* uniFB28
+	* uniFB39 and 15 more.
 
 Use -F or --full-lists to disable shortening of long lists.
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
@@ -538,16 +538,16 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-short-s
 
 
 * ⚠ **WARN** Following glyphs differ greatly from Google Fonts version:
-	* uniFB35
-	* uniFB20
+	* uni05EA
 	* uniFB4A
-	* uni059F
+	* uni05E3
+	* uniFB1D
 	* uni05D7
-	* uniFB3A
-	* uniFB44
-	* uni05F1
+	* uni05D9
 	* uniFB28
-	* uniFB43 and 19 more.
+	* uniFB39
+	* uni05F0
+	* uni05D5 and 19 more.
 
 Use -F or --full-lists to disable shortening of long lists.
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
@@ -647,16 +647,16 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-short-s
 
 
 * ⚠ **WARN** Following glyphs differ greatly from Google Fonts version:
-	* uniFB35
-	* uni059F
-	* uni05DB
-	* uni05D8
+	* uni05EA
+	* uniFB2C
+	* uniFB41
+	* uni05E3
+	* uniFB1D
 	* uni05D7
-	* uniFB3A
-	* uni05A9
-	* uni05A0
-	* uniFB44
-	* uni05F1 and 31 more.
+	* uni05D9
+	* uniFB28
+	* uniFB39
+	* uni05F0 and 31 more.
 
 Use -F or --full-lists to disable shortening of long lists.
 </div></details><details><summary>⚠ <b>WARN:</b> Ensure fonts have ScriptLangTags declared on the 'meta' table. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/meta/script_lang_tags">com.google.fonts/check/meta/script_lang_tags</a>)</summary><div>
@@ -721,16 +721,16 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-short-s
 
 
 * ⚠ **WARN** Following glyphs differ greatly from Google Fonts version:
-	* uniFB35
-	* uniFB20
+	* uni05EA
+	* uni05D1
+	* uniFB46
 	* uniFB4A
-	* uni059F
-	* uni05DB
-	* uni05D8
+	* uni05E3
+	* uniFB1D
 	* uni05D7
-	* uniFB3A
-	* uniFB44
-	* uni05F1 and 24 more.
+	* uni05D9
+	* uniFB28
+	* uniFB39 and 24 more.
 
 Use -F or --full-lists to disable shortening of long lists.
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
@@ -855,14 +855,14 @@ Use -F or --full-lists to disable shortening of long lists. [code: found-short-s
 
 * ⚠ **WARN** Following glyphs differ greatly from Google Fonts version:
 	* uni05D7
-	* uni05F1
-	* uniFB28
 	* uni05E7
-	* uniFB26
-	* uniFB1F
+	* uniFB28
+	* uni05F0
 	* uni05F2
+	* uniFB1F
+	* uniFB26
 	* uni05DE
-	* uni05F0 and uni05DD
+	* uni05F1 and uni05DD
 </div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
 
 
