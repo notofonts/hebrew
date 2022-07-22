@@ -1,8 +1,10 @@
 buildVariable: true
 familyName: Noto Rashi Hebrew
+category:
+- SERIF
 googleFonts: true
 includeSubsets:
-- from: Noto Sans
+- from: Noto Serif
   name: GF_Latin_Core
 sources:
 - NotoRashiHebrew.glyphs
