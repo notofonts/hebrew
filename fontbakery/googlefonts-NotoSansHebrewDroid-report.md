@@ -48,11 +48,11 @@ Fontbakery version: 0.8.9
 
 	- NULL
 
-	- uni00A0
+	- uni002D
 
-	- uniFB4F.salt 
+	- uni00A0 
 
-	- And uni002D
+	- And uniFB4F.salt
  [code: unreachable-glyphs]
 </div></details><details><summary>⚠ <b>WARN:</b> Check if each glyph has the recommended amount of contours. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/contour_count">com.google.fonts/check/contour_count</a>)</summary><div>
 
@@ -215,11 +215,11 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 	- NULL
 
-	- uni00A0
+	- uni002D
 
-	- uniFB4F.salt 
+	- uni00A0 
 
-	- And uni002D
+	- And uniFB4F.salt
  [code: unreachable-glyphs]
 </div></details><details><summary>⚠ <b>WARN:</b> Check if each glyph has the recommended amount of contours. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/contour_count">com.google.fonts/check/contour_count</a>)</summary><div>
 
@@ -368,11 +368,11 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 	- NULL
 
-	- uni00A0
+	- uni002D
 
-	- uniFB4F.salt 
+	- uni00A0 
 
-	- And uni002D
+	- And uniFB4F.salt
  [code: unreachable-glyphs]
 </div></details><details><summary>⚠ <b>WARN:</b> Check if each glyph has the recommended amount of contours. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/contour_count">com.google.fonts/check/contour_count</a>)</summary><div>
 
@@ -501,11 +501,11 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 	- NULL
 
-	- uni00A0
+	- uni002D
 
-	- uniFB4F.salt 
+	- uni00A0 
 
-	- And uni002D
+	- And uniFB4F.salt
  [code: unreachable-glyphs]
 </div></details><details><summary>⚠ <b>WARN:</b> Check if each glyph has the recommended amount of contours. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/universal.html#com.google.fonts/check/contour_count">com.google.fonts/check/contour_count</a>)</summary><div>
 
@@ -666,11 +666,11 @@ Please take a look at the conversation at https://github.com/googlefonts/fontbak
 
 	- NULL
 
-	- uni00A0
+	- uni002D
 
-	- uniFB4F.salt 
+	- uni00A0 
 
-	- And uni002D
+	- And uniFB4F.salt
  [code: unreachable-glyphs]
 </div></details><details><summary>⚠ <b>WARN:</b> Check mark characters are in GDEF mark glyph class. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/gdef.html#com.google.fonts/check/gdef_mark_chars">com.google.fonts/check/gdef_mark_chars</a>)</summary><div>
 
