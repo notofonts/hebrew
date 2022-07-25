@@ -218,7 +218,7 @@ value = "Noto is a trademark of Google Inc.";
 },
 {
 name = versionString;
-value = "Version 1.005";
+value = "Version 1.006";
 },
 {
 name = Axes;
@@ -14994,7 +14994,7 @@ layerId = "E2314B6E-5E7F-4CD2-8B1C-CC369A56056B";
 width = 0;
 }
 );
-note = ".null";
+note = .null;
 unicode = 0000;
 },
 {
@@ -25117,5 +25117,5 @@ manufacturer = "Google LLC";
 manufacturerURL = "http://www.google.com/get/noto/";
 unitsPerEm = 1000;
 versionMajor = 1;
-versionMinor = 5;
+versionMinor = 6;
 }
