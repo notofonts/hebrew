@@ -1,12 +1,12 @@
 {
-.appVersion = "3109";
+.appVersion = "3225";
 DisplayStrings = (
 "/he-hb/lamed-hb/yod-hb/lamed-hb/he-hb/space/shin-hb/space/sindot-hb/space/holam-hb/space/holamhaser-hb/space/lamed-hb/vav-hb/holamhaser-hb/space/kaf-hb/vav-hb/kaf-hb/bet-hb/het-hb/siluqleft-hb/hatafsegol_zerowidthjoiner_siluqleft-hb/hatafpatah_zerowidthjoiner_siluqleft-hb/hatafqamats_zerowidthjoiner_siluqleft-hb",
 "/segolta-hb",
 "/uni25CC",
 "/alef-hb/space/holam-hb \012/bet-hb/holam-hb \012/gimel-hb/holam-hb \012/dalet-hb/holam-hb \012/he-hb/holam-hb \012/vav-hb/holam-hb \012/zayin-hb/holam-hb \012/het-hb/holam-hb \012/tet-hb/holam-hb \012/yod-hb/holam-hb \012/finalkaf-hb/holam-hb \012/kaf-hb/holam-hb \012/lamed-hb/holam-hb \012/finalmem-hb/holam-hb \012/mem-hb/holam-hb \012/finalnun-hb/holam-hb \012/nun-hb/holam-hb \012/samekh-hb/holam-hb \012/ayin-hb/holam-hb \012/finalpe-hb/holam-hb \012/pe-hb/holam-hb \012/finaltsadi-hb/holam-hb \012/tsadi-hb/holam-hb \012/qof-hb/holam-hb \012/resh-hb/holam-hb \012/shin-hb/holam-hb \012/tav-hb/holam-hb \012/u034F",
 "/lamed-hb/qamats-hb/hiriq-hb/hiriq-hb.alt/finalmem-hb/finalmem-hb_hiriq-hb.alt",
-"/hatafpatah_zerowidthjoiner_siluqleft-hb/alef-hb/bet-hb/gimel-hb/dalet-hb/he-hb/vav-hb/holamhaser-hb/zayin-hb/het-hb/tet-hb/yod-hb/finalkaf-hb/kaf-hb/lamed-hb/finalmem-hb/mem-hb/finalnun-hb/nun-hb/samekh-hb/ayin-hb/finalpe-hb/pe-hb/finaltsadi-hb/tsadi-hb/qof-hb/resh-hb/holam-hb/shin-hb/sindot-hb/tav-hb \012/lamed-hb/dalet-hb/zayin-hb/finalkaf-hb/kaf-hb/finalnun-hb/samekh-hb/finalpe-hb/pe-hb/finaltsadi-hb/resh-hb"
+"/zaqefgadol-hb/alef-hb/bet-hb/gimel-hb/dalet-hb/he-hb/vav-hb/holamhaser-hb/zayin-hb/het-hb/tet-hb/yod-hb/finalkaf-hb/kaf-hb/lamed-hb/finalmem-hb/mem-hb/finalnun-hb/nun-hb/samekh-hb/ayin-hb/finalpe-hb/pe-hb/finaltsadi-hb/tsadi-hb/qof-hb/resh-hb/holam-hb/shin-hb/sindot-hb/tav-hb \012/lamed-hb/dalet-hb/zayin-hb/finalkaf-hb/kaf-hb/finalnun-hb/samekh-hb/finalpe-hb/pe-hb/finaltsadi-hb/resh-hb"
 );
 copyright = "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/hebrew)";
 customParameters = (
@@ -208,12 +208,12 @@ name = licenseURL;
 value = "https://scripts.sil.org/OFL";
 },
 {
-name = vendorID;
-value = GOOG;
-},
-{
 name = trademark;
 value = "Noto is a trademark of Google Inc.";
+},
+{
+name = vendorID;
+value = GOOG;
 },
 {
 name = versionString;
@@ -30175,7 +30175,7 @@ unicode = 0594;
 },
 {
 glyphname = "zaqefgadol-hb";
-lastChange = "2016-07-07 18:36:03 +0000";
+lastChange = "2023-11-23 07:28:28 +0000";
 layers = (
 {
 anchors = (
@@ -30363,9 +30363,6 @@ nodes = (
 {
 closed = 1;
 nodes = (
-"146 686 OFFCURVE",
-"169 673 OFFCURVE",
-"197 673 CURVE SMOOTH",
 "225 673 OFFCURVE",
 "248 686 OFFCURVE",
 "248 715 CURVE SMOOTH",
@@ -30374,15 +30371,15 @@ nodes = (
 "197 757 CURVE SMOOTH",
 "169 757 OFFCURVE",
 "146 743 OFFCURVE",
-"146 715 CURVE SMOOTH"
+"146 715 CURVE SMOOTH",
+"146 686 OFFCURVE",
+"169 673 OFFCURVE",
+"197 673 CURVE SMOOTH"
 );
 },
 {
 closed = 1;
 nodes = (
-"146 791 OFFCURVE",
-"168 778 OFFCURVE",
-"197 778 CURVE SMOOTH",
 "223 778 OFFCURVE",
 "248 791 OFFCURVE",
 "248 820 CURVE SMOOTH",
@@ -30391,7 +30388,10 @@ nodes = (
 "197 862 CURVE SMOOTH",
 "168 862 OFFCURVE",
 "146 848 OFFCURVE",
-"146 820 CURVE"
+"146 820 CURVE",
+"146 791 OFFCURVE",
+"168 778 OFFCURVE",
+"197 778 CURVE SMOOTH"
 );
 }
 );
@@ -30583,9 +30583,6 @@ nodes = (
 {
 closed = 1;
 nodes = (
-"146 684 OFFCURVE",
-"167 673 OFFCURVE",
-"191 673 CURVE SMOOTH",
 "216 673 OFFCURVE",
 "236 684 OFFCURVE",
 "236 710 CURVE SMOOTH",
@@ -30594,15 +30591,15 @@ nodes = (
 "191 747 CURVE SMOOTH",
 "167 747 OFFCURVE",
 "146 734 OFFCURVE",
-"146 710 CURVE SMOOTH"
+"146 710 CURVE SMOOTH",
+"146 684 OFFCURVE",
+"167 673 OFFCURVE",
+"191 673 CURVE SMOOTH"
 );
 },
 {
 closed = 1;
 nodes = (
-"146 777 OFFCURVE",
-"166 765 OFFCURVE",
-"191 765 CURVE SMOOTH",
 "214 765 OFFCURVE",
 "236 777 OFFCURVE",
 "236 802 CURVE SMOOTH",
@@ -30611,7 +30608,10 @@ nodes = (
 "191 839 CURVE SMOOTH",
 "166 839 OFFCURVE",
 "146 827 OFFCURVE",
-"146 802 CURVE"
+"146 802 CURVE",
+"146 777 OFFCURVE",
+"166 765 OFFCURVE",
+"191 765 CURVE SMOOTH"
 );
 }
 );
@@ -46902,7 +46902,7 @@ value = "Noto Sans Hebrew ExtLt";
 );
 interpolationWeight = 39;
 instanceInterpolations = {
-"0C04772A-F31D-4E86-90EF-3402D1EA39CA" = 0.20312;
+"0C04772A-F31D-4E86-90EF-3402D1EA39CA" = 0.20313;
 "1F954AD7-537E-453D-9D07-161C7E95D0AA" = 0.79688;
 };
 name = ExtraLight;
@@ -47872,7 +47872,7 @@ interpolationWeight = 39;
 interpolationWidth = 70;
 instanceInterpolations = {
 "BD31AAF9-E65B-4A30-ACC0-7018B0C27C60" = 0.79688;
-"E193C3F6-581C-4255-BA06-39B2C55FEA85" = 0.20312;
+"E193C3F6-581C-4255-BA06-39B2C55FEA85" = 0.20313;
 };
 name = "ExtraCondensed ExtraLight";
 weightClass = ExtraLight;
