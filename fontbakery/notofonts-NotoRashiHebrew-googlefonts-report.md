@@ -180,15 +180,15 @@ fontbakery version: 0.10.4
     subset declarations to METADATA.pb, or by editing the glyphset
     definitions.
 
- * U+02C7 CARON: try adding one of: canadian-aboriginal, yi, tifinagh
+ * U+02C7 CARON: try adding one of: tifinagh, yi, canadian-aboriginal
  * U+02C9 MODIFIER LETTER MACRON: not included in any glyphset definition
- * U+02D8 BREVE: try adding one of: canadian-aboriginal, yi
- * U+02D9 DOT ABOVE: try adding one of: canadian-aboriginal, yi
- * U+02DB OGONEK: try adding one of: canadian-aboriginal, yi
+ * U+02D8 BREVE: try adding one of: yi, canadian-aboriginal
+ * U+02D9 DOT ABOVE: try adding one of: yi, canadian-aboriginal
+ * U+02DB OGONEK: try adding one of: yi, canadian-aboriginal
  * U+02DD DOUBLE ACUTE ACCENT: not included in any glyphset definition
- * U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: coptic, math, cherokee, tifinagh
+ * U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: cherokee, tifinagh, coptic, math
  * U+0306 COMBINING BREVE: try adding one of: tifinagh, old-permic
- * U+0307 COMBINING DOT ABOVE: try adding one of: canadian-aboriginal, tifinagh, tai-le, math, malayalam, syriac, coptic, old-permic
+ * U+0307 COMBINING DOT ABOVE: try adding one of: tai-le, old-permic, syriac, math, tifinagh, coptic, malayalam, canadian-aboriginal
  * U+030A COMBINING RING ABOVE: try adding syriac
  * U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: cherokee, osage
  * U+030C COMBINING CARON: try adding one of: cherokee, tai-le
@@ -196,8 +196,8 @@ fontbakery version: 0.10.4
  * U+0326 COMBINING COMMA BELOW: not included in any glyphset definition
  * U+0327 COMBINING CEDILLA: not included in any glyphset definition
  * U+0328 COMBINING OGONEK: not included in any glyphset definition
- * U+200C ZERO WIDTH NON-JOINER: try adding one of: syloti-nagri, psalter-pahlavi, telugu, meetei-mayek, manichaean, devanagari, gurmukhi, sharada, siddham, phags-pa, sogdian, mandaic, sundanese, tagalog, tai-viet, rejang, avestan, khmer, tibetan, yi, malayalam, bengali, buhid, new-tai-lue, khudawadi, mongolian, pahawh-hmong, warang-citi, brahmi, saurashtra, takri, tai-tham, thai, kayah-li, duployan, tai-le, modi, kaithi, lepcha, tagbanwa, kharoshthi, mahajani, buginese, sinhala, tamil, javanese, nko, tifinagh, tirhuta, newa, cham, batak, gunjala-gondi, hanifi-rohingya, hatran, oriya, gujarati, hanunoo, thaana, grantha, kannada, chakma, limbu, myanmar, syriac, dogra, khojki, balinese
- * U+200D ZERO WIDTH JOINER: try adding one of: syloti-nagri, psalter-pahlavi, telugu, meetei-mayek, manichaean, devanagari, gurmukhi, sharada, siddham, phags-pa, sundanese, mandaic, tagalog, tai-viet, rejang, avestan, tibetan, yi, malayalam, bengali, buhid, new-tai-lue, khudawadi, mongolian, pahawh-hmong, warang-citi, brahmi, saurashtra, takri, tai-tham, thai, kayah-li, duployan, tai-le, modi, kaithi, lepcha, tagbanwa, kharoshthi, mahajani, buginese, sinhala, tamil, javanese, nko, old-hungarian, tifinagh, tirhuta, newa, cham, batak, gunjala-gondi, hanifi-rohingya, oriya, gujarati, hanunoo, thaana, grantha, kannada, chakma, limbu, myanmar, syriac, dogra, khojki, balinese
+ * U+200C ZERO WIDTH NON-JOINER: try adding one of: khojki, bengali, sharada, sogdian, kharoshthi, newa, avestan, tirhuta, gunjala-gondi, malayalam, siddham, thai, gujarati, gurmukhi, cham, khudawadi, new-tai-lue, syloti-nagri, tagbanwa, batak, meetei-mayek, takri, duployan, hatran, warang-citi, tibetan, buhid, tai-viet, mandaic, limbu, tai-le, tagalog, mongolian, syriac, javanese, tai-tham, dogra, kaithi, sundanese, telugu, tifinagh, lepcha, thaana, chakma, brahmi, kannada, kayah-li, hanifi-rohingya, grantha, yi, modi, khmer, tamil, buginese, devanagari, hanunoo, rejang, mahajani, pahawh-hmong, sinhala, psalter-pahlavi, oriya, myanmar, phags-pa, saurashtra, balinese, manichaean, nko
+ * U+200D ZERO WIDTH JOINER: try adding one of: khojki, bengali, sharada, kharoshthi, newa, avestan, tirhuta, gunjala-gondi, malayalam, siddham, thai, gujarati, gurmukhi, cham, khudawadi, new-tai-lue, syloti-nagri, tagbanwa, batak, old-hungarian, meetei-mayek, takri, duployan, warang-citi, tibetan, buhid, tai-viet, mandaic, limbu, tai-le, tagalog, mongolian, syriac, javanese, tai-tham, dogra, kaithi, sundanese, telugu, tifinagh, lepcha, thaana, chakma, brahmi, kannada, kayah-li, hanifi-rohingya, grantha, yi, modi, tamil, buginese, devanagari, hanunoo, rejang, mahajani, pahawh-hmong, sinhala, psalter-pahlavi, oriya, myanmar, phags-pa, saurashtra, balinese, manichaean, nko
  * U+200E LEFT-TO-RIGHT MARK: try adding one of: phags-pa, syriac, thaana, nko
  * U+200F RIGHT-TO-LEFT MARK: try adding one of: phags-pa, syriac, thaana, nko
  * U+FB1D HEBREW LETTER YOD WITH HIRIQ: not included in any glyphset definition
@@ -226,7 +226,7 @@ The dot of soft dotted characters _should_ disappear in other cases, for example
 
 Your font fully covers the following languages that require the soft-dotted feature: Dutch (Latn, 31,709,104 speakers), Lithuanian (Latn, 2,357,094 speakers). 
 
-Your font does *not* cover the following languages that require the soft-dotted feature: Ebira (Latn, 2,200,000 speakers), Aghem (Latn, 38,843 speakers), Belarusian (Cyrl, 10,064,517 speakers), Sar (Latn, 500,000 speakers), Lugbara (Latn, 2,200,000 speakers), Igbo (Latn, 27,823,640 speakers), Navajo (Latn, 166,319 speakers), Basaa (Latn, 332,940 speakers), Nateni (Latn, 100,000 speakers), Ejagham (Latn, 120,000 speakers), Kom (Latn, 360,685 speakers), Dan (Latn, 1,099,244 speakers), Gulay (Latn, 250,478 speakers), Mango (Latn, 77,000 speakers), Ma’di (Latn, 584,000 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Avokaya (Latn, 100,000 speakers), Koonzime (Latn, 40,000 speakers). [code: soft-dotted]
+Your font does *not* cover the following languages that require the soft-dotted feature: Avokaya (Latn, 100,000 speakers), Koonzime (Latn, 40,000 speakers), Navajo (Latn, 166,319 speakers), Dan (Latn, 1,099,244 speakers), Kom (Latn, 360,685 speakers), Sar (Latn, 500,000 speakers), Gulay (Latn, 250,478 speakers), Nateni (Latn, 100,000 speakers), Ma’di (Latn, 584,000 speakers), Ebira (Latn, 2,200,000 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Mango (Latn, 77,000 speakers), Belarusian (Cyrl, 10,064,517 speakers), Igbo (Latn, 27,823,640 speakers), Ejagham (Latn, 120,000 speakers), Aghem (Latn, 38,843 speakers), Lugbara (Latn, 2,200,000 speakers), Basaa (Latn, 332,940 speakers). [code: soft-dotted]
 </div></details><br></div></details>
 
 ### Summary
