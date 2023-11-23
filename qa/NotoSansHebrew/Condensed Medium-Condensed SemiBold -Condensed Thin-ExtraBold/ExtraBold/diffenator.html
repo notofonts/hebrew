@@ -1,0 +1,1947 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+<head>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>GFR - Glyphs</title>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <style type="text/css">
+    
+
+        html{
+	  font-family: sans-serif;
+	}
+    @font-face {
+        font-family: "Adobe NotDef";
+        src: url(https://cdn.jsdelivr.net/gh/adobe-fonts/adobe-notdef/AND-Regular.ttf);
+    }
+	.box-title{
+	  width: 100%;
+	  font-size: 8pt;
+	  font-weight: 700;
+	  border-top: 1px solid black;
+	  padding-top: 5px;
+	  margin-bottom: 10pt;
+	  display: block;
+	}
+	.box{
+	  margin-bottom: 20pt;
+	  width: 100%;
+	  float: left;
+	}
+	.box-text{
+	}
+	
+	#nav{
+	  position: fixed;
+	  right: 20px;
+	  z-index: 100;
+	}
+	#font-toggle{
+	}
+	.nav-item{
+		display: block;
+		cursor: pointer;
+		-webkit-user-select: none; /* Safari */        
+		-moz-user-select: none; /* Firefox */
+			-ms-user-select: none; /* IE10+/Edge */
+		user-select: none; /* Standard */
+		text-align: center;
+		color: white;
+		background-color: black;
+		display: block;
+		font-size: 9pt;
+		padding: 5px;
+		margin: 2px;
+	}
+	.tooltip {
+	position: relative;
+	display: inline-block;
+	border-bottom: 1px dotted black;
+	}
+
+	.tooltip .tooltiptext {
+	font-family: sans-serif;
+	visibility: hidden;
+	width: 500px;
+	background-color: black;
+	color: #fff;
+	text-align: left;
+	font-size: 12pt;
+	line-height: 15pt;
+	border-radius: 6px;
+	padding: 5px 0;
+
+	/* Position the tooltip */
+	position: absolute;
+	z-index: 1;
+	}
+
+	.tooltip:hover .tooltiptext {
+	padding: 10px;
+	visibility: visible;
+	}
+	.tooltipleft {
+		float:left;
+		width: 249px;
+	}
+	.tooltipright {
+		float:right;
+		width:250px;
+	}
+
+			/* Stuff needed for the table differ */
+            body {
+                font-family: Helvetica;
+            }
+            .node {
+                font-family: courier;
+                cursor: pointer;
+                position: relative;
+                left: 30px;
+                padding: 5px;
+                display: block;
+                border: 1px dashed grey;
+            }
+            .header {
+            font-weight: bold;
+            }
+            .attrib-old{
+                color: red;
+                cursor: text;
+            }
+            .attrib-new{
+                color: green;
+                cursor: text;
+            }
+            .leaf {
+            font-weight: bold;
+            }
+            .old .cell .new {
+            	display:  none;
+            }
+            .new .cell .old {
+            	display:  none;
+            }
+            .both .cell .old {
+            	opacity: 0.75;
+            	color:  red;
+            }
+            .both .cell .new {
+            	opacity: 0.75;
+            	position: absolute;
+            	top: 0;
+            	color:  green;
+            }
+			.spacer {
+				display:block;
+				float:left;
+				width:100%;
+			}
+
+	  
+	    @font-face{
+    src: url(old-NotoSansHebrew-ExtraBold.ttf);
+    font-family: "old font";
+    font-weight: 800;
+    
+    font-style: normal;
+}
+	  
+
+	  
+	    @font-face{
+    src: url(new-NotoSansHebrew-ExtraBold.ttf);
+    font-family: "new font";
+    font-weight: 800;
+    
+    font-style: normal;
+}
+	  
+
+	  
+
+	  
+	    .old-wght-400{
+    font-family: "old font", "Adobe NotDef";
+    font-weight: 400;
+    
+    font-style: normal;
+    font-variation-settings: "wght" 400;
+}
+	  
+
+	  
+	    .new-wght-400{
+    font-family: "new font", "Adobe NotDef";
+    font-weight: 400;
+    
+    font-style: normal;
+    font-variation-settings: "wght" 400;
+}
+	  
+
+	  
+	
+.cell{
+  z-index: -100;
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 5pt;
+  margin: 5pt;
+  width: 50pt;
+  line-height: 48.0px;
+}
+.cell-word{
+  z-index: -100;
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 5pt;
+  margin: 5pt;
+  line-height: 48.0px;
+}
+.cat-strings .cell {
+  clear: both;
+  position: static;
+  float: none;
+  text-align: left;
+}
+.box-title {
+  clear: both;
+}
+
+
+	   #ot-panel {
+		max-height: 400px;
+		overflow-y: scroll;
+		background: white;
+		padding: 10px;
+		display: none;
+	   }
+    </style>
+</head>
+<body>
+    <div id="nav">
+		
+			<div class="nav-item" id="font-toggle">old</div>
+		
+			<div class="nav-item" id="ot-button">OT features</div>
+			<div id="ot-panel">
+			</div>
+		
+	</div>
+    <div id="content">
+	<h2>
+<b>Diffenator</b>
+</h2>
+	
+  
+    <div class="box">
+    <div class="box-title">Tables</div>
+     <script>var fontdiff = {"glyf": {"glyphOrder": {"error": ["There are 141 changes, check manually!", ""]}}, "post": {"extraNames": {"error": ["There are 140 changes, check manually!", ""]}}, "head": {"checkSumAdjustment": [3496065412, 3355680160], "modified": [3740716719, 3783580629]}, "GDEF": {"table": {"LigCaretList": {"Coverage": {"glyphs": {"0": ["uniFB4F", "uni05F0"], "1": ["uni05F0", "uni05F1"], "2": ["uni05F1", "uni05F2"], "3": ["uni05F2", "uniFB4F"]}}, "LigGlyph": {"0": {"CaretValue": {"0": {"Coordinate": [299, 280]}}}, "1": {"CaretValue": {"0": {"Coordinate": [280, 265]}}}, "2": {"CaretValue": {"0": {"Coordinate": [265, 250]}}}, "3": {"CaretValue": {"0": {"Coordinate": [250, 351]}}}}}}}, "GPOS": {"table": {"LookupList": {"Lookup": {"0": {"SubTable": {"0": {"Coverage": {"glyphs": {"0": ["uni05E2", "uni05D1"], "1": ["uni05D1", "uni05D3"], "2": ["uni05D3", "uni05D4"], "3": ["uni05D4", "uni05D6"], "5": ["uni05DB", "uni05D8"], "6": ["uni05DC", "uni05D9"], "7": ["uni05E4", "uni05DB"], "8": ["uni05E7", "uni05DC"], "9": ["uni05E8", "uni05E1"], "10": ["uni05E1", "uni05E2"], "11": ["uni05E9", "uni05E4"], "12": ["uni05D8", "uni05E6"], "13": ["uni05E6", "uni05E7"], "14": ["uni05D9", "uni05E8"], "15": ["uni05D6", "uni05E9"]}}, "PairSet": {"0": {"PairValueRecord": {"0": {"Value1": {"XAdvance": [-11, -20], "XPlacement": [-11, -20]}}}}, "1": {"PairValueCount": [1, 8], "PairValueRecord": {"0": {"SecondGlyph": ["uni05E4", "uni05D1"], "Value1": {"XAdvance": [-20, -40], "XPlacement": [-20, -40]}}, "1": {"SecondGlyph": [null, "uni05D8"], "Value1": {"XPlacement": [null, -25], "XAdvance": [null, -25]}}, "2": {"SecondGlyph": [null, "uni05DA"], "Value1": {"XPlacement": [null, -50], "XAdvance": [null, -50]}}, "3": {"SecondGlyph": [null, "uni05DB"], "Value1": {"XPlacement": [null, -25], "XAdvance": [null, -25]}}, "4": {"SecondGlyph": [null, "uni05DE"], "Value1": {"XPlacement": [null, -11], "XAdvance": [null, -11]}}, "5": {"SecondGlyph": [null, "uni05E1"], "Value1": {"XPlacement": [null, -45], "XAdvance": [null, -45]}}, "6": {"SecondGlyph": [null, "uni05E3"], "Value1": {"XPlacement": [null, -23], "XAdvance": [null, -23]}}, "7": {"SecondGlyph": [null, "uni05E4"], "Value1": {"XPlacement": [null, -35], "XAdvance": [null, -35]}}}}, "2": {"PairValueCount": [8, 1], "PairValueRecord": {"0": {"SecondGlyph": ["uni05D1", "uni05DA"], "Value1": {"XAdvance": [-40, -11], "XPlacement": [-40, -11]}}, "1": {"SecondGlyph": ["uni05DA", null], "Value1": {"XPlacement": [-50, null], "XAdvance": [-50, null]}}, "2": {"SecondGlyph": ["uni05E3", null], "Value1": {"XPlacement": [-23, null], "XAdvance": [-23, null]}}, "3": {"SecondGlyph": ["uni05DB", null], "Value1": {"XPlacement": [-25, null], "XAdvance": [-25, null]}}, "4": {"SecondGlyph": ["uni05DE", null], "Value1": {"XPlacement": [-11, null], "XAdvance": [-11, null]}}, "5": {"SecondGlyph": ["uni05E4", null], "Value1": {"XPlacement": [-35, null], "XAdvance": [-35, null]}}, "6": {"SecondGlyph": ["uni05E1", null], "Value1": {"XPlacement": [-45, null], "XAdvance": [-45, null]}}, "7": {"SecondGlyph": ["uni05D8", null], "Value1": {"XPlacement": [-25, null], "XAdvance": [-25, null]}}}}, "3": {"PairValueRecord": {"0": {"SecondGlyph": ["uni05DA", "uni05E5"], "Value1": {"XAdvance": [-11, 5], "XPlacement": [-11, 5]}}}}, "5": {"PairValueCount": [4, 8], "PairValueRecord": {"0": {"SecondGlyph": ["uni05E3", "uni05D3"], "Value1": {"XAdvance": [-20, -9], "XPlacement": [-20, -9]}}, "1": {"SecondGlyph": ["uni05E4", "uni05D8"], "Value1": {"XAdvance": [-20, -9], "XPlacement": [-20, -9]}}, "2": {"SecondGlyph": ["uni05E1", "uni05DA"], "Value1": {"XAdvance": [-10, -34], "XPlacement": [-10, -34]}}, "3": {"SecondGlyph": ["uni05D8", "uni05DB"], "Value1": {"XAdvance": [-9, -15], "XPlacement": [-9, -15]}}, "4": {"SecondGlyph": [null, "uni05E1"], "Value1": {"XPlacement": [null, -9], "XAdvance": [null, -9]}}, "5": {"SecondGlyph": [null, "uni05E3"], "Value1": {"XPlacement": [null, -30], "XAdvance": [null, -30]}}, "6": {"SecondGlyph": [null, "uni05E4"], "Value1": {"XPlacement": [null, -14], "XAdvance": [null, -14]}}, "7": {"SecondGlyph": [null, "uni05E5"], "Value1": {"XPlacement": [null, -11], "XAdvance": [null, -11]}}}}, "6": {"PairValueCount": [13, 10], "PairValueRecord": {"0": {"Value1": {"XAdvance": [-11, -30], "XPlacement": [-11, -30]}}, "1": {"SecondGlyph": ["uni05DA", "uni05D7"], "Value1": {"XAdvance": [-30, -9], "XPlacement": [-30, -9]}}, "2": {"SecondGlyph": ["uni05DF", "uni05D8"], "Value1": {"XAdvance": [-11, -20], "XPlacement": [-11, -20]}}, "3": {"SecondGlyph": ["uni05E3", "uni05DB"], "Value1": {"XAdvance": [-45, -20], "XPlacement": [-45, -20]}}, "4": {"SecondGlyph": ["uni05D7", "uni05DD"], "Value1": {"XAdvance": [-11, -30], "XPlacement": [-11, -30]}}, "5": {"SecondGlyph": ["uni05DB", "uni05DE"], "Value1": {"XAdvance": [-25, -9], "XPlacement": [-25, -9]}}, "6": {"SecondGlyph": ["uni05DE", "uni05E1"], "Value1": {"XAdvance": [-11, -20], "XPlacement": [-11, -20]}}, "7": {"SecondGlyph": ["uni05E0", "uni05E4"], "Value1": {"XAdvance": [-11, -20], "XPlacement": [-11, -20]}}, "8": {"SecondGlyph": ["uni05E4", "uni05E8"], "Value1": {"XAdvance": [-14, -20], "XPlacement": [-14, -20]}}, "9": {"SecondGlyph": ["uni05E8", "uni05E9"], "Value1": {"XAdvance": [-11, -9], "XPlacement": [-11, -9]}}, "10": {"SecondGlyph": ["uni05E1", null], "Value1": {"XPlacement": [-35, null], "XAdvance": [-35, null]}}, "11": {"SecondGlyph": ["uni05EA", null], "Value1": {"XPlacement": [-16, null], "XAdvance": [-16, null]}}, "12": {"SecondGlyph": ["uni05D8", null], "Value1": {"XPlacement": [-15, null], "XAdvance": [-15, null]}}}}, "7": {"PairValueCount": [8, 4], "PairValueRecord": {"0": {"SecondGlyph": ["uni05DA", "uni05D8"], "Value1": {"XAdvance": [-15, -9], "XPlacement": [-15, -9]}}, "1": {"SecondGlyph": ["uni05E3", "uni05E1"], "Value1": {"XAdvance": [-29, -10], "XPlacement": [-29, -10]}}, "2": {"SecondGlyph": ["uni05DB", "uni05E3"], "Value1": {"XAdvance": [-9, -20], "XPlacement": [-9, -20]}}, "3": {"SecondGlyph": ["uni05DC", "uni05E4"], "Value1": {"XAdvance": [-9, -20], "XPlacement": [-9, -20]}}, "4": {"SecondGlyph": ["uni05E4", null], "Value1": {"XPlacement": [-5, null], "XAdvance": [-5, null]}}, "5": {"SecondGlyph": ["uni05E1", null], "Value1": {"XPlacement": [-20, null], "XAdvance": [-20, null]}}, "6": {"SecondGlyph": ["uni05E9", null], "Value1": {"XPlacement": [-9, null], "XAdvance": [-9, null]}}, "7": {"SecondGlyph": ["uni05D8", null], "Value1": {"XPlacement": [-9, null], "XAdvance": [-9, null]}}}}, "8": {"PairValueCount": [2, 13], "PairValueRecord": {"0": {"SecondGlyph": ["uni05E3", "uni05D1"]}, "1": {"SecondGlyph": ["uni05DC", "uni05D7"], "Value1": {"XAdvance": [-16, -11], "XPlacement": [-16, -11]}}, "2": {"SecondGlyph": [null, "uni05D8"], "Value1": {"XPlacement": [null, -15], "XAdvance": [null, -15]}}, "3": {"SecondGlyph": [null, "uni05DA"], "Value1": {"XPlacement": [null, -30], "XAdvance": [null, -30]}}, "4": {"SecondGlyph": [null, "uni05DB"], "Value1": {"XPlacement": [null, -25], "XAdvance": [null, -25]}}, "5": {"SecondGlyph": [null, "uni05DE"], "Value1": {"XPlacement": [null, -11], "XAdvance": [null, -11]}}, "6": {"SecondGlyph": [null, "uni05DF"], "Value1": {"XPlacement": [null, -11], "XAdvance": [null, -11]}}, "7": {"SecondGlyph": [null, "uni05E0"], "Value1": {"XPlacement": [null, -11], "XAdvance": [null, -11]}}, "8": {"SecondGlyph": [null, "uni05E1"], "Value1": {"XPlacement": [null, -35], "XAdvance": [null, -35]}}, "9": {"SecondGlyph": [null, "uni05E3"], "Value1": {"XPlacement": [null, -45], "XAdvance": [null, -45]}}, "10": {"SecondGlyph": [null, "uni05E4"], "Value1": {"XPlacement": [null, -14], "XAdvance": [null, -14]}}, "11": {"SecondGlyph": [null, "uni05E8"], "Value1": {"XPlacement": [null, -11], "XAdvance": [null, -11]}}, "12": {"SecondGlyph": [null, "uni05EA"], "Value1": {"XPlacement": [null, -16], "XAdvance": [null, -16]}}}}, "9": {"PairValueCount": [6, 9], "PairValueRecord": {"0": {"SecondGlyph": ["uni05DA", "uni05D8"], "Value1": {"XAdvance": [-29, -9], "XPlacement": [-29, -9]}}, "1": {"SecondGlyph": ["uni05E3", "uni05DA"], "Value1": {"XAdvance": [-40, -30], "XPlacement": [-40, -30]}}, "2": {"SecondGlyph": ["uni05E4", "uni05DB"], "Value1": {"XAdvance": [-35, -20], "XPlacement": [-35, -20]}}, "3": {"SecondGlyph": ["uni05E8", "uni05DC"], "Value1": {"XAdvance": [-20, -5], "XPlacement": [-20, -5]}}, "4": {"Value1": {"XAdvance": [-30, -10], "XPlacement": [-30, -10]}}, "5": {"SecondGlyph": ["uni05D8", "uni05E3"], "Value1": {"XAdvance": [-20, -11], "XPlacement": [-20, -11]}}, "6": {"SecondGlyph": [null, "uni05E4"], "Value1": {"XPlacement": [null, -20], "XAdvance": [null, -20]}}, "7": {"SecondGlyph": [null, "uni05E8"], "Value1": {"XPlacement": [null, -14], "XAdvance": [null, -14]}}, "8": {"SecondGlyph": [null, "uni05EA"], "Value1": {"XPlacement": [null, -16], "XAdvance": [null, -16]}}}}, "10": {"PairValueCount": [9, 1], "PairValueRecord": {"0": {"SecondGlyph": ["uni05DA", "uni05E4"], "Value1": {"XAdvance": [-30, -11], "XPlacement": [-30, -11]}}, "1": {"SecondGlyph": ["uni05E3", null], "Value1": {"XPlacement": [-11, null], "XAdvance": [-11, null]}}, "2": {"SecondGlyph": ["uni05DB", null], "Value1": {"XPlacement": [-20, null], "XAdvance": [-20, null]}}, "3": {"SecondGlyph": ["uni05DC", null], "Value1": {"XPlacement": [-5, null], "XAdvance": [-5, null]}}, "4": {"SecondGlyph": ["uni05E4", null], "Value1": {"XPlacement": [-20, null], "XAdvance": [-20, null]}}, "5": {"SecondGlyph": ["uni05E8", null], "Value1": {"XPlacement": [-14, null], "XAdvance": [-14, null]}}, "6": {"SecondGlyph": ["uni05E1", null], "Value1": {"XPlacement": [-10, null], "XAdvance": [-10, null]}}, "7": {"SecondGlyph": ["uni05EA", null], "Value1": {"XPlacement": [-16, null], "XAdvance": [-16, null]}}, "8": {"SecondGlyph": ["uni05D8", null], "Value1": {"XPlacement": [-9, null], "XAdvance": [-9, null]}}}}, "11": {"PairValueCount": [7, 8], "PairValueRecord": {"0": {"SecondGlyph": ["uni05DA", "uni05D8"], "Value1": {"XAdvance": [-35, -9], "XPlacement": [-35, -9]}}, "1": {"SecondGlyph": ["uni05E3", "uni05DA"], "Value1": {"XAdvance": [-11, -15], "XPlacement": [-11, -15]}}, "2": {"Value1": {"XAdvance": [-25, -9], "XPlacement": [-25, -9]}}, "3": {"SecondGlyph": ["uni05E4", "uni05DC"], "Value1": {"XAdvance": [-20, -9], "XPlacement": [-20, -9]}}, "4": {"SecondGlyph": ["uni05E8", "uni05E1"], "Value1": {"XAdvance": [-9, -20], "XPlacement": [-9, -20]}}, "5": {"SecondGlyph": ["uni05E1", "uni05E3"], "Value1": {"XAdvance": [-25, -29], "XPlacement": [-25, -29]}}, "6": {"SecondGlyph": ["uni05D8", "uni05E4"], "Value1": {"XAdvance": [-19, -5], "XPlacement": [-19, -5]}}, "7": {"SecondGlyph": [null, "uni05E9"], "Value1": {"XPlacement": [null, -9], "XAdvance": [null, -9]}}}}, "12": {"PairValueCount": [8, 2], "PairValueRecord": {"0": {"SecondGlyph": ["uni05D3", "uni05D0"], "Value1": {"XAdvance": [-9, -11], "XPlacement": [-9, -11]}}, "1": {"SecondGlyph": ["uni05DA", "uni05E1"], "Value1": {"XAdvance": [-34, -25], "XPlacement": [-34, -25]}}, "2": {"SecondGlyph": ["uni05E3", null], "Value1": {"XPlacement": [-30, null], "XAdvance": [-30, null]}}, "3": {"SecondGlyph": ["uni05E5", null], "Value1": {"XPlacement": [-11, null], "XAdvance": [-11, null]}}, "4": {"SecondGlyph": ["uni05DB", null], "Value1": {"XPlacement": [-15, null], "XAdvance": [-15, null]}}, "5": {"SecondGlyph": ["uni05E4", null], "Value1": {"XPlacement": [-14, null], "XAdvance": [-14, null]}}, "6": {"SecondGlyph": ["uni05E1", null], "Value1": {"XPlacement": [-9, null], "XAdvance": [-9, null]}}, "7": {"SecondGlyph": ["uni05D8", null], "Value1": {"XPlacement": [-9, null], "XAdvance": [-9, null]}}}}, "13": {"PairValueRecord": {"0": {"SecondGlyph": ["uni05D0", "uni05DC"], "Value1": {"XAdvance": [-11, -16], "XPlacement": [-11, -16]}}, "1": {"SecondGlyph": ["uni05E1", "uni05E3"], "Value1": {"XAdvance": [-25, -11], "XPlacement": [-25, -11]}}}}, "14": {"PairValueCount": [10, 6], "PairValueRecord": {"0": {"SecondGlyph": ["uni05D1", "uni05D8"], "Value1": {"XAdvance": [-30, -20], "XPlacement": [-30, -20]}}, "1": {"SecondGlyph": ["uni05DD", "uni05DA"], "Value1": {"XAdvance": [-30, -29], "XPlacement": [-30, -29]}}, "2": {"SecondGlyph": ["uni05D7", "uni05E1"], "Value1": {"XAdvance": [-9, -30], "XPlacement": [-9, -30]}}, "3": {"SecondGlyph": ["uni05DB", "uni05E3"], "Value1": {"XAdvance": [-20, -40], "XPlacement": [-20, -40]}}, "4": {"SecondGlyph": ["uni05DE", "uni05E4"], "Value1": {"XAdvance": [-9, -35], "XPlacement": [-9, -35]}}, "5": {"SecondGlyph": ["uni05E4", "uni05E8"]}, "6": {"SecondGlyph": ["uni05E8", null], "Value1": {"XPlacement": [-20, null], "XAdvance": [-20, null]}}, "7": {"SecondGlyph": ["uni05E1", null], "Value1": {"XPlacement": [-20, null], "XAdvance": [-20, null]}}, "8": {"SecondGlyph": ["uni05E9", null], "Value1": {"XPlacement": [-9, null], "XAdvance": [-9, null]}}, "9": {"SecondGlyph": ["uni05D8", null], "Value1": {"XPlacement": [-20, null], "XAdvance": [-20, null]}}}}, "15": {"PairValueCount": [1, 7], "PairValueRecord": {"0": {"SecondGlyph": ["uni05E5", "uni05D8"], "Value1": {"XAdvance": [5, -19], "XPlacement": [5, -19]}}, "1": {"SecondGlyph": [null, "uni05DA"], "Value1": {"XPlacement": [null, -35], "XAdvance": [null, -35]}}, "2": {"SecondGlyph": [null, "uni05DB"], "Value1": {"XPlacement": [null, -25], "XAdvance": [null, -25]}}, "3": {"SecondGlyph": [null, "uni05E1"], "Value1": {"XPlacement": [null, -25], "XAdvance": [null, -25]}}, "4": {"SecondGlyph": [null, "uni05E3"], "Value1": {"XPlacement": [null, -11], "XAdvance": [null, -11]}}, "5": {"SecondGlyph": [null, "uni05E4"], "Value1": {"XPlacement": [null, -20], "XAdvance": [null, -20]}}, "6": {"SecondGlyph": [null, "uni05E8"], "Value1": {"XPlacement": [null, -9], "XAdvance": [null, -9]}}}}}}}}, "1": {"SubTable": {"0": {"BaseArray": {"BaseRecord": {"0": {"BaseAnchor": {"0": {"YCoordinate": [0, 549], "XCoordinate": [43, 550]}, "1": {"YCoordinate": [293, 0], "XCoordinate": [242, 43]}, "5": {"YCoordinate": [0, 293], "XCoordinate": [596, 242]}, "6": {"YCoordinate": [549, 0], "XCoordinate": [550, 596]}}}, "1": {"BaseAnchor": {"0": {"Format": [1, null], "XCoordinate": [128, null], "YCoordinate": [0, null]}, "1": {"YCoordinate": [107, 0], "XCoordinate": [305, 128]}, "5": {"Format": [null, 1], "XCoordinate": [null, 305], "YCoordinate": [null, 107]}}}, "2": {"BaseAnchor": {"0": {"Format": [1, null], "XCoordinate": [128, null], "YCoordinate": [0, null]}, "1": {"YCoordinate": [107, 0], "XCoordinate": [305, 128]}, "5": {"Format": [null, 1], "XCoordinate": [null, 305], "YCoordinate": [null, 107]}}}, "3": {"BaseAnchor": {"0": {"Format": [1, null], "XCoordinate": [128, null], "YCoordinate": [0, null]}, "1": {"YCoordinate": [107, 0], "XCoordinate": [305, 128]}, "5": {"Format": [null, 1], "XCoordinate": [null, 305], "YCoordinate": [null, 107]}}}, "4": {"BaseAnchor": {"0": {"Format": [1, null], "XCoordinate": [128, null], "YCoordinate": [0, null]}, "1": {"YCoordinate": [107, 0], "XCoordinate": [305, 128]}, "5": {"Format": [null, 1], "XCoordinate": [null, 305], "YCoordinate": [null, 107]}}}, "5": {"BaseAnchor": {"0": {"Format": [1, null], "XCoordinate": [15, null], "YCoordinate": [0, null]}, "1": {"YCoordinate": [405, 0], "XCoordinate": [367, 10]}, "3": {"XCoordinate": [351, 229]}, "4": {"XCoordinate": [303, 304]}, "5": {"Format": [null, 1], "XCoordinate": [null, 180], "YCoordinate": [null, 304]}}}, "6": {"BaseAnchor": {"0": {"Format": [1, null], "XCoordinate": [10, null], "YCoordinate": [0, null]}, "1": {"Format": [null, 1], "XCoordinate": [null, 10], "YCoordinate": [null, 0]}, "2": {"XCoordinate": [43, 0]}, "3": {"XCoordinate": [329, 229]}, "4": {"XCoordinate": [297, 304]}, "5": {"Format": [null, 1], "XCoordinate": [null, 180], "YCoordinate": [null, 304]}}}, "7": {"BaseAnchor": {"0": {"Format": [1, null], "XCoordinate": [10, null], "YCoordinate": [0, null]}, "1": {"YCoordinate": [304, 0], "XCoordinate": [180, 10]}, "5": {"Format": [null, 1], "XCoordinate": [null, 180], "YCoordinate": [null, 304]}}}, "8": {"BaseAnchor": {"0": {"Format": [1, null], "XCoordinate": [10, null], "YCoordinate": [0, null]}, "1": {"YCoordinate": [304, 0], "XCoordinate": [180, 12]}, "3": {"XCoordinate": [229, 212]}, "4": {"XCoordinate": [304, 203]}, "5": {"Format": [null, 1], "XCoordinate": [null, 110], "YCoordinate": [null, 320]}}}, "9": {"BaseAnchor": {"0": {"Format": [1, null], "XCoordinate": [10, null], "YCoordinate": [0, null]}, "1": {"YCoordinate": [304, 0], "XCoordinate": [180, 12]}, "3": {"XCoordinate": [229, 212]}, "4": {"XCoordinate": [304, 203]}, "5": {"Format": [null, 1], "XCoordinate": [null, 110], "YCoordinate": [null, 320]}}}, "10": {"BaseAnchor": {"0": {"Format": [1, null], "XCoordinate": [12, null], "YCoordinate": [0, null]}, "1": {"YCoordinate": [304, 0], "XCoordinate": [166, 12]}, "5": {"Format": [null, 1], "XCoordinate": [null, 166], "YCoordinate": [null, 304]}}}, "11": {"BaseAnchor": {"0": {"Format": [1, null], "XCoordinate": [12, null], "YCoordinate": [0, null]}, "1": {"YCoordinate": [304, 0], "XCoordinate": [166, 12]}, "5": {"Format": [null, 1], "XCoordinate": [null, 166], "YCoordinate": [null, 304]}}}, "12": {"BaseAnchor": {"0": {"Format": [1, null], "XCoordinate": [4, null], "YCoordinate": [0, null]}, "1": {"YCoordinate": [304, 0], "XCoordinate": [188, 75]}, "2": {"XCoordinate": [-18, 0]}, "3": {"XCoordinate": [233, 359]}, "4": {"YCoordinate": [240, 0], "XCoordinate": [182, 359]}, "5": {"Format": [null, 1], "XCoordinate": [null, 358], "YCoordinate": [null, 304]}}}, "13": {"BaseAnchor": {"0": {"Format": [1, null], "XCoordinate": [4, null], "YCoordinate": [0, null]}, "1": {"YCoordinate": [304, 0], "XCoordinate": [188, 75]}, "2": {"XCoordinate": [-18, 0]}, "3": {"XCoordinate": [233, 359]}, "4": {"YCoordinate": [240, 0], "XCoordinate": [182, 359]}, "5": {"Format": [null, 1], "XCoordinate": [null, 358], "YCoordinate": [null, 304]}}}, "14": {"BaseAnchor": {"0": {"Format": [1, null], "XCoordinate": [38, null], "YCoordinate": [0, null]}, "1": {"YCoordinate": [302, 0], "XCoordinate": [351, 1]}, "2": {"XCoordinate": [0, 160]}, "3": {"XCoordinate": [351, 160]}, "4": {"XCoordinate": [351, 160]}, "5": {"YCoordinate": [0, 304], "XCoordinate": [584, 0]}}}, "15": {"BaseAnchor": {"0": {"Format": [1, null], "XCoordinate": [38, null], "YCoordinate": [0, null]}, "1": {"YCoordinate": [302, 0], "XCoordinate": [351, 1]}, "2": {"XCoordinate": [0, 160]}, "3": {"XCoordinate": [351, 160]}, "4": {"XCoordinate": [351, 160]}, "5": {"YCoordinate": [0, 304], "XCoordinate": [584, 0]}}}, "16": {"BaseAnchor": {"0": {"Format": [1, null], "XCoordinate": [12, null], "YCoordinate": [0, null]}, "1": {"YCoordinate": [304, 0], "XCoordinate": [48, 1]}, "2": {"XCoordinate": [-18, 160]}, "4": {"Format": [null, 1], "XCoordinate": [null, 160], "YCoordinate": [null, 0]}, "5": {"Format": [null, 1], "XCoordinate": [null, 0], "YCoordinate": [null, 304]}}}, "17": {"BaseAnchor": {"0": {"Format": [1, null], "XCoordinate": [7, null], "YCoordinate": [0, null]}, "1": {"YCoordinate": [282, 0], "XCoordinate": [344, 3]}, "2": {"XCoordinate": [-26, -18]}, "3": {"XCoordinate": [297, 180]}, "4": {"Format": [null, 1], "XCoordinate": [null, 174], "YCoordinate": [null, 0]}, "5": {"Format": [null, 1], "XCoordinate": [null, 3], "YCoordinate": [null, 304]}}}, "18": {"BaseAnchor": {"0": {"Format": [1, null], "XCoordinate": [7, null], "YCoordinate": [0, null]}, "1": {"YCoordinate": [282, 0], "XCoordinate": [344, 3]}, "2": {"XCoordinate": [-26, -18]}, "3": {"XCoordinate": [297, 180]}, "4": {"Format": [null, 1], "XCoordinate": [null, 174], "YCoordinate": [null, 0]}, "5": {"Format": [null, 1], "XCoordinate": [null, 3], "YCoordinate": [null, 304]}}}, "19": {"BaseAnchor": {"0": {"Format": [1, null], "XCoordinate": [12, null], "YCoordinate": [0, null]}, "1": {"YCoordinate": [473, 0], "XCoordinate": [306, 38]}, "2": {"XCoordinate": [-23, 0]}, "3": {"XCoordinate": [288, 366]}, "4": {"Format": [null, 1], "XCoordinate": [null, 366], "YCoordinate": [null, 0]}, "5": {"Format": [null, 1], "XCoordinate": [null, 366], "YCoordinate": [null, 304]}}}, "20": {"BaseAnchor": {"0": {"Format": [1, null], "XCoordinate": [12, null], "YCoordinate": [0, null]}, "1": {"YCoordinate": [320, 0], "XCoordinate": [110, 43]}, "3": {"XCoordinate": [212, 377]}, "4": {"XCoordinate": [203, 378]}, "5": {"Format": [null, 1], "XCoordinate": [null, 377], "YCoordinate": [null, 304]}}}, "21": {"BaseAnchor": {"0": {"Format": [1, null], "XCoordinate": [12, null], "YCoordinate": [0, null]}, "1": {"YCoordinate": [320, 0], "XCoordinate": [110, 43]}, "3": {"XCoordinate": [212, 377]}, "4": {"XCoordinate": [203, 378]}, "5": {"Format": [null, 1], "XCoordinate": [null, 377], "YCoordinate": [null, 304]}}}, "22": {"BaseAnchor": {"0": {"Format": [1, null], "XCoordinate": [75, null], "YCoordinate": [0, null]}, "1": {"YCoordinate": [304, 0], "XCoordinate": [358, -18]}, "3": {"XCoordinate": [359, 150]}, "4": {"XCoordinate": [359, 150]}, "5": {"Format": [null, 1], "XCoordinate": [null, -7], "YCoordinate": [null, 413]}}}, "23": {"BaseAnchor": {"0": {"Format": [1, null], "XCoordinate": [75, null], "YCoordinate": [0, null]}, "1": {"YCoordinate": [304, 0], "XCoordinate": [358, -18]}, "3": {"XCoordinate": [359, 150]}, "4": {"XCoordinate": [359, 150]}, "5": {"Format": [null, 1], "XCoordinate": [null, -7], "YCoordinate": [null, 413]}}}, "24": {"BaseAnchor": {"0": {"Format": [1, null], "XCoordinate": [38, null], "YCoordinate": [0, null]}, "1": {"YCoordinate": [304, 0], "XCoordinate": [366, 4]}, "2": {"XCoordinate": [0, -18]}, "3": {"XCoordinate": [366, 233]}, "4": {"YCoordinate": [0, 240], "XCoordinate": [366, 182]}, "5": {"Format": [null, 1], "XCoordinate": [null, 188], "YCoordinate": [null, 304]}}}, "25": {"BaseAnchor": {"0": {"Format": [1, null], "XCoordinate": [33, null], "YCoordinate": [0, null]}, "1": {"YCoordinate": [304, 0], "XCoordinate": [207, 4]}, "3": {"XCoordinate": [212, 233]}, "4": {"YCoordinate": [0, 240], "XCoordinate": [228, 182]}, "5": {"Format": [null, 1], "XCoordinate": [null, 188], "YCoordinate": [null, 304]}}}, "26": {"BaseAnchor": {"0": {"Format": [1, null], "XCoordinate": [33, null], "YCoordinate": [0, null]}, "1": {"YCoordinate": [304, 0], "XCoordinate": [207, 33]}, "5": {"Format": [null, 1], "XCoordinate": [null, 207], "YCoordinate": [null, 304]}}}, "27": {"BaseAnchor": {"0": {"Format": [1, null], "XCoordinate": [33, null], "YCoordinate": [0, null]}, "1": {"YCoordinate": [304, 0], "XCoordinate": [207, 33]}, "5": {"Format": [null, 1], "XCoordinate": [null, 207], "YCoordinate": [null, 304]}}}, "28": {"BaseAnchor": {"0": {"Format": [1, null], "XCoordinate": [250, null], "YCoordinate": [0, null]}, "1": {"YCoordinate": [304, 0], "XCoordinate": [153, 33]}, "2": {"XCoordinate": [-51, -18]}, "3": {"XCoordinate": [369, 212]}, "4": {"XCoordinate": [270, 228]}, "5": {"Format": [null, 1], "XCoordinate": [null, 207], "YCoordinate": [null, 304]}}}, "29": {"BaseAnchor": {"0": {"Format": [1, null], "XCoordinate": [250, null], "YCoordinate": [0, null]}, "1": {"YCoordinate": [304, 0], "XCoordinate": [153, 250]}, "5": {"Format": [null, 1], "XCoordinate": [null, 153], "YCoordinate": [null, 304]}}}, "30": {"BaseAnchor": {"0": {"Format": [1, null], "XCoordinate": [125, null], "YCoordinate": [0, null]}, "1": {"YCoordinate": [304, 0], "XCoordinate": [361, 250]}, "2": {"XCoordinate": [0, -51]}, "3": {"XCoordinate": [364, 369]}, "4": {"XCoordinate": [351, 270]}, "5": {"Format": [null, 1], "XCoordinate": [null, 153], "YCoordinate": [null, 304]}}}, "31": {"BaseAnchor": {"0": {"Format": [1, null], "XCoordinate": [125, null], "YCoordinate": [0, null]}, "1": {"YCoordinate": [304, 0], "XCoordinate": [361, 38]}, "3": {"XCoordinate": [364, 351]}, "5": {"Format": [null, 1], "XCoordinate": [null, 351], "YCoordinate": [null, 302]}, "6": {"Format": [null, 1], "XCoordinate": [null, 584], "YCoordinate": [null, 0]}}}, "32": {"BaseAnchor": {"0": {"Format": [1, null], "XCoordinate": [-4, null], "YCoordinate": [0, null]}, "1": {"YCoordinate": [304, 0], "XCoordinate": [114, 125]}, "3": {"XCoordinate": [215, 364]}, "4": {"XCoordinate": [204, 351]}, "5": {"Format": [null, 1], "XCoordinate": [null, 361], "YCoordinate": [null, 304]}}}, "33": {"BaseAnchor": {"0": {"Format": [1, null], "XCoordinate": [-4, null], "YCoordinate": [0, null]}, "1": {"YCoordinate": [304, 0], "XCoordinate": [114, 125]}, "3": {"XCoordinate": [215, 364]}, "4": {"XCoordinate": [204, 351]}, "5": {"Format": [null, 1], "XCoordinate": [null, 361], "YCoordinate": [null, 304]}}}, "34": {"BaseAnchor": {"0": {"Format": [1, null], "XCoordinate": [40, null], "YCoordinate": [0, null]}, "1": {"YCoordinate": [287, 0], "XCoordinate": [379, 12]}, "2": {"XCoordinate": [-10, -18]}, "3": {"XCoordinate": [300, 160]}, "4": {"Format": [1, null], "XCoordinate": [301, null], "YCoordinate": [0, null]}, "5": {"Format": [null, 1], "XCoordinate": [null, 48], "YCoordinate": [null, 304]}}}, "35": {"BaseAnchor": {"0": {"Format": [1, null], "XCoordinate": [40, null], "YCoordinate": [0, null]}, "1": {"YCoordinate": [287, 0], "XCoordinate": [379, -4]}, "2": {"XCoordinate": [-10, 0]}, "3": {"XCoordinate": [300, 215]}, "4": {"XCoordinate": [301, 204]}, "5": {"Format": [null, 1], "XCoordinate": [null, 114], "YCoordinate": [null, 304]}}}, "36": {"BaseAnchor": {"0": {"Format": [1, null], "XCoordinate": [40, null], "YCoordinate": [0, null]}, "1": {"YCoordinate": [287, 0], "XCoordinate": [379, -4]}, "2": {"XCoordinate": [-10, 0]}, "3": {"XCoordinate": [300, 215]}, "4": {"XCoordinate": [301, 204]}, "5": {"Format": [null, 1], "XCoordinate": [null, 114], "YCoordinate": [null, 304]}}}, "37": {"BaseAnchor": {"0": {"Format": [1, null], "XCoordinate": [19, null], "YCoordinate": [0, null]}, "1": {"YCoordinate": [304, 0], "XCoordinate": [323, 32]}, "2": {"XCoordinate": [0, -18]}, "3": {"XCoordinate": [368, 385]}, "4": {"XCoordinate": [413, 382]}, "5": {"Format": [null, 1], "XCoordinate": [null, 385], "YCoordinate": [null, 304]}}}, "38": {"BaseAnchor": {"0": {"Format": [1, null], "XCoordinate": [19, null], "YCoordinate": [0, null]}, "1": {"YCoordinate": [304, 0], "XCoordinate": [323, 32]}, "2": {"XCoordinate": [0, -18]}, "3": {"XCoordinate": [368, 385]}, "4": {"XCoordinate": [413, 382]}, "5": {"Format": [null, 1], "XCoordinate": [null, 385], "YCoordinate": [null, 304]}}}, "39": {"BaseAnchor": {"0": {"Format": [1, null], "XCoordinate": [90, null], "YCoordinate": [0, null]}, "1": {"YCoordinate": [304, 0], "XCoordinate": [191, 15]}, "2": {"XCoordinate": [-21, 0]}, "3": {"XCoordinate": [276, 351]}, "4": {"XCoordinate": [454, 303]}, "5": {"Format": [null, 1], "XCoordinate": [null, 367], "YCoordinate": [null, 405]}}}, "40": {"BaseAnchor": {"0": {"Format": [1, null], "XCoordinate": [90, null], "YCoordinate": [0, null]}, "1": {"YCoordinate": [304, 0], "XCoordinate": [191, 7]}, "2": {"XCoordinate": [-21, -26]}, "3": {"XCoordinate": [276, 297]}, "4": {"Format": [1, null], "XCoordinate": [454, null], "YCoordinate": [0, null]}, "5": {"Format": [null, 1], "XCoordinate": [null, 344], "YCoordinate": [null, 282]}}}, "41": {"BaseAnchor": {"0": {"Format": [1, null], "XCoordinate": [32, null], "YCoordinate": [0, null]}, "1": {"YCoordinate": [304, 0], "XCoordinate": [385, 7]}, "2": {"XCoordinate": [-18, -26]}, "3": {"XCoordinate": [385, 297]}, "4": {"Format": [1, null], "XCoordinate": [382, null], "YCoordinate": [0, null]}, "5": {"Format": [null, 1], "XCoordinate": [null, 344], "YCoordinate": [null, 282]}}}, "42": {"BaseAnchor": {"0": {"Format": [1, null], "XCoordinate": [32, null], "YCoordinate": [0, null]}, "1": {"YCoordinate": [304, 0], "XCoordinate": [385, 40]}, "2": {"XCoordinate": [-18, -10]}, "3": {"XCoordinate": [385, 300]}, "4": {"XCoordinate": [382, 301]}, "5": {"Format": [null, 1], "XCoordinate": [null, 379], "YCoordinate": [null, 287]}}}, "43": {"BaseAnchor": {"0": {"Format": [1, null], "XCoordinate": [88, null], "YCoordinate": [0, null]}, "1": {"YCoordinate": [240, 0], "XCoordinate": [441, 40]}, "3": {"XCoordinate": [408, 300]}, "4": {"XCoordinate": [365, 301]}, "5": {"Format": [null, 1], "XCoordinate": [null, 379], "YCoordinate": [null, 287]}, "6": {"Format": [1, null], "XCoordinate": [673, null], "YCoordinate": [549, null]}}}, "44": {"BaseAnchor": {"0": {"Format": [1, null], "XCoordinate": [88, null], "YCoordinate": [0, null]}, "1": {"YCoordinate": [240, 0], "XCoordinate": [441, 40]}, "3": {"XCoordinate": [408, 300]}, "4": {"XCoordinate": [365, 301]}, "5": {"Format": [null, 1], "XCoordinate": [null, 379], "YCoordinate": [null, 287]}, "6": {"Format": [1, null], "XCoordinate": [673, null], "YCoordinate": [549, null]}}}, "45": {"BaseAnchor": {"0": {"Format": [1, null], "XCoordinate": [88, null], "YCoordinate": [0, null]}, "1": {"YCoordinate": [240, 0], "XCoordinate": [441, 12]}, "2": {"XCoordinate": [-10, -23]}, "3": {"XCoordinate": [408, 288]}, "4": {"Format": [1, null], "XCoordinate": [365, null], "YCoordinate": [0, null]}, "5": {"Format": [null, 1], "XCoordinate": [null, 306], "YCoordinate": [null, 473]}, "6": {"Format": [1, null], "XCoordinate": [673, null], "YCoordinate": [549, null]}}}, "46": {"BaseAnchor": {"0": {"Format": [1, null], "XCoordinate": [88, null], "YCoordinate": [0, null]}, "1": {"YCoordinate": [240, 0], "XCoordinate": [441, 34]}, "2": {"XCoordinate": [-10, 0]}, "3": {"XCoordinate": [408, 321]}, "4": {"XCoordinate": [365, 303]}, "5": {"Format": [null, 1], "XCoordinate": [null, 110], "YCoordinate": [null, 280]}, "6": {"Format": [1, null], "XCoordinate": [673, null], "YCoordinate": [549, null]}}}, "47": {"BaseAnchor": {"0": {"Format": [1, null], "XCoordinate": [88, null], "YCoordinate": [0, null]}, "1": {"YCoordinate": [240, 0], "XCoordinate": [441, 34]}, "2": {"XCoordinate": [-10, 0]}, "3": {"XCoordinate": [408, 321]}, "4": {"XCoordinate": [365, 303]}, "5": {"Format": [null, 1], "XCoordinate": [null, 110], "YCoordinate": [null, 280]}, "6": {"Format": [1, null], "XCoordinate": [673, null], "YCoordinate": [549, null]}}}, "48": {"BaseAnchor": {"0": {"Format": [1, null], "XCoordinate": [88, null], "YCoordinate": [0, null]}, "1": {"YCoordinate": [240, 0], "XCoordinate": [441, 19]}, "2": {"XCoordinate": [-10, 0]}, "3": {"XCoordinate": [408, 368]}, "4": {"XCoordinate": [365, 413]}, "5": {"Format": [null, 1], "XCoordinate": [null, 323], "YCoordinate": [null, 304]}, "6": {"Format": [1, null], "XCoordinate": [673, null], "YCoordinate": [549, null]}}}, "49": {"BaseAnchor": {"0": {"Format": [1, null], "XCoordinate": [12, null], "YCoordinate": [0, null]}, "1": {"YCoordinate": [304, 0], "XCoordinate": [390, 19]}, "3": {"XCoordinate": [375, 368]}, "4": {"XCoordinate": [390, 413]}, "5": {"Format": [null, 1], "XCoordinate": [null, 323], "YCoordinate": [null, 304]}}}, "50": {"BaseAnchor": {"0": {"Format": [1, null], "XCoordinate": [12, null], "YCoordinate": [0, null]}, "1": {"YCoordinate": [304, 0], "XCoordinate": [390, 90]}, "2": {"XCoordinate": [0, -21]}, "3": {"XCoordinate": [375, 276]}, "4": {"XCoordinate": [390, 454]}, "5": {"Format": [null, 1], "XCoordinate": [null, 191], "YCoordinate": [null, 304]}}}, "51": {"BaseAnchor": {"0": {"Format": [1, null], "XCoordinate": [43, null], "YCoordinate": [0, null]}, "1": {"YCoordinate": [304, 0], "XCoordinate": [377, 90]}, "2": {"XCoordinate": [0, -21]}, "3": {"XCoordinate": [377, 276]}, "4": {"XCoordinate": [378, 454]}, "5": {"Format": [null, 1], "XCoordinate": [null, 191], "YCoordinate": [null, 304]}}}, "52": {"BaseAnchor": {"0": {"YCoordinate": [0, 549], "XCoordinate": [43, 673]}, "1": {"YCoordinate": [304, 0], "XCoordinate": [377, 88]}, "2": {"XCoordinate": [0, -10]}, "3": {"XCoordinate": [377, 408]}, "4": {"XCoordinate": [378, 365]}, "5": {"Format": [null, 1], "XCoordinate": [null, 441], "YCoordinate": [null, 240]}}}, "53": {"BaseAnchor": {"0": {"YCoordinate": [0, 549], "XCoordinate": [34, 673]}, "1": {"YCoordinate": [280, 0], "XCoordinate": [110, 88]}, "2": {"XCoordinate": [0, -10]}, "3": {"XCoordinate": [321, 408]}, "4": {"XCoordinate": [303, 365]}, "5": {"Format": [null, 1], "XCoordinate": [null, 441], "YCoordinate": [null, 240]}}}, "54": {"BaseAnchor": {"0": {"YCoordinate": [0, 549], "XCoordinate": [34, 673]}, "1": {"YCoordinate": [280, 0], "XCoordinate": [110, 88]}, "2": {"XCoordinate": [0, -10]}, "3": {"XCoordinate": [321, 408]}, "4": {"XCoordinate": [303, 365]}, "5": {"Format": [null, 1], "XCoordinate": [null, 441], "YCoordinate": [null, 240]}}}, "55": {"BaseAnchor": {"0": {"YCoordinate": [0, 549], "XCoordinate": [1, 673]}, "1": {"YCoordinate": [304, 0], "XCoordinate": [0, 88]}, "2": {"XCoordinate": [160, -10]}, "3": {"XCoordinate": [160, 408]}, "4": {"XCoordinate": [160, 365]}, "5": {"Format": [null, 1], "XCoordinate": [null, 441], "YCoordinate": [null, 240]}}}, "56": {"BaseAnchor": {"0": {"YCoordinate": [0, 549], "XCoordinate": [1, 673]}, "1": {"YCoordinate": [304, 0], "XCoordinate": [0, 88]}, "2": {"XCoordinate": [160, -10]}, "3": {"XCoordinate": [160, 408]}, "4": {"XCoordinate": [160, 365]}, "5": {"Format": [null, 1], "XCoordinate": [null, 441], "YCoordinate": [null, 240]}}}, "57": {"BaseAnchor": {"0": {"YCoordinate": [0, 549], "XCoordinate": [1, 673]}, "1": {"YCoordinate": [304, 0], "XCoordinate": [0, 88]}, "2": {"XCoordinate": [160, -10]}, "3": {"XCoordinate": [160, 408]}, "4": {"XCoordinate": [160, 365]}, "5": {"Format": [null, 1], "XCoordinate": [null, 441], "YCoordinate": [null, 240]}}}, "58": {"BaseAnchor": {"0": {"Format": [1, null], "XCoordinate": [-18, null], "YCoordinate": [0, null]}, "1": {"YCoordinate": [413, 0], "XCoordinate": [-7, 12]}, "3": {"XCoordinate": [150, 375]}, "4": {"XCoordinate": [150, 390]}, "5": {"Format": [null, 1], "XCoordinate": [null, 390], "YCoordinate": [null, 304]}}}, "59": {"BaseAnchor": {"0": {"Format": [1, null], "XCoordinate": [-18, null], "YCoordinate": [0, null]}, "1": {"YCoordinate": [413, 0], "XCoordinate": [-7, 12]}, "3": {"XCoordinate": [150, 375]}, "4": {"XCoordinate": [150, 390]}, "5": {"Format": [null, 1], "XCoordinate": [null, 390], "YCoordinate": [null, 304]}}}, "60": {"BaseAnchor": {"0": {"Format": [1, null], "XCoordinate": [-18, null], "YCoordinate": [0, null]}, "1": {"YCoordinate": [413, 0], "XCoordinate": [-7, -18]}, "5": {"Format": [null, 1], "XCoordinate": [null, -7], "YCoordinate": [null, 413]}}}, "61": {"BaseAnchor": {"0": {"Format": [1, null], "XCoordinate": [3, null], "YCoordinate": [0, null]}, "1": {"YCoordinate": [304, 0], "XCoordinate": [3, 10]}, "2": {"XCoordinate": [-18, 43]}, "3": {"XCoordinate": [180, 329]}, "4": {"XCoordinate": [174, 297]}}}, "62": {"BaseAnchor": {"0": {"Format": [1, null], "XCoordinate": [3, null], "YCoordinate": [0, null]}, "1": {"YCoordinate": [304, 0], "XCoordinate": [3, 38]}, "2": {"XCoordinate": [-18, 0]}, "3": {"XCoordinate": [180, 351]}, "4": {"XCoordinate": [174, 351]}, "5": {"Format": [null, 1], "XCoordinate": [null, 351], "YCoordinate": [null, 302]}, "6": {"Format": [null, 1], "XCoordinate": [null, 584], "YCoordinate": [null, 0]}}}}}, "BaseCoverage": {"glyphs": {"2": ["uniFB30", "uniFB2E"], "3": ["uniFB2E", "uniFB2F"], "4": ["uniFB2F", "uniFB30"], "5": ["uni05E2", "uni05D1"], "6": ["uniFB20", "uniFB31"], "7": ["uni05D1", "uniFB4C"], "8": ["uniFB31", "uni05D2"], "9": ["uniFB4C", "uniFB32"], "12": ["uni05DA", "uni05D4"], "13": ["uniFB3A", "uniFB34"], "14": ["uni05DD", "uni05D5"], "15": ["uni05DD05B4.alt", "uniFB35"], "16": ["uni05DF", "uniFB4B"], "17": ["uni05E3", "uni05D6"], "18": ["uniFB43", "uniFB36"], "19": ["uni05E5", "uni05D7"], "20": ["uni05D2", "uni05D8"], "21": ["uniFB32", "uniFB38"], "22": ["uni05D4", "uni05D9"], "23": ["uniFB34", "uniFB39"], "24": ["uni05D7", "uni05DA"], "25": ["uni05DB", "uniFB3A"], "26": ["uniFB3B", "uni05DB"], "27": ["uniFB4D", "uniFB3B"], "28": ["uni05DC", "uniFB4D"], "29": ["uniFB3C", "uni05DC"], "30": ["uni05DE", "uniFB3C"], "31": ["uniFB3E", "uni05DD"], "32": ["uni05E0", "uni05DE"], "33": ["uniFB40", "uniFB3E"], "34": ["uni05E4", "uni05DF"], "35": ["uniFB44", "uni05E0"], "36": ["uniFB4E", "uniFB40"], "37": ["uni05E7", "uni05E1"], "38": ["uniFB47", "uniFB41"], "39": ["uni05E8", "uni05E2"], "40": ["uniFB48", "uni05E3"], "41": ["uni05E1", "uniFB43"], "42": ["uniFB41", "uni05E4"], "43": ["uni05E9", "uniFB44"], "44": ["uniFB49", "uniFB4E"], "45": ["uniFB2C", "uni05E5"], "46": ["uniFB2D", "uni05E6"], "47": ["uniFB2A", "uniFB46"], "48": ["uniFB2B", "uni05E7"], "49": ["uni05EA", "uniFB47"], "50": ["uniFB4A", "uni05E8"], "51": ["uni05D8", "uniFB48"], "52": ["uniFB38", "uni05E9"], "53": ["uni05E6", "uniFB2A"], "54": ["uniFB46", "uniFB2B"], "55": ["uni05D5", "uniFB2C"], "56": ["uniFB35", "uniFB2D"], "57": ["uniFB4B", "uniFB49"], "58": ["uni05D9", "uni05EA"], "59": ["uniFB39", "uniFB4A"], "61": ["uni05D6", "uniFB20"], "62": ["uniFB36", "uni05DD05B4.alt"]}}, "MarkArray": {"MarkRecord": {"0": {"MarkAnchor": {"YCoordinate": [0, 549], "XCoordinate": [142, 96]}}, "1": {"MarkAnchor": {"YCoordinate": [304, 0], "XCoordinate": [96, 141]}}, "2": {"Class": [0, 2], "MarkAnchor": {"YCoordinate": [0, 549], "XCoordinate": [188, 217]}}, "3": {"Class": [0, 3], "MarkAnchor": {"YCoordinate": [0, 549], "XCoordinate": [76, 125]}}, "4": {"Class": [0, 3], "MarkAnchor": {"YCoordinate": [0, 549], "XCoordinate": [141, 96]}}, "5": {"Class": [2, 3], "MarkAnchor": {"XCoordinate": [76, 141]}}, "6": {"Class": [3, 1], "MarkAnchor": {"YCoordinate": [549, 0], "XCoordinate": [141, 76]}}, "7": {"Class": [3, 2], "MarkAnchor": {"XCoordinate": [158, 174]}}, "8": {"Class": [4, 3], "MarkAnchor": {"YCoordinate": [0, 549], "XCoordinate": [215, 194]}}, "9": {"Class": [4, 2], "MarkAnchor": {"YCoordinate": [0, 549], "XCoordinate": [260, 206]}}, "10": {"Class": [4, 1], "MarkAnchor": {"XCoordinate": [215, 150]}}, "11": {"Class": [4, 1], "MarkAnchor": {"XCoordinate": [260, 199]}}, "12": {"Class": [4, 2], "MarkAnchor": {"YCoordinate": [0, 549], "XCoordinate": [218, 76]}}, "13": {"Class": [4, 3], "MarkAnchor": {"YCoordinate": [0, 549], "XCoordinate": [265, 141]}}, "14": {"Class": [4, 3], "MarkAnchor": {"YCoordinate": [0, 549], "XCoordinate": [96, 158]}}, "15": {"Class": [5, 3], "MarkAnchor": {"YCoordinate": [0, 549], "XCoordinate": [96, 288]}}, "16": {"Class": [2, 3], "MarkAnchor": {"XCoordinate": [0, 162]}}, "17": {"Class": [2, 3], "MarkAnchor": {"XCoordinate": [0, 130]}}, "18": {"Class": [3, 1], "MarkAnchor": {"YCoordinate": [549, 0], "XCoordinate": [128, 142]}}, "19": {"Class": [3, 1], "MarkAnchor": {"YCoordinate": [549, 0], "XCoordinate": [160, 206]}}, "20": {"Class": [4, 1], "MarkAnchor": {"XCoordinate": [96, 128]}}, "21": {"Class": [0, 1], "MarkAnchor": {"XCoordinate": [128, 206]}}, "22": {"Class": [3, 1], "MarkAnchor": {"YCoordinate": [549, 0], "XCoordinate": [146, 258]}}, "23": {"Class": [0, 1], "MarkAnchor": {"XCoordinate": [258, 188]}}, "24": {"Class": [0, 2], "MarkAnchor": {"YCoordinate": [0, 549], "XCoordinate": [206, 181]}}, "25": {"Class": [0, 2], "MarkAnchor": {"YCoordinate": [0, 549], "XCoordinate": [206, 149]}}, "26": {"Class": [3, 1], "MarkAnchor": {"YCoordinate": [549, 0], "XCoordinate": [128, 142]}}, "27": {"Class": [2, 3], "MarkAnchor": {"XCoordinate": [206, 128]}}, "28": {"Class": [4, 3], "MarkAnchor": {"YCoordinate": [0, 549], "XCoordinate": [156, 128]}}, "29": {"Class": [3, 1], "MarkAnchor": {"YCoordinate": [549, 0], "XCoordinate": [130, 76]}}, "30": {"Class": [2, 3], "MarkAnchor": {"XCoordinate": [181, 194]}}, "31": {"Class": [4, 3], "MarkAnchor": {"YCoordinate": [0, 549], "XCoordinate": [136, 146]}}, "32": {"MarkAnchor": {"XCoordinate": [156, 96]}}, "33": {"Class": [3, 4], "MarkAnchor": {"YCoordinate": [549, 0], "XCoordinate": [288, 218]}}, "34": {"MarkAnchor": {"XCoordinate": [195, 265]}}, "35": {"Class": [3, 4], "MarkAnchor": {"YCoordinate": [549, 0], "XCoordinate": [164, 215]}}, "36": {"Class": [2, 4], "MarkAnchor": {"YCoordinate": [549, 0], "XCoordinate": [174, 260]}}, "37": {"MarkAnchor": {"XCoordinate": [158, 215]}}, "38": {"Class": [2, 4], "MarkAnchor": {"YCoordinate": [549, 0], "XCoordinate": [217, 260]}}, "39": {"Class": [3, 4], "MarkAnchor": {"YCoordinate": [549, 0], "XCoordinate": [125, 96]}}, "40": {"MarkAnchor": {"XCoordinate": [96, 164]}}, "41": {"Class": [6, 4], "MarkAnchor": {"YCoordinate": [549, 0], "XCoordinate": [96, 158]}}, "42": {"MarkAnchor": {"XCoordinate": [81, 156]}}, "43": {"Class": [2, 4], "MarkAnchor": {"YCoordinate": [549, 0], "XCoordinate": [-125, 136]}}, "44": {"Class": [3, 2], "MarkAnchor": {"XCoordinate": [162, 0]}}, "45": {"MarkAnchor": {"XCoordinate": [149, 0]}}, "46": {"Class": [0, 4], "MarkAnchor": {"XCoordinate": [199, 195]}}, "47": {"Class": [0, 5], "MarkAnchor": {"YCoordinate": [0, 304], "XCoordinate": [76, 96]}}, "48": {"MarkAnchor": {"XCoordinate": [164, 81]}}, "49": {"MarkAnchor": {"XCoordinate": [96, 164]}}, "50": {"Class": [0, 2], "MarkAnchor": {"YCoordinate": [0, 549], "XCoordinate": [142, -125]}}, "51": {"Class": [0, 3], "MarkAnchor": {"YCoordinate": [0, 549], "XCoordinate": [150, 96]}}, "52": {"Class": [3, 4], "MarkAnchor": {"YCoordinate": [549, 0], "XCoordinate": [141, 96]}}, "53": {"Class": [3, 4], "MarkAnchor": {"YCoordinate": [549, 0], "XCoordinate": [96, 156]}}, "54": {"MarkAnchor": {"XCoordinate": [194, 160]}}, "55": {"Class": [3, 6], "MarkAnchor": {"YCoordinate": [549, 0], "XCoordinate": [194, 96]}}}}, "MarkCoverage": {"glyphs": {"0": ["uni05A2", "uni05C1"], "1": ["uni05BC", "uni0591"], "2": ["uni05A7", "uni0592"], "3": ["uni05AD", "uni0593"], "4": ["uni0591", "uni0594"], "5": ["uni059C", "uni0595"], "6": ["uni059D", "uni0596"], "7": ["uni059E", "uni0597"], "8": ["uni05B2", "uni0598"], "9": ["uni05B2200D05BD", "uni0599"], "10": ["uni05B3", "uni059A"], "11": ["uni05B3200D05BD", "uni059B"], "12": ["uni05B1", "uni059C"], "13": ["uni05B1200D05BD", "uni059D"], "14": ["uni05B4", "uni059E"], "15": ["uni05B4.alt", "uni059F"], "16": ["uni05B9", "uni05A0"], "17": ["uni05BA", "uni05A1"], "18": ["uni05AC", "uni05A2"], "19": ["uniFB1E", "uni05A3"], "20": ["uni05C5", "uni05A4"], "21": ["uni05A4", "uni05A5"], "22": ["uni05AF", "uni05A6"], "23": ["uni05A6", "uni05A7"], "24": ["uni05A5", "uni05A8"], "25": ["uni05A3", "uni05A9"], "26": ["uni05AB", "uni05AA"], "27": ["uni0599", "uni05AB"], "28": ["uni05B7", "uni05AC"], "29": ["uni05A1", "uni05AD"], "30": ["uni05A8", "uni05AE"], "31": ["uni05B8", "uni05AF"], "32": ["uni05C7", "uni05B0"], "33": ["uni059F", "uni05B1"], "34": ["uni05BB", "uni05B1200D05BD"], "35": ["uni05BF", "uni05B2"], "36": ["uni0597", "uni05B2200D05BD"], "37": ["uni05B6", "uni05B3"], "38": ["uni0592", "uni05B3200D05BD"], "39": ["uni0593", "uni05B4"], "40": ["uni05B0", "uni05B5"], "41": ["uni05C1", "uni05B6"], "42": ["uni05BD", "uni05B7"], "43": ["uni05C2", "uni05B8"], "44": ["uni05A0", "uni05B9"], "45": ["uni05A9", "uni05BA"], "46": ["uni059B", "uni05BB"], "47": ["uni0596", "uni05BC"], "48": ["uni05B5", "uni05BD"], "49": ["uni05C4", "uni05BF"], "50": ["uni05AA", "uni05C2"], "51": ["uni059A", "uni05C4"], "52": ["uni0595", "uni05C5"], "53": ["uni0594", "uni05C7"], "54": ["uni0598", "uniFB1E"], "55": ["uni05AE", "uni05B4.alt"]}}}}}, "2": {"SubTable": {"0": {"LigatureArray": {"LigatureAttach": {"0": {"ComponentRecord": {"0": {"LigatureAnchor": {"1": {"YCoordinate": [304, 549], "XCoordinate": [295, 455]}, "3": {"YCoordinate": [549, 0]}, "4": {"YCoordinate": [0, 304], "XCoordinate": [455, 295]}}}, "1": {"LigatureAnchor": {"1": {"YCoordinate": [413, 549], "XCoordinate": [-7, 0]}, "2": {"XCoordinate": [0, 150]}, "3": {"YCoordinate": [549, 0]}, "4": {"YCoordinate": [0, 413], "XCoordinate": [150, -7]}}}}}, "1": {"ComponentRecord": {"0": {"LigatureAnchor": {"1": {"YCoordinate": [413, 549], "XCoordinate": [288, 295]}, "2": {"XCoordinate": [295, 445]}, "3": {"YCoordinate": [549, 0]}, "4": {"YCoordinate": [0, 413], "XCoordinate": [445, 288]}}}, "1": {"LigatureAnchor": {"1": {"YCoordinate": [413, 549], "XCoordinate": [-7, 0]}, "2": {"XCoordinate": [0, 150]}, "3": {"YCoordinate": [549, 0]}, "4": {"YCoordinate": [0, 413], "XCoordinate": [150, -7]}}}}}}}, "MarkArray": {"MarkRecord": {"0": {"MarkAnchor": {"XCoordinate": [142, 141]}}, "1": {"MarkAnchor": {"YCoordinate": [304, 549], "XCoordinate": [96, 217]}}, "2": {"Class": [0, 2], "MarkAnchor": {"YCoordinate": [0, 549], "XCoordinate": [188, 125]}}, "3": {"Class": [0, 2], "MarkAnchor": {"YCoordinate": [0, 549], "XCoordinate": [76, 96]}}, "4": {"Class": [0, 2], "MarkAnchor": {"YCoordinate": [0, 549]}}, "5": {"Class": [2, 0], "MarkAnchor": {"YCoordinate": [549, 0]}}, "6": {"Class": [3, 1], "MarkAnchor": {"XCoordinate": [141, 174]}}, "7": {"Class": [3, 2], "MarkAnchor": {"XCoordinate": [158, 194]}}, "8": {"Class": [4, 1], "MarkAnchor": {"YCoordinate": [0, 549], "XCoordinate": [215, 206]}}, "9": {"Class": [4, 0], "MarkAnchor": {"XCoordinate": [260, 150]}}, "10": {"Class": [4, 0], "MarkAnchor": {"XCoordinate": [215, 199]}}, "11": {"Class": [4, 1], "MarkAnchor": {"YCoordinate": [0, 549], "XCoordinate": [260, 76]}}, "12": {"Class": [4, 2], "MarkAnchor": {"YCoordinate": [0, 549], "XCoordinate": [218, 141]}}, "13": {"Class": [4, 2], "MarkAnchor": {"YCoordinate": [0, 549], "XCoordinate": [265, 158]}}, "14": {"Class": [4, 2], "MarkAnchor": {"YCoordinate": [0, 549], "XCoordinate": [96, 288]}}, "15": {"MarkAnchor": {"XCoordinate": [0, 162]}}, "16": {"MarkAnchor": {"XCoordinate": [0, 130]}}, "17": {"Class": [3, 0], "MarkAnchor": {"YCoordinate": [549, 0], "XCoordinate": [128, 142]}}, "18": {"Class": [3, 0], "MarkAnchor": {"YCoordinate": [549, 0], "XCoordinate": [160, 206]}}, "19": {"Class": [4, 0], "MarkAnchor": {"XCoordinate": [96, 128]}}, "20": {"MarkAnchor": {"XCoordinate": [128, 206]}}, "21": {"Class": [3, 0], "MarkAnchor": {"YCoordinate": [549, 0], "XCoordinate": [146, 258]}}, "22": {"MarkAnchor": {"XCoordinate": [258, 188]}}, "23": {"Class": [0, 1], "MarkAnchor": {"YCoordinate": [0, 549], "XCoordinate": [206, 181]}}, "24": {"Class": [0, 1], "MarkAnchor": {"YCoordinate": [0, 549], "XCoordinate": [206, 149]}}, "25": {"Class": [3, 0], "MarkAnchor": {"YCoordinate": [549, 0], "XCoordinate": [128, 142]}}, "26": {"MarkAnchor": {"XCoordinate": [206, 128]}}, "27": {"Class": [4, 2], "MarkAnchor": {"YCoordinate": [0, 549], "XCoordinate": [156, 128]}}, "28": {"Class": [3, 0], "MarkAnchor": {"YCoordinate": [549, 0], "XCoordinate": [130, 76]}}, "29": {"MarkAnchor": {"XCoordinate": [181, 194]}}, "30": {"Class": [4, 2], "MarkAnchor": {"YCoordinate": [0, 549], "XCoordinate": [136, 146]}}, "31": {"Class": [4, 3], "MarkAnchor": {"XCoordinate": [156, 96]}}, "32": {"MarkAnchor": {"YCoordinate": [549, 0], "XCoordinate": [288, 218]}}, "33": {"Class": [4, 3], "MarkAnchor": {"XCoordinate": [195, 265]}}, "34": {"MarkAnchor": {"YCoordinate": [549, 0], "XCoordinate": [164, 215]}}, "35": {"Class": [2, 3], "MarkAnchor": {"YCoordinate": [549, 0], "XCoordinate": [174, 260]}}, "36": {"Class": [4, 3], "MarkAnchor": {"XCoordinate": [158, 215]}}, "37": {"Class": [2, 3], "MarkAnchor": {"YCoordinate": [549, 0], "XCoordinate": [217, 260]}}, "38": {"MarkAnchor": {"YCoordinate": [549, 0], "XCoordinate": [125, 96]}}, "39": {"Class": [4, 3], "MarkAnchor": {"XCoordinate": [96, 164]}}, "40": {"Class": [4, 3], "MarkAnchor": {"XCoordinate": [81, 158]}}, "41": {"Class": [2, 3], "MarkAnchor": {"YCoordinate": [549, 0], "XCoordinate": [-125, 156]}}, "42": {"MarkAnchor": {"YCoordinate": [549, 0], "XCoordinate": [162, 136]}}, "43": {"Class": [2, 1], "MarkAnchor": {"XCoordinate": [149, 0]}}, "44": {"Class": [0, 1], "MarkAnchor": {"YCoordinate": [0, 549], "XCoordinate": [199, 0]}}, "45": {"Class": [0, 3], "MarkAnchor": {"XCoordinate": [76, 195]}}, "46": {"MarkAnchor": {"YCoordinate": [0, 304], "XCoordinate": [164, 96]}}, "47": {"MarkAnchor": {"YCoordinate": [549, 0], "XCoordinate": [96, 81]}}, "48": {"Class": [0, 2], "MarkAnchor": {"YCoordinate": [0, 549], "XCoordinate": [142, 164]}}, "49": {"Class": [0, 1], "MarkAnchor": {"YCoordinate": [0, 549], "XCoordinate": [150, -125]}}, "50": {"Class": [3, 2], "MarkAnchor": {"XCoordinate": [141, 96]}}, "51": {"MarkAnchor": {"YCoordinate": [549, 0]}}, "52": {"MarkAnchor": {"YCoordinate": [549, 0], "XCoordinate": [194, 156]}}, "53": {"Class": [3, 2], "MarkAnchor": {"XCoordinate": [194, 160]}}}}, "MarkCoverage": {"glyphs": {"0": ["uni05A2", "uni0591"], "1": ["uni05BC", "uni0592"], "2": ["uni05A7", "uni0593"], "3": ["uni05AD", "uni0594"], "4": ["uni0591", "uni0595"], "5": ["uni059C", "uni0596"], "6": ["uni059D", "uni0597"], "7": ["uni059E", "uni0598"], "8": ["uni05B2", "uni0599"], "9": ["uni05B2200D05BD", "uni059A"], "10": ["uni05B3", "uni059B"], "11": ["uni05B3200D05BD", "uni059C"], "12": ["uni05B1", "uni059D"], "13": ["uni05B1200D05BD", "uni059E"], "14": ["uni05B4", "uni059F"], "15": ["uni05B9", "uni05A0"], "16": ["uni05BA", "uni05A1"], "17": ["uni05AC", "uni05A2"], "18": ["uniFB1E", "uni05A3"], "19": ["uni05C5", "uni05A4"], "20": ["uni05A4", "uni05A5"], "21": ["uni05AF", "uni05A6"], "22": ["uni05A6", "uni05A7"], "23": ["uni05A5", "uni05A8"], "24": ["uni05A3", "uni05A9"], "25": ["uni05AB", "uni05AA"], "26": ["uni0599", "uni05AB"], "27": ["uni05B7", "uni05AC"], "28": ["uni05A1", "uni05AD"], "29": ["uni05A8", "uni05AE"], "30": ["uni05B8", "uni05AF"], "31": ["uni05C7", "uni05B0"], "32": ["uni059F", "uni05B1"], "33": ["uni05BB", "uni05B1200D05BD"], "34": ["uni05BF", "uni05B2"], "35": ["uni0597", "uni05B2200D05BD"], "36": ["uni05B6", "uni05B3"], "37": ["uni0592", "uni05B3200D05BD"], "38": ["uni0593", "uni05B4"], "39": ["uni05B0", "uni05B5"], "40": ["uni05BD", "uni05B6"], "41": ["uni05C2", "uni05B7"], "42": ["uni05A0", "uni05B8"], "43": ["uni05A9", "uni05B9"], "44": ["uni059B", "uni05BA"], "45": ["uni0596", "uni05BB"], "46": ["uni05B5", "uni05BC"], "47": ["uni05C4", "uni05BD"], "48": ["uni05AA", "uni05BF"], "49": ["uni059A", "uni05C2"], "50": ["uni0595", "uni05C4"], "51": ["uni0594", "uni05C5"], "52": ["uni0598", "uni05C7"], "53": ["uni05AE", "uniFB1E"]}}}}}}}, "ScriptList": {"ScriptRecord": {"0": {"Script": {"DefaultLangSys": {"FeatureIndex": {"0": [0, 1], "1": [1, null]}, "FeatureCount": [2, 1]}}}}}}}, "hhea": {"numberOfHMetrics": [152, 96]}};</script><div id="difftable"></div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+      <div class="box">
+        <div class="box-title">Modified encoded Glyphs</div>
+        <div class="box-text old-wght-400" style="font-size: 32pt">
+          
+            <div class="cell">
+              <div class="cell-word" dir="">
+    <div class="tooltip">
+        ֕<br>
+        <span class="tooltiptext">
+            name: HEBREW ACCENT ZAQEF GADOL<br>
+            unicode: U+0595<br>
+            changed pixels: 2.64%
+        </span>
+    </div>
+</div>
+            </div>
+          
+          </div>
+      </div>
+    
+
+    
+      <div class="box">
+        <div class="box-title">Misshapen Common words</div>
+        <div class="box-text old-wght-400" style="font-size: 32pt">
+          
+        </div>
+      </div>
+    
+      <div class="box">
+        <div class="box-title">Misshapen Hebrew words</div>
+        <div class="box-text old-wght-400" style="font-size: 32pt">
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        אֱסָרֵי<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=141, pos=(-20, 0, 275, 0)<br>gid=95, pos=(-30, 0, 579, 0)<br>gid=124, pos=(-319, 0, 0, 0)<br>gid=98, pos=(0, 0, 741, 0)<br>gid=88, pos=(-495, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=48, pos=(-564, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=31, pos=(0, 0, 295, 0)<br>gid=59, pos=(0, 0, 609, 0)<br>gid=135, pos=(-319, 0, 0, 0)<br>gid=46, pos=(0, 0, 741, 0)<br>gid=138, pos=(-495, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=128, pos=(-564, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 6.61%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        אֲזוֹבֵי<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=141, pos=(-30, 0, 265, 0)<br>gid=19, pos=(0, 0, 602, 0)<br>gid=124, pos=(-462, 0, 0, 0)<br>gid=127, pos=(0, 0, 320, 0)<br>gid=55, pos=(-160, 0, 0, 0)<br>gid=149, pos=(0, 0, 360, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=44, pos=(-561, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=31, pos=(0, 0, 295, 0)<br>gid=14, pos=(0, 0, 602, 0)<br>gid=135, pos=(-462, 0, 0, 0)<br>gid=23, pos=(0, 0, 320, 0)<br>gid=139, pos=(-160, 0, 0, 0)<br>gid=26, pos=(0, 0, 360, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=130, pos=(-561, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 5.23%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        אֲחַפֵּשׂ<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=104, pos=(-20, 0, 758, 0)<br>gid=112, pos=(-663, 0, 0, 0)<br>gid=84, pos=(0, 0, 668, 0)<br>gid=22, pos=(-385, -17, 0, 0)<br>gid=124, pos=(-531, 0, 0, 0)<br>gid=52, pos=(0, 0, 730, 0)<br>gid=82, pos=(-520, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=44, pos=(-561, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=61, pos=(0, 0, 778, 0)<br>gid=145, pos=(-663, 0, 0, 0)<br>gid=51, pos=(0, 0, 668, 0)<br>gid=142, pos=(-385, -17, 0, 0)<br>gid=135, pos=(-531, 0, 0, 0)<br>gid=28, pos=(0, 0, 730, 0)<br>gid=137, pos=(-520, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=130, pos=(-561, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 5.11%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        צִפֳּרִים<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=30, pos=(0, 0, 712, 0)<br>gid=141, pos=(-20, 0, 275, 0)<br>gid=95, pos=(-35, 0, 574, 0)<br>gid=53, pos=(-251, 0, 0, 0)<br>gid=84, pos=(0, 0, 668, 0)<br>gid=22, pos=(-385, -17, 0, 0)<br>gid=46, pos=(-582, 0, 0, 0)<br>gid=122, pos=(0, 0, 640, 0)<br>gid=53, pos=(-433, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=40, pos=(0, 0, 712, 0)<br>gid=31, pos=(0, 0, 295, 0)<br>gid=59, pos=(0, 0, 609, 0)<br>gid=134, pos=(-251, 0, 0, 0)<br>gid=51, pos=(0, 0, 668, 0)<br>gid=142, pos=(-385, -17, 0, 0)<br>gid=132, pos=(-582, 0, 0, 0)<br>gid=55, pos=(0, 0, 640, 0)<br>gid=134, pos=(-433, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 5.03%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        אַבְדִּימֵי<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=141, pos=(-9, 0, 286, 0)<br>gid=70, pos=(0, 0, 714, 0)<br>gid=124, pos=(-527, 0, 0, 0)<br>gid=141, pos=(0, 0, 295, 0)<br>gid=23, pos=(-40, 0, 557, 0)<br>gid=22, pos=(-527, 0, 0, 0)<br>gid=53, pos=(-289, 0, 0, 0)<br>gid=19, pos=(0, 0, 602, 0)<br>gid=103, pos=(-394, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=82, pos=(-502, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=31, pos=(0, 0, 295, 0)<br>gid=41, pos=(0, 0, 714, 0)<br>gid=135, pos=(-527, 0, 0, 0)<br>gid=31, pos=(0, 0, 295, 0)<br>gid=19, pos=(0, 0, 597, 0)<br>gid=142, pos=(-527, 0, 0, 0)<br>gid=134, pos=(-289, 0, 0, 0)<br>gid=14, pos=(0, 0, 602, 0)<br>gid=127, pos=(-394, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=137, pos=(-502, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 4.91%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        אִם־נֶחֱלַק<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=91, pos=(-16, 0, 674, 0)<br>gid=64, pos=(-11, 0, 569, 0)<br>gid=82, pos=(-466, 0, 0, 0)<br>gid=52, pos=(0, 0, 730, 0)<br>gid=48, pos=(-582, 0, 0, 0)<br>gid=76, pos=(0, 0, 447, 0)<br>gid=100, pos=(-401, 0, 0, 0)<br>gid=68, pos=(0, 0, 309, 0)<br>gid=30, pos=(0, 0, 712, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=53, pos=(-442, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=57, pos=(0, 0, 690, 0)<br>gid=38, pos=(0, 0, 580, 0)<br>gid=137, pos=(-466, 0, 0, 0)<br>gid=28, pos=(0, 0, 730, 0)<br>gid=128, pos=(-582, 0, 0, 0)<br>gid=44, pos=(0, 0, 447, 0)<br>gid=136, pos=(-401, 0, 0, 0)<br>gid=91, pos=(0, 0, 309, 0)<br>gid=40, pos=(0, 0, 712, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=134, pos=(-442, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 4.71%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        אֹבְדֵי<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=141, pos=(0, 0, 295, 0)<br>gid=23, pos=(-40, 0, 557, 0)<br>gid=124, pos=(-357, 0, 0, 0)<br>gid=19, pos=(0, 0, 602, 0)<br>gid=103, pos=(-394, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=55, pos=(-692, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=31, pos=(0, 0, 295, 0)<br>gid=19, pos=(0, 0, 597, 0)<br>gid=135, pos=(-357, 0, 0, 0)<br>gid=14, pos=(0, 0, 602, 0)<br>gid=127, pos=(-394, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=139, pos=(-692, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 4.55%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        אֲחִיתֹפֶל<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=64, pos=(-14, 0, 566, 0)<br>gid=84, pos=(0, 0, 668, 0)<br>gid=100, pos=(-525, 0, 0, 0)<br>gid=114, pos=(0, 0, 725, 0)<br>gid=55, pos=(-725, 0, 0, 0)<br>gid=141, pos=(-9, 0, 286, 0)<br>gid=52, pos=(0, 0, 730, 0)<br>gid=53, pos=(-460, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=44, pos=(-561, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=38, pos=(0, 0, 580, 0)<br>gid=51, pos=(0, 0, 668, 0)<br>gid=136, pos=(-525, 0, 0, 0)<br>gid=67, pos=(0, 0, 725, 0)<br>gid=139, pos=(-725, 0, 0, 0)<br>gid=31, pos=(0, 0, 295, 0)<br>gid=28, pos=(0, 0, 730, 0)<br>gid=134, pos=(-460, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=130, pos=(-561, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 4.48%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        אֲגַפָּיו<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=127, pos=(0, 0, 320, 0)<br>gid=141, pos=(-20, 0, 275, 0)<br>gid=84, pos=(0, 0, 668, 0)<br>gid=22, pos=(-385, -17, 0, 0)<br>gid=88, pos=(-503, 0, 0, 0)<br>gid=42, pos=(0, 0, 418, 0)<br>gid=82, pos=(-371, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=44, pos=(-561, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=23, pos=(0, 0, 320, 0)<br>gid=31, pos=(0, 0, 295, 0)<br>gid=51, pos=(0, 0, 668, 0)<br>gid=142, pos=(-385, -17, 0, 0)<br>gid=138, pos=(-503, 0, 0, 0)<br>gid=17, pos=(0, 0, 418, 0)<br>gid=137, pos=(-371, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=130, pos=(-561, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 4.40%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        כִּ֤י<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=141, pos=(-20, 0, 275, 0)<br>gid=61, pos=(0, 0, 593, 0)<br>gid=22, pos=(-482, 0, 0, 0)<br>gid=53, pos=(-461, 0, 0, 0)<br>gid=67, pos=(-688, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=31, pos=(0, 0, 295, 0)<br>gid=35, pos=(0, 0, 593, 0)<br>gid=142, pos=(-482, 0, 0, 0)<br>gid=134, pos=(-461, 0, 0, 0)<br>gid=115, pos=(-688, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 4.39%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        כִּ֥י<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=141, pos=(-20, 0, 275, 0)<br>gid=61, pos=(0, 0, 593, 0)<br>gid=22, pos=(-482, 0, 0, 0)<br>gid=53, pos=(-461, 0, 0, 0)<br>gid=73, pos=(-766, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=31, pos=(0, 0, 295, 0)<br>gid=35, pos=(0, 0, 593, 0)<br>gid=142, pos=(-482, 0, 0, 0)<br>gid=134, pos=(-461, 0, 0, 0)<br>gid=116, pos=(-766, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 4.28%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        אֲסִירִים<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=30, pos=(0, 0, 712, 0)<br>gid=141, pos=(-20, 0, 275, 0)<br>gid=95, pos=(0, 0, 609, 0)<br>gid=53, pos=(-251, 0, 0, 0)<br>gid=141, pos=(-20, 0, 275, 0)<br>gid=98, pos=(0, 0, 741, 0)<br>gid=53, pos=(-455, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=44, pos=(-561, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=40, pos=(0, 0, 712, 0)<br>gid=31, pos=(0, 0, 295, 0)<br>gid=59, pos=(0, 0, 609, 0)<br>gid=134, pos=(-251, 0, 0, 0)<br>gid=31, pos=(0, 0, 295, 0)<br>gid=46, pos=(0, 0, 741, 0)<br>gid=134, pos=(-455, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=130, pos=(-561, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 4.24%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        צֳרִי<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=141, pos=(-20, 0, 275, 0)<br>gid=95, pos=(0, 0, 609, 0)<br>gid=53, pos=(-251, 0, 0, 0)<br>gid=122, pos=(0, 0, 640, 0)<br>gid=46, pos=(-552, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=31, pos=(0, 0, 295, 0)<br>gid=59, pos=(0, 0, 609, 0)<br>gid=134, pos=(-251, 0, 0, 0)<br>gid=55, pos=(0, 0, 640, 0)<br>gid=132, pos=(-552, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 4.24%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        אֶת־גּוּפִי<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=141, pos=(-20, 0, 275, 0)<br>gid=84, pos=(0, 0, 668, 0)<br>gid=53, pos=(-463, 0, 0, 0)<br>gid=127, pos=(0, 0, 320, 0)<br>gid=22, pos=(-416, 0, 0, 0)<br>gid=42, pos=(0, 0, 418, 0)<br>gid=22, pos=(-404, 16, 0, 0)<br>gid=68, pos=(0, 0, 309, 0)<br>gid=114, pos=(0, 0, 725, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=100, pos=(-504, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=31, pos=(0, 0, 295, 0)<br>gid=51, pos=(0, 0, 668, 0)<br>gid=134, pos=(-463, 0, 0, 0)<br>gid=23, pos=(0, 0, 320, 0)<br>gid=142, pos=(-416, 0, 0, 0)<br>gid=17, pos=(0, 0, 418, 0)<br>gid=142, pos=(-404, 16, 0, 0)<br>gid=91, pos=(0, 0, 309, 0)<br>gid=67, pos=(0, 0, 725, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=136, pos=(-504, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 4.10%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        אלחֻסֵין<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=32, pos=(0, 0, 354, 0)<br>gid=141, pos=(-20, 0, 275, 0)<br>gid=98, pos=(0, 0, 741, 0)<br>gid=124, pos=(-523, 0, 0, 0)<br>gid=52, pos=(0, 0, 730, 0)<br>gid=93, pos=(-559, 0, 0, 0)<br>gid=64, pos=(0, 0, 580, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=43, pos=(0, 0, 354, 0)<br>gid=31, pos=(0, 0, 295, 0)<br>gid=46, pos=(0, 0, 741, 0)<br>gid=135, pos=(-523, 0, 0, 0)<br>gid=28, pos=(0, 0, 730, 0)<br>gid=141, pos=(-559, 0, 0, 0)<br>gid=38, pos=(0, 0, 580, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 4.09%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        וּלֲהַבְדִּיל<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=64, pos=(0, 0, 580, 0)<br>gid=141, pos=(0, 0, 295, 0)<br>gid=23, pos=(-40, 0, 557, 0)<br>gid=22, pos=(-527, 0, 0, 0)<br>gid=53, pos=(-289, 0, 0, 0)<br>gid=19, pos=(0, 0, 602, 0)<br>gid=103, pos=(-394, 0, 0, 0)<br>gid=50, pos=(0, 0, 712, 0)<br>gid=82, pos=(-509, 0, 0, 0)<br>gid=64, pos=(0, 0, 580, 0)<br>gid=44, pos=(-525, 0, 0, 0)<br>gid=127, pos=(0, 0, 320, 0)<br>gid=22, pos=(-416, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=38, pos=(0, 0, 580, 0)<br>gid=31, pos=(0, 0, 295, 0)<br>gid=19, pos=(0, 0, 597, 0)<br>gid=142, pos=(-527, 0, 0, 0)<br>gid=134, pos=(-289, 0, 0, 0)<br>gid=14, pos=(0, 0, 602, 0)<br>gid=127, pos=(-394, 0, 0, 0)<br>gid=21, pos=(0, 0, 712, 0)<br>gid=137, pos=(-509, 0, 0, 0)<br>gid=38, pos=(0, 0, 580, 0)<br>gid=130, pos=(-525, 0, 0, 0)<br>gid=23, pos=(0, 0, 320, 0)<br>gid=142, pos=(-416, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 4.06%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        אֲגַרְטְלֵי<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=141, pos=(0, 0, 295, 0)<br>gid=64, pos=(-15, 0, 565, 0)<br>gid=124, pos=(-474, 0, 0, 0)<br>gid=118, pos=(0, 0, 734, 0)<br>gid=103, pos=(-452, 0, 0, 0)<br>gid=95, pos=(0, 0, 609, 0)<br>gid=103, pos=(-251, 0, 0, 0)<br>gid=42, pos=(0, 0, 418, 0)<br>gid=82, pos=(-371, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=44, pos=(-561, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=31, pos=(0, 0, 295, 0)<br>gid=38, pos=(0, 0, 580, 0)<br>gid=135, pos=(-474, 0, 0, 0)<br>gid=29, pos=(0, 0, 734, 0)<br>gid=127, pos=(-452, 0, 0, 0)<br>gid=59, pos=(0, 0, 609, 0)<br>gid=127, pos=(-251, 0, 0, 0)<br>gid=17, pos=(0, 0, 418, 0)<br>gid=137, pos=(-371, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=130, pos=(-561, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 4.04%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        אֲיַחֵל<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=64, pos=(-11, 0, 569, 0)<br>gid=52, pos=(0, 0, 730, 0)<br>gid=124, pos=(-528, 0, 0, 0)<br>gid=141, pos=(0, 0, 295, 0)<br>gid=82, pos=(-301, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=44, pos=(-561, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=38, pos=(0, 0, 580, 0)<br>gid=28, pos=(0, 0, 730, 0)<br>gid=135, pos=(-528, 0, 0, 0)<br>gid=31, pos=(0, 0, 295, 0)<br>gid=137, pos=(-301, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=130, pos=(-561, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 4.01%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        בְּסֹדָם<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=30, pos=(0, 0, 712, 0)<br>gid=23, pos=(-45, 0, 552, 0)<br>gid=88, pos=(-329, 0, 0, 0)<br>gid=98, pos=(0, 0, 741, 0)<br>gid=55, pos=(-759, 0, 0, 0)<br>gid=19, pos=(0, 0, 602, 0)<br>gid=22, pos=(-518, 0, 0, 0)<br>gid=103, pos=(-394, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=40, pos=(0, 0, 712, 0)<br>gid=19, pos=(0, 0, 597, 0)<br>gid=138, pos=(-329, 0, 0, 0)<br>gid=46, pos=(0, 0, 741, 0)<br>gid=139, pos=(-759, 0, 0, 0)<br>gid=14, pos=(0, 0, 602, 0)<br>gid=142, pos=(-518, 0, 0, 0)<br>gid=127, pos=(-394, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 3.79%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        אֲחַשְׁוֵרֹשׁ<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=104, pos=(-9, 0, 769, 0)<br>gid=108, pos=(-201, 0, 0, 0)<br>gid=95, pos=(0, 0, 609, 0)<br>gid=55, pos=(-630, 0, 0, 0)<br>gid=127, pos=(0, 0, 320, 0)<br>gid=124, pos=(-324, 0, 0, 0)<br>gid=104, pos=(0, 0, 778, 0)<br>gid=108, pos=(-201, 0, 0, 0)<br>gid=103, pos=(-509, 0, 0, 0)<br>gid=52, pos=(0, 0, 730, 0)<br>gid=82, pos=(-520, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=44, pos=(-561, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=61, pos=(0, 0, 778, 0)<br>gid=95, pos=(-201, 0, 0, 0)<br>gid=59, pos=(0, 0, 609, 0)<br>gid=139, pos=(-630, 0, 0, 0)<br>gid=23, pos=(0, 0, 320, 0)<br>gid=135, pos=(-324, 0, 0, 0)<br>gid=61, pos=(0, 0, 778, 0)<br>gid=95, pos=(-201, 0, 0, 0)<br>gid=127, pos=(-509, 0, 0, 0)<br>gid=28, pos=(0, 0, 730, 0)<br>gid=137, pos=(-520, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=130, pos=(-561, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 3.78%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        בְּמָרְדֳּכַי<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=141, pos=(-20, 0, 275, 0)<br>gid=61, pos=(0, 0, 593, 0)<br>gid=82, pos=(-521, 0, 0, 0)<br>gid=23, pos=(0, 0, 597, 0)<br>gid=22, pos=(-527, 0, 0, 0)<br>gid=46, pos=(-408, 0, 0, 0)<br>gid=95, pos=(0, 0, 609, 0)<br>gid=103, pos=(-251, 0, 0, 0)<br>gid=70, pos=(0, 0, 714, 0)<br>gid=88, pos=(-499, 0, 0, 0)<br>gid=19, pos=(0, 0, 602, 0)<br>gid=22, pos=(-518, 0, 0, 0)<br>gid=103, pos=(-394, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=31, pos=(0, 0, 295, 0)<br>gid=35, pos=(0, 0, 593, 0)<br>gid=137, pos=(-521, 0, 0, 0)<br>gid=19, pos=(0, 0, 597, 0)<br>gid=142, pos=(-527, 0, 0, 0)<br>gid=132, pos=(-408, 0, 0, 0)<br>gid=59, pos=(0, 0, 609, 0)<br>gid=127, pos=(-251, 0, 0, 0)<br>gid=41, pos=(0, 0, 714, 0)<br>gid=138, pos=(-499, 0, 0, 0)<br>gid=14, pos=(0, 0, 602, 0)<br>gid=142, pos=(-518, 0, 0, 0)<br>gid=127, pos=(-394, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 3.76%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        אֲבִיחַיִל<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=64, pos=(0, 0, 580, 0)<br>gid=141, pos=(-9, 0, 286, 0)<br>gid=53, pos=(-241, 0, 0, 0)<br>gid=52, pos=(0, 0, 730, 0)<br>gid=82, pos=(-520, 0, 0, 0)<br>gid=141, pos=(-30, 0, 265, 0)<br>gid=19, pos=(0, 0, 602, 0)<br>gid=53, pos=(-394, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=44, pos=(-561, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=38, pos=(0, 0, 580, 0)<br>gid=31, pos=(0, 0, 295, 0)<br>gid=134, pos=(-241, 0, 0, 0)<br>gid=28, pos=(0, 0, 730, 0)<br>gid=137, pos=(-520, 0, 0, 0)<br>gid=31, pos=(0, 0, 295, 0)<br>gid=14, pos=(0, 0, 602, 0)<br>gid=134, pos=(-394, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=130, pos=(-561, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 3.74%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        אָטֵר<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=95, pos=(-20, 0, 589, 0)<br>gid=118, pos=(0, 0, 734, 0)<br>gid=124, pos=(-520, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=88, pos=(-482, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=59, pos=(0, 0, 609, 0)<br>gid=29, pos=(0, 0, 734, 0)<br>gid=135, pos=(-520, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=138, pos=(-482, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 3.74%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        אִבַּדְתִּי<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=141, pos=(0, 0, 295, 0)<br>gid=114, pos=(0, 0, 725, 0)<br>gid=22, pos=(-431, 0, 0, 0)<br>gid=53, pos=(-431, 0, 0, 0)<br>gid=23, pos=(-40, 0, 557, 0)<br>gid=103, pos=(-289, 0, 0, 0)<br>gid=19, pos=(0, 0, 602, 0)<br>gid=22, pos=(-518, 0, 0, 0)<br>gid=82, pos=(-454, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=53, pos=(-442, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=31, pos=(0, 0, 295, 0)<br>gid=67, pos=(0, 0, 725, 0)<br>gid=142, pos=(-431, 0, 0, 0)<br>gid=134, pos=(-431, 0, 0, 0)<br>gid=19, pos=(0, 0, 597, 0)<br>gid=127, pos=(-289, 0, 0, 0)<br>gid=14, pos=(0, 0, 602, 0)<br>gid=142, pos=(-518, 0, 0, 0)<br>gid=137, pos=(-454, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=134, pos=(-442, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 3.63%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        אַוּגוּסְטֶה<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=50, pos=(0, 0, 712, 0)<br>gid=118, pos=(-9, 0, 725, 0)<br>gid=100, pos=(-514, 0, 0, 0)<br>gid=98, pos=(0, 0, 741, 0)<br>gid=103, pos=(-455, 0, 0, 0)<br>gid=127, pos=(0, 0, 320, 0)<br>gid=22, pos=(-416, 0, 0, 0)<br>gid=42, pos=(0, 0, 418, 0)<br>gid=127, pos=(0, 0, 320, 0)<br>gid=22, pos=(-416, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=82, pos=(-502, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=21, pos=(0, 0, 712, 0)<br>gid=29, pos=(0, 0, 734, 0)<br>gid=136, pos=(-514, 0, 0, 0)<br>gid=46, pos=(0, 0, 741, 0)<br>gid=127, pos=(-455, 0, 0, 0)<br>gid=23, pos=(0, 0, 320, 0)<br>gid=142, pos=(-416, 0, 0, 0)<br>gid=17, pos=(0, 0, 418, 0)<br>gid=23, pos=(0, 0, 320, 0)<br>gid=142, pos=(-416, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=137, pos=(-502, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 3.58%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        בָּרֲכִי<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=141, pos=(-20, 0, 275, 0)<br>gid=61, pos=(0, 0, 593, 0)<br>gid=53, pos=(-461, 0, 0, 0)<br>gid=95, pos=(0, 0, 609, 0)<br>gid=44, pos=(-370, 0, 0, 0)<br>gid=19, pos=(0, 0, 602, 0)<br>gid=22, pos=(-518, 0, 0, 0)<br>gid=88, pos=(-434, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=31, pos=(0, 0, 295, 0)<br>gid=35, pos=(0, 0, 593, 0)<br>gid=134, pos=(-461, 0, 0, 0)<br>gid=59, pos=(0, 0, 609, 0)<br>gid=130, pos=(-370, 0, 0, 0)<br>gid=14, pos=(0, 0, 602, 0)<br>gid=142, pos=(-518, 0, 0, 0)<br>gid=138, pos=(-434, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 3.57%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        אֲרֻכִּים<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=30, pos=(0, 0, 712, 0)<br>gid=141, pos=(-20, 0, 275, 0)<br>gid=61, pos=(0, 0, 593, 0)<br>gid=22, pos=(-482, 0, 0, 0)<br>gid=53, pos=(-461, 0, 0, 0)<br>gid=95, pos=(0, 0, 609, 0)<br>gid=93, pos=(-350, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=44, pos=(-561, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=40, pos=(0, 0, 712, 0)<br>gid=31, pos=(0, 0, 295, 0)<br>gid=35, pos=(0, 0, 593, 0)<br>gid=142, pos=(-482, 0, 0, 0)<br>gid=134, pos=(-461, 0, 0, 0)<br>gid=59, pos=(0, 0, 609, 0)<br>gid=141, pos=(-350, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=130, pos=(-561, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 3.46%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        אֱלִימֶלֶךְ<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=28, pos=(0, 0, 601, 0)<br>gid=103, pos=(-515, 240, 0, 0)<br>gid=64, pos=(-11, 0, 569, 0)<br>gid=100, pos=(-468, 0, 0, 0)<br>gid=70, pos=(0, 0, 714, 0)<br>gid=100, pos=(-521, 0, 0, 0)<br>gid=141, pos=(0, 0, 295, 0)<br>gid=64, pos=(0, 0, 580, 0)<br>gid=53, pos=(-406, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=48, pos=(-564, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=33, pos=(0, 0, 601, 0)<br>gid=127, pos=(-515, 240, 0, 0)<br>gid=38, pos=(0, 0, 580, 0)<br>gid=136, pos=(-468, 0, 0, 0)<br>gid=41, pos=(0, 0, 714, 0)<br>gid=136, pos=(-521, 0, 0, 0)<br>gid=31, pos=(0, 0, 295, 0)<br>gid=38, pos=(0, 0, 580, 0)<br>gid=134, pos=(-406, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=128, pos=(-564, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 3.44%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        אָכַ֣ל<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=64, pos=(-25, 0, 555, 0)<br>gid=61, pos=(0, 0, 593, 0)<br>gid=82, pos=(-521, 0, 0, 0)<br>gid=74, pos=(-766, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=88, pos=(-482, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=38, pos=(0, 0, 580, 0)<br>gid=35, pos=(0, 0, 593, 0)<br>gid=137, pos=(-521, 0, 0, 0)<br>gid=114, pos=(-766, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=138, pos=(-482, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 3.39%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        אֲשֵׁמִים<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=30, pos=(0, 0, 712, 0)<br>gid=141, pos=(-9, 0, 286, 0)<br>gid=70, pos=(0, 0, 714, 0)<br>gid=53, pos=(-459, 0, 0, 0)<br>gid=104, pos=(0, 0, 778, 0)<br>gid=108, pos=(-201, 0, 0, 0)<br>gid=124, pos=(-577, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=44, pos=(-561, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=40, pos=(0, 0, 712, 0)<br>gid=31, pos=(0, 0, 295, 0)<br>gid=41, pos=(0, 0, 714, 0)<br>gid=134, pos=(-459, 0, 0, 0)<br>gid=61, pos=(0, 0, 778, 0)<br>gid=95, pos=(-201, 0, 0, 0)<br>gid=135, pos=(-577, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=130, pos=(-561, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 3.37%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        אֲזוֹרִית<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=114, pos=(0, 0, 725, 0)<br>gid=141, pos=(-20, 0, 275, 0)<br>gid=95, pos=(0, 0, 609, 0)<br>gid=53, pos=(-251, 0, 0, 0)<br>gid=127, pos=(0, 0, 320, 0)<br>gid=55, pos=(-160, 0, 0, 0)<br>gid=149, pos=(0, 0, 360, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=44, pos=(-561, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=67, pos=(0, 0, 725, 0)<br>gid=31, pos=(0, 0, 295, 0)<br>gid=59, pos=(0, 0, 609, 0)<br>gid=134, pos=(-251, 0, 0, 0)<br>gid=23, pos=(0, 0, 320, 0)<br>gid=139, pos=(-160, 0, 0, 0)<br>gid=26, pos=(0, 0, 360, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=130, pos=(-561, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 3.37%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        אִתְפְּעֵל<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=64, pos=(0, 0, 580, 0)<br>gid=17, pos=(-11, 0, 660, 0)<br>gid=124, pos=(-532, 0, 0, 0)<br>gid=84, pos=(0, 0, 668, 0)<br>gid=22, pos=(-385, -17, 0, 0)<br>gid=103, pos=(-463, 0, 0, 0)<br>gid=114, pos=(0, 0, 725, 0)<br>gid=103, pos=(-431, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=53, pos=(-442, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=38, pos=(0, 0, 580, 0)<br>gid=48, pos=(0, 0, 671, 0)<br>gid=135, pos=(-532, 0, 0, 0)<br>gid=51, pos=(0, 0, 668, 0)<br>gid=142, pos=(-385, -17, 0, 0)<br>gid=127, pos=(-463, 0, 0, 0)<br>gid=67, pos=(0, 0, 725, 0)<br>gid=127, pos=(-431, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=134, pos=(-442, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 3.31%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        אֲבִיהֶן<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=32, pos=(0, 0, 354, 0)<br>gid=50, pos=(0, 0, 712, 0)<br>gid=100, pos=(-511, 0, 0, 0)<br>gid=141, pos=(-30, 0, 265, 0)<br>gid=19, pos=(0, 0, 602, 0)<br>gid=53, pos=(-394, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=44, pos=(-561, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=43, pos=(0, 0, 354, 0)<br>gid=21, pos=(0, 0, 712, 0)<br>gid=136, pos=(-511, 0, 0, 0)<br>gid=31, pos=(0, 0, 295, 0)<br>gid=14, pos=(0, 0, 602, 0)<br>gid=134, pos=(-394, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=130, pos=(-561, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 3.31%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        הַמְּשֻׁשּׁים<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=30, pos=(0, 0, 712, 0)<br>gid=141, pos=(-9, 0, 286, 0)<br>gid=104, pos=(0, 0, 778, 0)<br>gid=108, pos=(-201, 0, 0, 0)<br>gid=22, pos=(-433, -64, 0, 0)<br>gid=104, pos=(0, 0, 778, 0)<br>gid=108, pos=(-201, 0, 0, 0)<br>gid=93, pos=(-608, 0, 0, 0)<br>gid=70, pos=(0, 0, 714, 0)<br>gid=22, pos=(-449, 0, 0, 0)<br>gid=103, pos=(-459, 0, 0, 0)<br>gid=50, pos=(0, 0, 712, 0)<br>gid=82, pos=(-509, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=40, pos=(0, 0, 712, 0)<br>gid=31, pos=(0, 0, 295, 0)<br>gid=61, pos=(0, 0, 778, 0)<br>gid=95, pos=(-201, 0, 0, 0)<br>gid=142, pos=(-433, -64, 0, 0)<br>gid=61, pos=(0, 0, 778, 0)<br>gid=95, pos=(-201, 0, 0, 0)<br>gid=141, pos=(-608, 0, 0, 0)<br>gid=41, pos=(0, 0, 714, 0)<br>gid=142, pos=(-449, 0, 0, 0)<br>gid=127, pos=(-459, 0, 0, 0)<br>gid=21, pos=(0, 0, 712, 0)<br>gid=137, pos=(-509, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 3.25%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        אלדימֻקרטיה<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=50, pos=(0, 0, 712, 0)<br>gid=141, pos=(-20, 0, 275, 0)<br>gid=118, pos=(0, 0, 734, 0)<br>gid=95, pos=(0, 0, 609, 0)<br>gid=91, pos=(0, 0, 690, 0)<br>gid=70, pos=(0, 0, 714, 0)<br>gid=93, pos=(-558, 0, 0, 0)<br>gid=141, pos=(0, 0, 295, 0)<br>gid=23, pos=(0, 0, 597, 0)<br>gid=64, pos=(0, 0, 580, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=21, pos=(0, 0, 712, 0)<br>gid=31, pos=(0, 0, 295, 0)<br>gid=29, pos=(0, 0, 734, 0)<br>gid=59, pos=(0, 0, 609, 0)<br>gid=57, pos=(0, 0, 690, 0)<br>gid=41, pos=(0, 0, 714, 0)<br>gid=141, pos=(-558, 0, 0, 0)<br>gid=31, pos=(0, 0, 295, 0)<br>gid=19, pos=(0, 0, 597, 0)<br>gid=38, pos=(0, 0, 580, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 3.24%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        אֲסֻפּוֹת<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=114, pos=(0, 0, 725, 0)<br>gid=127, pos=(0, 0, 320, 0)<br>gid=55, pos=(-160, 0, 0, 0)<br>gid=84, pos=(-20, 0, 648, 0)<br>gid=22, pos=(-385, -17, 0, 0)<br>gid=98, pos=(0, 0, 741, 0)<br>gid=93, pos=(-554, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=44, pos=(-561, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=67, pos=(0, 0, 725, 0)<br>gid=23, pos=(0, 0, 320, 0)<br>gid=139, pos=(-160, 0, 0, 0)<br>gid=51, pos=(0, 0, 668, 0)<br>gid=142, pos=(-385, -17, 0, 0)<br>gid=46, pos=(0, 0, 741, 0)<br>gid=141, pos=(-554, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=130, pos=(-561, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 3.23%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        מֶ֣לֶךְ<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=28, pos=(0, 0, 601, 0)<br>gid=103, pos=(-515, 240, 0, 0)<br>gid=64, pos=(-11, 0, 569, 0)<br>gid=100, pos=(-468, 0, 0, 0)<br>gid=70, pos=(0, 0, 714, 0)<br>gid=100, pos=(-521, 0, 0, 0)<br>gid=74, pos=(-795, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=33, pos=(0, 0, 601, 0)<br>gid=127, pos=(-515, 240, 0, 0)<br>gid=38, pos=(0, 0, 580, 0)<br>gid=136, pos=(-468, 0, 0, 0)<br>gid=41, pos=(0, 0, 714, 0)<br>gid=136, pos=(-521, 0, 0, 0)<br>gid=114, pos=(-795, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 3.22%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        וַתְּחַיֶּיןָ<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=32, pos=(0, 0, 354, 0)<br>gid=88, pos=(0, 0, 0, 0)<br>gid=141, pos=(0, 0, 295, 0)<br>gid=141, pos=(-9, 0, 286, 0)<br>gid=22, pos=(-398, 109, 0, 0)<br>gid=100, pos=(-303, 0, 0, 0)<br>gid=52, pos=(0, 0, 730, 0)<br>gid=82, pos=(-520, 0, 0, 0)<br>gid=114, pos=(0, 0, 725, 0)<br>gid=22, pos=(-431, 0, 0, 0)<br>gid=103, pos=(-431, 0, 0, 0)<br>gid=127, pos=(0, 0, 320, 0)<br>gid=82, pos=(-316, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=43, pos=(0, 0, 354, 0)<br>gid=138, pos=(0, 0, 0, 0)<br>gid=31, pos=(0, 0, 295, 0)<br>gid=31, pos=(0, 0, 295, 0)<br>gid=142, pos=(-398, 109, 0, 0)<br>gid=136, pos=(-303, 0, 0, 0)<br>gid=28, pos=(0, 0, 730, 0)<br>gid=137, pos=(-520, 0, 0, 0)<br>gid=67, pos=(0, 0, 725, 0)<br>gid=142, pos=(-431, 0, 0, 0)<br>gid=127, pos=(-431, 0, 0, 0)<br>gid=23, pos=(0, 0, 320, 0)<br>gid=137, pos=(-316, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 3.18%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        כֹּ֚ל<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=64, pos=(-25, 0, 555, 0)<br>gid=61, pos=(0, 0, 593, 0)<br>gid=22, pos=(-482, 0, 0, 0)<br>gid=55, pos=(-611, 0, 0, 0)<br>gid=140, pos=(-710, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=38, pos=(0, 0, 580, 0)<br>gid=35, pos=(0, 0, 593, 0)<br>gid=142, pos=(-482, 0, 0, 0)<br>gid=139, pos=(-611, 0, 0, 0)<br>gid=105, pos=(-710, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 3.12%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        אְסקְסטַה<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=50, pos=(0, 0, 712, 0)<br>gid=118, pos=(-9, 0, 725, 0)<br>gid=82, pos=(-512, 0, 0, 0)<br>gid=98, pos=(0, 0, 741, 0)<br>gid=91, pos=(0, 0, 690, 0)<br>gid=103, pos=(-373, 0, 0, 0)<br>gid=98, pos=(0, 0, 741, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=103, pos=(-442, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=21, pos=(0, 0, 712, 0)<br>gid=29, pos=(0, 0, 734, 0)<br>gid=137, pos=(-512, 0, 0, 0)<br>gid=46, pos=(0, 0, 741, 0)<br>gid=57, pos=(0, 0, 690, 0)<br>gid=127, pos=(-373, 0, 0, 0)<br>gid=46, pos=(0, 0, 741, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=127, pos=(-442, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 3.10%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        אֱלֹקֶיךָ<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=28, pos=(0, 0, 601, 0)<br>gid=88, pos=(-555, 240, 0, 0)<br>gid=141, pos=(0, 0, 295, 0)<br>gid=91, pos=(-16, 0, 674, 0)<br>gid=100, pos=(-435, 0, 0, 0)<br>gid=64, pos=(0, 0, 580, 0)<br>gid=55, pos=(-631, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=48, pos=(-564, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=33, pos=(0, 0, 601, 0)<br>gid=138, pos=(-555, 240, 0, 0)<br>gid=31, pos=(0, 0, 295, 0)<br>gid=57, pos=(0, 0, 690, 0)<br>gid=136, pos=(-435, 0, 0, 0)<br>gid=38, pos=(0, 0, 580, 0)<br>gid=139, pos=(-631, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=128, pos=(-564, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 3.08%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        תֹּאכֲלֶנָּה<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=50, pos=(0, 0, 712, 0)<br>gid=76, pos=(0, 0, 447, 0)<br>gid=22, pos=(-429, 0, 0, 0)<br>gid=88, pos=(-379, 0, 0, 0)<br>gid=64, pos=(-25, 0, 555, 0)<br>gid=100, pos=(-468, 0, 0, 0)<br>gid=61, pos=(0, 0, 593, 0)<br>gid=44, pos=(-580, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=114, pos=(0, 0, 725, 0)<br>gid=22, pos=(-431, 0, 0, 0)<br>gid=55, pos=(-725, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=21, pos=(0, 0, 712, 0)<br>gid=44, pos=(0, 0, 447, 0)<br>gid=142, pos=(-429, 0, 0, 0)<br>gid=138, pos=(-379, 0, 0, 0)<br>gid=38, pos=(0, 0, 580, 0)<br>gid=136, pos=(-468, 0, 0, 0)<br>gid=35, pos=(0, 0, 593, 0)<br>gid=130, pos=(-580, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=67, pos=(0, 0, 725, 0)<br>gid=142, pos=(-431, 0, 0, 0)<br>gid=139, pos=(-725, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 3.05%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        אֶת־אָחִיו<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=127, pos=(0, 0, 320, 0)<br>gid=141, pos=(-9, 0, 286, 0)<br>gid=52, pos=(0, 0, 730, 0)<br>gid=53, pos=(-460, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=88, pos=(-482, 0, 0, 0)<br>gid=68, pos=(0, 0, 309, 0)<br>gid=114, pos=(0, 0, 725, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=100, pos=(-504, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=23, pos=(0, 0, 320, 0)<br>gid=31, pos=(0, 0, 295, 0)<br>gid=28, pos=(0, 0, 730, 0)<br>gid=134, pos=(-460, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=138, pos=(-482, 0, 0, 0)<br>gid=91, pos=(0, 0, 309, 0)<br>gid=67, pos=(0, 0, 725, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=136, pos=(-504, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 3.02%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        אֲיַסֵּר<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=95, pos=(-30, 0, 579, 0)<br>gid=98, pos=(0, 0, 741, 0)<br>gid=22, pos=(-452, 0, 0, 0)<br>gid=124, pos=(-523, 0, 0, 0)<br>gid=141, pos=(0, 0, 295, 0)<br>gid=82, pos=(-301, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=44, pos=(-561, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=59, pos=(0, 0, 609, 0)<br>gid=46, pos=(0, 0, 741, 0)<br>gid=142, pos=(-452, 0, 0, 0)<br>gid=135, pos=(-523, 0, 0, 0)<br>gid=31, pos=(0, 0, 295, 0)<br>gid=137, pos=(-301, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=130, pos=(-561, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 2.94%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        הַחַרְטֻמִּים<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=30, pos=(0, 0, 712, 0)<br>gid=141, pos=(-9, 0, 286, 0)<br>gid=70, pos=(0, 0, 714, 0)<br>gid=22, pos=(-449, 0, 0, 0)<br>gid=53, pos=(-459, 0, 0, 0)<br>gid=118, pos=(0, 0, 734, 0)<br>gid=93, pos=(-551, 0, 0, 0)<br>gid=95, pos=(0, 0, 609, 0)<br>gid=103, pos=(-251, 0, 0, 0)<br>gid=52, pos=(0, 0, 730, 0)<br>gid=82, pos=(-520, 0, 0, 0)<br>gid=50, pos=(0, 0, 712, 0)<br>gid=82, pos=(-509, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=40, pos=(0, 0, 712, 0)<br>gid=31, pos=(0, 0, 295, 0)<br>gid=41, pos=(0, 0, 714, 0)<br>gid=142, pos=(-449, 0, 0, 0)<br>gid=134, pos=(-459, 0, 0, 0)<br>gid=29, pos=(0, 0, 734, 0)<br>gid=141, pos=(-551, 0, 0, 0)<br>gid=59, pos=(0, 0, 609, 0)<br>gid=127, pos=(-251, 0, 0, 0)<br>gid=28, pos=(0, 0, 730, 0)<br>gid=137, pos=(-520, 0, 0, 0)<br>gid=21, pos=(0, 0, 712, 0)<br>gid=137, pos=(-509, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 2.91%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        הַקֳּדָשִׁ֖ים<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=30, pos=(0, 0, 712, 0)<br>gid=141, pos=(-9, 0, 286, 0)<br>gid=104, pos=(0, 0, 778, 0)<br>gid=108, pos=(-201, 0, 0, 0)<br>gid=53, pos=(-509, 0, 0, 0)<br>gid=121, pos=(-766, 0, 0, 0)<br>gid=23, pos=(0, 0, 597, 0)<br>gid=88, pos=(-329, 0, 0, 0)<br>gid=91, pos=(0, 0, 690, 0)<br>gid=22, pos=(-463, 0, 0, 0)<br>gid=46, pos=(-492, 0, 0, 0)<br>gid=50, pos=(0, 0, 712, 0)<br>gid=82, pos=(-509, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=40, pos=(0, 0, 712, 0)<br>gid=31, pos=(0, 0, 295, 0)<br>gid=61, pos=(0, 0, 778, 0)<br>gid=95, pos=(-201, 0, 0, 0)<br>gid=134, pos=(-509, 0, 0, 0)<br>gid=101, pos=(-766, 0, 0, 0)<br>gid=19, pos=(0, 0, 597, 0)<br>gid=138, pos=(-329, 0, 0, 0)<br>gid=57, pos=(0, 0, 690, 0)<br>gid=142, pos=(-463, 0, 0, 0)<br>gid=132, pos=(-492, 0, 0, 0)<br>gid=21, pos=(0, 0, 712, 0)<br>gid=137, pos=(-509, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 2.90%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        אֶחְיֶה<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=50, pos=(0, 0, 712, 0)<br>gid=141, pos=(-9, 0, 286, 0)<br>gid=100, pos=(-303, 0, 0, 0)<br>gid=52, pos=(0, 0, 730, 0)<br>gid=103, pos=(-460, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=100, pos=(-504, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=21, pos=(0, 0, 712, 0)<br>gid=31, pos=(0, 0, 295, 0)<br>gid=136, pos=(-303, 0, 0, 0)<br>gid=28, pos=(0, 0, 730, 0)<br>gid=127, pos=(-460, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=136, pos=(-504, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 2.85%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        אֲרַמִּים<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=30, pos=(0, 0, 712, 0)<br>gid=141, pos=(-9, 0, 286, 0)<br>gid=70, pos=(0, 0, 714, 0)<br>gid=22, pos=(-449, 0, 0, 0)<br>gid=53, pos=(-459, 0, 0, 0)<br>gid=95, pos=(0, 0, 609, 0)<br>gid=82, pos=(-311, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=44, pos=(-561, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=40, pos=(0, 0, 712, 0)<br>gid=31, pos=(0, 0, 295, 0)<br>gid=41, pos=(0, 0, 714, 0)<br>gid=142, pos=(-449, 0, 0, 0)<br>gid=134, pos=(-459, 0, 0, 0)<br>gid=59, pos=(0, 0, 609, 0)<br>gid=137, pos=(-311, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=130, pos=(-561, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 2.83%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        אַלַשִיַה<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=50, pos=(0, 0, 712, 0)<br>gid=141, pos=(-9, 0, 286, 0)<br>gid=82, pos=(-301, 0, 0, 0)<br>gid=104, pos=(0, 0, 778, 0)<br>gid=53, pos=(-509, 0, 0, 0)<br>gid=64, pos=(0, 0, 580, 0)<br>gid=82, pos=(-466, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=82, pos=(-502, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=21, pos=(0, 0, 712, 0)<br>gid=31, pos=(0, 0, 295, 0)<br>gid=137, pos=(-301, 0, 0, 0)<br>gid=61, pos=(0, 0, 778, 0)<br>gid=134, pos=(-509, 0, 0, 0)<br>gid=38, pos=(0, 0, 580, 0)<br>gid=137, pos=(-466, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=137, pos=(-502, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 2.76%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        הַשִּׁבֳּלִים<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=30, pos=(0, 0, 712, 0)<br>gid=141, pos=(0, 0, 295, 0)<br>gid=64, pos=(-11, 0, 569, 0)<br>gid=53, pos=(-406, 0, 0, 0)<br>gid=19, pos=(0, 0, 602, 0)<br>gid=22, pos=(-518, 0, 0, 0)<br>gid=46, pos=(-513, 0, 0, 0)<br>gid=104, pos=(0, 0, 778, 0)<br>gid=108, pos=(-201, 0, 0, 0)<br>gid=22, pos=(-433, -64, 0, 0)<br>gid=53, pos=(-509, 0, 0, 0)<br>gid=50, pos=(0, 0, 712, 0)<br>gid=82, pos=(-509, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=40, pos=(0, 0, 712, 0)<br>gid=31, pos=(0, 0, 295, 0)<br>gid=38, pos=(0, 0, 580, 0)<br>gid=134, pos=(-406, 0, 0, 0)<br>gid=14, pos=(0, 0, 602, 0)<br>gid=142, pos=(-518, 0, 0, 0)<br>gid=132, pos=(-513, 0, 0, 0)<br>gid=61, pos=(0, 0, 778, 0)<br>gid=95, pos=(-201, 0, 0, 0)<br>gid=142, pos=(-433, -64, 0, 0)<br>gid=134, pos=(-509, 0, 0, 0)<br>gid=21, pos=(0, 0, 712, 0)<br>gid=137, pos=(-509, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 2.75%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        אֲכַבֵּד<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=23, pos=(-40, 0, 557, 0)<br>gid=19, pos=(0, 0, 602, 0)<br>gid=22, pos=(-518, 0, 0, 0)<br>gid=124, pos=(-462, 0, 0, 0)<br>gid=61, pos=(0, 0, 593, 0)<br>gid=82, pos=(-521, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=44, pos=(-561, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=19, pos=(0, 0, 597, 0)<br>gid=14, pos=(0, 0, 602, 0)<br>gid=142, pos=(-518, 0, 0, 0)<br>gid=135, pos=(-462, 0, 0, 0)<br>gid=35, pos=(0, 0, 593, 0)<br>gid=137, pos=(-521, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=130, pos=(-561, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 2.75%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        אֵצֵא<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=10, pos=(0, 0, 692, 0)<br>gid=122, pos=(-11, 0, 629, 0)<br>gid=124, pos=(-501, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=124, pos=(-510, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=10, pos=(0, 0, 692, 0)<br>gid=55, pos=(0, 0, 640, 0)<br>gid=135, pos=(-501, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=135, pos=(-510, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 2.74%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        אִכְפַּת<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=114, pos=(0, 0, 725, 0)<br>gid=84, pos=(-9, 0, 659, 0)<br>gid=22, pos=(-385, -17, 0, 0)<br>gid=82, pos=(-523, 0, 0, 0)<br>gid=61, pos=(0, 0, 593, 0)<br>gid=103, pos=(-461, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=53, pos=(-442, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=67, pos=(0, 0, 725, 0)<br>gid=51, pos=(0, 0, 668, 0)<br>gid=142, pos=(-385, -17, 0, 0)<br>gid=137, pos=(-523, 0, 0, 0)<br>gid=35, pos=(0, 0, 593, 0)<br>gid=127, pos=(-461, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=134, pos=(-442, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 2.73%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        בְּכֻלְּהוֹן<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=32, pos=(0, 0, 354, 0)<br>gid=127, pos=(0, 0, 320, 0)<br>gid=55, pos=(-160, 0, 0, 0)<br>gid=50, pos=(0, 0, 712, 0)<br>gid=64, pos=(-25, 0, 555, 0)<br>gid=22, pos=(-523, 0, 0, 0)<br>gid=103, pos=(-406, 0, 0, 0)<br>gid=61, pos=(0, 0, 593, 0)<br>gid=93, pos=(-560, 0, 0, 0)<br>gid=19, pos=(0, 0, 602, 0)<br>gid=22, pos=(-518, 0, 0, 0)<br>gid=103, pos=(-394, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=43, pos=(0, 0, 354, 0)<br>gid=23, pos=(0, 0, 320, 0)<br>gid=139, pos=(-160, 0, 0, 0)<br>gid=21, pos=(0, 0, 712, 0)<br>gid=38, pos=(0, 0, 580, 0)<br>gid=142, pos=(-523, 0, 0, 0)<br>gid=127, pos=(-406, 0, 0, 0)<br>gid=35, pos=(0, 0, 593, 0)<br>gid=141, pos=(-560, 0, 0, 0)<br>gid=14, pos=(0, 0, 602, 0)<br>gid=142, pos=(-518, 0, 0, 0)<br>gid=127, pos=(-394, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 2.65%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        אֶבְּלַה<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=50, pos=(0, 0, 712, 0)<br>gid=64, pos=(-11, 0, 569, 0)<br>gid=82, pos=(-466, 0, 0, 0)<br>gid=19, pos=(0, 0, 602, 0)<br>gid=22, pos=(-518, 0, 0, 0)<br>gid=103, pos=(-394, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=100, pos=(-504, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=21, pos=(0, 0, 712, 0)<br>gid=38, pos=(0, 0, 580, 0)<br>gid=137, pos=(-466, 0, 0, 0)<br>gid=14, pos=(0, 0, 602, 0)<br>gid=142, pos=(-518, 0, 0, 0)<br>gid=127, pos=(-394, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=136, pos=(-504, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 2.64%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        אֱלֹקֵיכֶם<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=30, pos=(0, 0, 712, 0)<br>gid=61, pos=(0, 0, 593, 0)<br>gid=100, pos=(-523, 0, 0, 0)<br>gid=141, pos=(0, 0, 295, 0)<br>gid=91, pos=(-16, 0, 674, 0)<br>gid=124, pos=(-441, 0, 0, 0)<br>gid=64, pos=(0, 0, 580, 0)<br>gid=55, pos=(-631, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=48, pos=(-564, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=40, pos=(0, 0, 712, 0)<br>gid=35, pos=(0, 0, 593, 0)<br>gid=136, pos=(-523, 0, 0, 0)<br>gid=31, pos=(0, 0, 295, 0)<br>gid=57, pos=(0, 0, 690, 0)<br>gid=135, pos=(-441, 0, 0, 0)<br>gid=38, pos=(0, 0, 580, 0)<br>gid=139, pos=(-631, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=128, pos=(-564, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 2.57%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        בְתַחְבֻּלוֹת<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=114, pos=(0, 0, 725, 0)<br>gid=127, pos=(0, 0, 320, 0)<br>gid=55, pos=(-160, 0, 0, 0)<br>gid=64, pos=(-11, 0, 569, 0)<br>gid=19, pos=(0, 0, 602, 0)<br>gid=22, pos=(-518, 0, 0, 0)<br>gid=93, pos=(-493, 0, 0, 0)<br>gid=52, pos=(0, 0, 730, 0)<br>gid=103, pos=(-460, 0, 0, 0)<br>gid=114, pos=(0, 0, 725, 0)<br>gid=82, pos=(-491, 0, 0, 0)<br>gid=19, pos=(0, 0, 602, 0)<br>gid=103, pos=(-394, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=67, pos=(0, 0, 725, 0)<br>gid=23, pos=(0, 0, 320, 0)<br>gid=139, pos=(-160, 0, 0, 0)<br>gid=38, pos=(0, 0, 580, 0)<br>gid=14, pos=(0, 0, 602, 0)<br>gid=142, pos=(-518, 0, 0, 0)<br>gid=141, pos=(-493, 0, 0, 0)<br>gid=28, pos=(0, 0, 730, 0)<br>gid=127, pos=(-460, 0, 0, 0)<br>gid=67, pos=(0, 0, 725, 0)<br>gid=137, pos=(-491, 0, 0, 0)<br>gid=14, pos=(0, 0, 602, 0)<br>gid=127, pos=(-394, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 2.53%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        בַּיּ֣וֹם<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=30, pos=(0, 0, 712, 0)<br>gid=127, pos=(0, 0, 320, 0)<br>gid=55, pos=(-160, 0, 0, 0)<br>gid=141, pos=(-30, 0, 265, 0)<br>gid=22, pos=(-398, 109, 0, 0)<br>gid=74, pos=(-519, 0, 0, 0)<br>gid=19, pos=(0, 0, 602, 0)<br>gid=22, pos=(-518, 0, 0, 0)<br>gid=82, pos=(-454, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=40, pos=(0, 0, 712, 0)<br>gid=23, pos=(0, 0, 320, 0)<br>gid=139, pos=(-160, 0, 0, 0)<br>gid=31, pos=(0, 0, 295, 0)<br>gid=142, pos=(-398, 109, 0, 0)<br>gid=114, pos=(-519, 0, 0, 0)<br>gid=14, pos=(0, 0, 602, 0)<br>gid=142, pos=(-518, 0, 0, 0)<br>gid=137, pos=(-454, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 2.51%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        אַצָּנוֹ<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=127, pos=(0, 0, 320, 0)<br>gid=55, pos=(-160, 0, 0, 0)<br>gid=76, pos=(0, 0, 447, 0)<br>gid=122, pos=(-11, 0, 629, 0)<br>gid=22, pos=(-626, -24, 0, 0)<br>gid=88, pos=(-473, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=82, pos=(-502, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=23, pos=(0, 0, 320, 0)<br>gid=139, pos=(-160, 0, 0, 0)<br>gid=44, pos=(0, 0, 447, 0)<br>gid=55, pos=(0, 0, 640, 0)<br>gid=142, pos=(-626, -24, 0, 0)<br>gid=138, pos=(-473, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=137, pos=(-502, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 2.46%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        אֲבִימָאֵל<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=64, pos=(0, 0, 580, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=124, pos=(-510, 0, 0, 0)<br>gid=70, pos=(0, 0, 714, 0)<br>gid=88, pos=(-499, 0, 0, 0)<br>gid=141, pos=(-30, 0, 265, 0)<br>gid=19, pos=(0, 0, 602, 0)<br>gid=53, pos=(-394, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=44, pos=(-561, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=38, pos=(0, 0, 580, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=135, pos=(-510, 0, 0, 0)<br>gid=41, pos=(0, 0, 714, 0)<br>gid=138, pos=(-499, 0, 0, 0)<br>gid=31, pos=(0, 0, 295, 0)<br>gid=14, pos=(0, 0, 602, 0)<br>gid=134, pos=(-394, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=130, pos=(-561, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 2.21%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        הַמְּיֻחָד<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=23, pos=(0, 0, 597, 0)<br>gid=52, pos=(0, 0, 730, 0)<br>gid=88, pos=(-500, 0, 0, 0)<br>gid=141, pos=(-9, 0, 286, 0)<br>gid=93, pos=(-340, 0, 0, 0)<br>gid=70, pos=(0, 0, 714, 0)<br>gid=22, pos=(-449, 0, 0, 0)<br>gid=103, pos=(-459, 0, 0, 0)<br>gid=50, pos=(0, 0, 712, 0)<br>gid=82, pos=(-509, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=19, pos=(0, 0, 597, 0)<br>gid=28, pos=(0, 0, 730, 0)<br>gid=138, pos=(-500, 0, 0, 0)<br>gid=31, pos=(0, 0, 295, 0)<br>gid=141, pos=(-340, 0, 0, 0)<br>gid=41, pos=(0, 0, 714, 0)<br>gid=142, pos=(-449, 0, 0, 0)<br>gid=127, pos=(-459, 0, 0, 0)<br>gid=21, pos=(0, 0, 712, 0)<br>gid=137, pos=(-509, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 2.13%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        אֶצְלָהּ<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=50, pos=(0, 0, 712, 0)<br>gid=22, pos=(-450, 0, 0, 0)<br>gid=64, pos=(0, 0, 580, 0)<br>gid=88, pos=(-446, 0, 0, 0)<br>gid=122, pos=(-11, 0, 629, 0)<br>gid=103, pos=(-433, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=100, pos=(-504, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=21, pos=(0, 0, 712, 0)<br>gid=142, pos=(-450, 0, 0, 0)<br>gid=38, pos=(0, 0, 580, 0)<br>gid=138, pos=(-446, 0, 0, 0)<br>gid=55, pos=(0, 0, 640, 0)<br>gid=127, pos=(-433, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=136, pos=(-504, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 2.12%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        בְּיֹשֵׁב<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=19, pos=(0, 0, 602, 0)<br>gid=104, pos=(0, 0, 778, 0)<br>gid=108, pos=(-201, 0, 0, 0)<br>gid=124, pos=(-577, 0, 0, 0)<br>gid=141, pos=(-30, 0, 265, 0)<br>gid=55, pos=(-295, 0, 0, 0)<br>gid=19, pos=(0, 0, 602, 0)<br>gid=22, pos=(-518, 0, 0, 0)<br>gid=103, pos=(-394, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=14, pos=(0, 0, 602, 0)<br>gid=61, pos=(0, 0, 778, 0)<br>gid=95, pos=(-201, 0, 0, 0)<br>gid=135, pos=(-577, 0, 0, 0)<br>gid=31, pos=(0, 0, 295, 0)<br>gid=139, pos=(-295, 0, 0, 0)<br>gid=14, pos=(0, 0, 602, 0)<br>gid=142, pos=(-518, 0, 0, 0)<br>gid=127, pos=(-394, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 2.03%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        כַֿיָאט<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=118, pos=(0, 0, 734, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=141, pos=(-20, 0, 275, 0)<br>gid=88, pos=(-281, 0, 0, 0)<br>gid=61, pos=(0, 0, 593, 0)<br>gid=94, pos=(-545, 0, 0, 0)<br>gid=82, pos=(-521, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=29, pos=(0, 0, 734, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=31, pos=(0, 0, 295, 0)<br>gid=138, pos=(-281, 0, 0, 0)<br>gid=35, pos=(0, 0, 593, 0)<br>gid=144, pos=(-545, 0, 0, 0)<br>gid=137, pos=(-521, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.78%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        מִלֻּאִ֑ים<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=30, pos=(0, 0, 712, 0)<br>gid=141, pos=(0, 0, 295, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=53, pos=(-442, 0, 0, 0)<br>gid=27, pos=(-705, 0, 0, 0)<br>gid=64, pos=(-11, 0, 569, 0)<br>gid=22, pos=(-523, 0, 0, 0)<br>gid=93, pos=(-505, 0, 0, 0)<br>gid=70, pos=(0, 0, 714, 0)<br>gid=53, pos=(-459, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=40, pos=(0, 0, 712, 0)<br>gid=31, pos=(0, 0, 295, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=134, pos=(-442, 0, 0, 0)<br>gid=96, pos=(-705, 0, 0, 0)<br>gid=38, pos=(0, 0, 580, 0)<br>gid=142, pos=(-523, 0, 0, 0)<br>gid=141, pos=(-505, 0, 0, 0)<br>gid=41, pos=(0, 0, 714, 0)<br>gid=134, pos=(-459, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.74%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        אִם־בִּלְשֹׁנוֹת<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=114, pos=(0, 0, 725, 0)<br>gid=127, pos=(0, 0, 320, 0)<br>gid=55, pos=(-160, 0, 0, 0)<br>gid=76, pos=(0, 0, 447, 0)<br>gid=104, pos=(0, 0, 778, 0)<br>gid=108, pos=(-201, 0, 0, 0)<br>gid=55, pos=(-788, 0, 0, 0)<br>gid=64, pos=(-11, 0, 569, 0)<br>gid=103, pos=(-406, 0, 0, 0)<br>gid=19, pos=(0, 0, 602, 0)<br>gid=22, pos=(-518, 0, 0, 0)<br>gid=53, pos=(-394, 0, 0, 0)<br>gid=68, pos=(0, 0, 309, 0)<br>gid=30, pos=(0, 0, 712, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=53, pos=(-442, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=67, pos=(0, 0, 725, 0)<br>gid=23, pos=(0, 0, 320, 0)<br>gid=139, pos=(-160, 0, 0, 0)<br>gid=44, pos=(0, 0, 447, 0)<br>gid=61, pos=(0, 0, 778, 0)<br>gid=95, pos=(-201, 0, 0, 0)<br>gid=139, pos=(-788, 0, 0, 0)<br>gid=38, pos=(0, 0, 580, 0)<br>gid=127, pos=(-406, 0, 0, 0)<br>gid=14, pos=(0, 0, 602, 0)<br>gid=142, pos=(-518, 0, 0, 0)<br>gid=134, pos=(-394, 0, 0, 0)<br>gid=91, pos=(0, 0, 309, 0)<br>gid=40, pos=(0, 0, 712, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=134, pos=(-442, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.73%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        אֶטִימוֹלוֹגִיָה<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=50, pos=(0, 0, 712, 0)<br>gid=141, pos=(0, 0, 295, 0)<br>gid=88, pos=(-281, 0, 0, 0)<br>gid=42, pos=(0, 0, 418, 0)<br>gid=53, pos=(-311, 0, 0, 0)<br>gid=127, pos=(0, 0, 320, 0)<br>gid=55, pos=(-160, 0, 0, 0)<br>gid=64, pos=(0, 0, 580, 0)<br>gid=127, pos=(0, 0, 320, 0)<br>gid=55, pos=(-160, 0, 0, 0)<br>gid=70, pos=(0, 0, 714, 0)<br>gid=141, pos=(-20, 0, 275, 0)<br>gid=118, pos=(0, 0, 734, 0)<br>gid=53, pos=(-452, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=100, pos=(-504, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=21, pos=(0, 0, 712, 0)<br>gid=31, pos=(0, 0, 295, 0)<br>gid=138, pos=(-281, 0, 0, 0)<br>gid=17, pos=(0, 0, 418, 0)<br>gid=134, pos=(-311, 0, 0, 0)<br>gid=23, pos=(0, 0, 320, 0)<br>gid=139, pos=(-160, 0, 0, 0)<br>gid=38, pos=(0, 0, 580, 0)<br>gid=23, pos=(0, 0, 320, 0)<br>gid=139, pos=(-160, 0, 0, 0)<br>gid=41, pos=(0, 0, 714, 0)<br>gid=31, pos=(0, 0, 295, 0)<br>gid=29, pos=(0, 0, 734, 0)<br>gid=134, pos=(-452, 0, 0, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=136, pos=(-504, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.70%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        בְּיַעְרַת<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=114, pos=(0, 0, 725, 0)<br>gid=95, pos=(0, 0, 609, 0)<br>gid=82, pos=(-311, 0, 0, 0)<br>gid=17, pos=(0, 0, 671, 0)<br>gid=103, pos=(-464, 0, 0, 0)<br>gid=141, pos=(-30, 0, 265, 0)<br>gid=82, pos=(-301, 0, 0, 0)<br>gid=19, pos=(0, 0, 602, 0)<br>gid=22, pos=(-518, 0, 0, 0)<br>gid=103, pos=(-394, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=67, pos=(0, 0, 725, 0)<br>gid=59, pos=(0, 0, 609, 0)<br>gid=137, pos=(-311, 0, 0, 0)<br>gid=48, pos=(0, 0, 671, 0)<br>gid=127, pos=(-464, 0, 0, 0)<br>gid=31, pos=(0, 0, 295, 0)<br>gid=137, pos=(-301, 0, 0, 0)<br>gid=14, pos=(0, 0, 602, 0)<br>gid=142, pos=(-518, 0, 0, 0)<br>gid=127, pos=(-394, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.58%
+        </div>
+        </span>
+    </div>
+</div>
+          
+              <div class="cell-word" style="font-feature-settings: " lang="None">
+    <div class="tooltip">
+        בְּיִזְרְעֶאל<br>
+        <span class="tooltiptext">
+        <div class="tooltipleft">
+            Before:<br>
+            gid=64, pos=(0, 0, 580, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=17, pos=(0, 0, 671, 0)<br>gid=100, pos=(-526, 0, 0, 0)<br>gid=95, pos=(0, 0, 609, 0)<br>gid=103, pos=(-251, 0, 0, 0)<br>gid=149, pos=(0, 0, 360, 0)<br>gid=103, pos=(-282, 0, 0, 0)<br>gid=141, pos=(-30, 0, 265, 0)<br>gid=53, pos=(-241, 0, 0, 0)<br>gid=19, pos=(0, 0, 602, 0)<br>gid=22, pos=(-518, 0, 0, 0)<br>gid=103, pos=(-394, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div class="tooltipright">
+            After:<br>
+            gid=38, pos=(0, 0, 580, 0)<br>gid=10, pos=(0, 0, 692, 0)<br>gid=48, pos=(0, 0, 671, 0)<br>gid=136, pos=(-526, 0, 0, 0)<br>gid=59, pos=(0, 0, 609, 0)<br>gid=127, pos=(-251, 0, 0, 0)<br>gid=26, pos=(0, 0, 360, 0)<br>gid=127, pos=(-282, 0, 0, 0)<br>gid=31, pos=(0, 0, 295, 0)<br>gid=134, pos=(-241, 0, 0, 0)<br>gid=14, pos=(0, 0, 602, 0)<br>gid=142, pos=(-518, 0, 0, 0)<br>gid=127, pos=(-394, 0, 0, 0)<br>
+            feats=()
+        </div>
+        <div>
+            changed pixels: 1.08%
+        </div>
+        </span>
+    </div>
+</div>
+          
+        </div>
+      </div>
+    
+    
+    <div class="box">
+      <div class="box-title">Misshapen user strings</div>
+      <div class="box-text old-wght-400" style="font-size: 32pt">
+        
+      </div>
+    </div>
+    
+
+    
+
+    </div>
+  
+
+    </div>
+</body>
+	<script>
+
+	POSITION = "old"
+	fontToggle = document.getElementById("font-toggle")
+	function switchFonts() {
+	boxTitles = document.getElementsByClassName("box-title")
+	items = document.getElementsByClassName("box-text");
+	  
+	if (POSITION === "old") {
+	  POSITION = "new"
+	  for (item of boxTitles) {
+	    item.textContent = item.textContent.replace("old", "new")
+	    fontToggle.textContent = "new"
+	  }
+	  for (item of items) {
+		item.className = item.className.replace("old", "new")
+	  }
+
+	  } else {
+	  POSITION = "old"
+	  for (item of boxTitles) {
+	    item.textContent = item.textContent.replace("new", "old")
+	    fontToggle.textContent = "old"
+	  }
+	  for (item of items) {
+		item.className = item.className.replace("new", "old")
+	  }
+	}
+	}
+	if (fontToggle !== null) {
+		fontToggle.addEventListener("click", switchFonts);
+	}
+
+// apply optional ot feats
+
+function buildFeatureList() {
+	var features = [
+		'aalt', 'c2sc', 'calt', 'case', 'cpsp', 'dlig', 'dnom',
+		'fina', 'frac', 'init', 'kern', 'liga', 'lnum', 'numr', 'onum',
+		'ordn', 'pnum', 'salt', 'sinf', 'smcp', 'sups',
+		'swsh', 'titl', 'tnum', 'zero', 'ss01', 'ss02',
+		'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08',
+		'ss09', 'ss10', 'ss11', 'ss12', 'ss13', 'ss14',
+		'ss15', 'ss16', 'ss17', 'ss18', 'ss19', 'ss20'
+	]
+	
+	var otPanel = document.getElementById("ot-panel")
+	for (i=0; i<features.length; i++) {
+		var feat = features[i]
+		
+		var row = document.createElement("div");
+
+		var item = document.createElement("input");
+		item.type = "checkbox"
+		item.value = feat
+		item.classList.add("ot-checkbox")
+		var label = document.createElement("label")
+		label.textContent = feat
+
+		row.appendChild(item)
+		row.appendChild(label)
+
+		otPanel.appendChild(row)
+	}
+}
+
+buildFeatureList()
+
+
+function enableFeatures() {
+	var checkboxes = document.getElementsByClassName("ot-checkbox")
+	var res = []
+	var disableKerning = false
+	for (i=0; i<checkboxes.length; i++) {
+		if (checkboxes[i].checked === true) {
+			var checkbox = checkboxes[i]
+			res.push('"' + checkbox.value + '"')
+
+			if (checkbox.value === "kern") {
+				disableKerning = true
+			}
+		}
+	}	
+
+	var boxText = document.getElementsByClassName("box-text")
+	var otString = res.join(", ")
+	for (j=0; j<boxText.length; j++) {
+		boxText[j].style.fontFeatureSettings = otString
+		if (disableKerning === true) {
+			boxText[j].style.fontKerning = "none"
+		}
+	}
+}
+
+var otButton = document.getElementById("ot-button")
+otButton.addEventListener("click", function() {
+    otPanel = document.getElementById("ot-panel")
+    if (otPanel.style.display !== "block") {
+        otPanel.style.display = "block"
+    } else {
+        otPanel.style.display = "none"
+    }
+})
+var checkboxes = document.getElementsByClassName("ot-checkbox")
+for (i=0; i<checkboxes.length; i++) {
+	cb = checkboxes[i]
+	cb.addEventListener("click", enableFeatures)
+}	
+    
+	function render(node, toplevel) {
+		var wrapper = $("<div> </div>");
+		if (!node) { return wrapper }
+		if (Array.isArray(node)) {
+			var before = $("<span/>");
+			before.addClass("attr-before");
+			before.html(" " + String(node[0]) + " ");
+			var after = $("<span/>");
+			after.addClass("attr-after");
+			after.append(String(node[1]));
+			wrapper.append(before);
+			wrapper.append(after);
+			return wrapper
+		}
+		for (const [key, value] of Object.entries(node)) {
+			var display = $("<div/>");
+			display.addClass("node")
+			if (!toplevel && ! key.match(/^\d+$/)) {
+				display.hide()
+			}
+			display.append(key);
+			display.append(render(value, false).children());
+			wrapper.append(display)
+		}
+		return wrapper
+
+	}
+	$(function() {
+		$("#difftable").append(render(fontdiff, true).children())
+		$("#difftable .node").on("click", function(event){ $(this).children().toggle(); event.stopPropagation() })
+	});
+
+function wordBreaks() {
+  words = document.getElementsByClassName("cell-word")
+  res = []
+  prevTop = 0
+  for (i=0; i<words.length; i++) {
+      var word = words[i]
+      currentTop = word.getBoundingClientRect().top
+      if (currentTop > prevTop) {
+          res.push(i)
+      }
+      prevTop = currentTop
+  }
+  return res
+}
+
+async function insertBreaks() {
+  switchFonts()
+  await sleep(1)
+  breaksBefore = wordBreaks()
+  switchFonts()
+  await sleep(1)
+  breaksAfter = wordBreaks()
+
+
+  console.log(breaksBefore.length, breaksAfter.length)
+
+  if (breaksBefore.length >= breaksAfter.length) {
+    breaks = breaksBefore
+  } else {
+    breaks = breaksAfter
+  }
+
+  words = document.getElementsByClassName("cell-word")
+  breaks.forEach(function(i) {
+    if (i != 0) {
+      i = i
+    }
+    word = words[i]
+    spacer = document.createElement("div")
+    spacer.className = "spacer"
+    word.parentNode.insertBefore(spacer, word)
+  })
+}
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+  
+insertBreaks()
+
+
+    </script>
+</html>
