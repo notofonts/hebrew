@@ -1,5 +1,5 @@
 {
-.appVersion = "3225";
+.appVersion = "3241";
 DisplayStrings = (
 "/tsere-hb",
 "/tsadi-hb",
@@ -4394,13 +4394,13 @@ unicode = 05D4;
 },
 {
 glyphname = "vav-hb";
-lastChange = "2021-12-21 12:15:17 +0000";
+lastChange = "2024-02-27 00:22:22 +0000";
 layers = (
 {
 anchors = (
 {
 name = bottom;
-position = "{166, 0}";
+position = "{159, 0}";
 },
 {
 name = bottomleft;
@@ -4460,7 +4460,7 @@ width = 261;
 anchors = (
 {
 name = bottom;
-position = "{221, 0}";
+position = "{170, 0}";
 },
 {
 name = bottomleft;
@@ -4520,7 +4520,7 @@ width = 291;
 anchors = (
 {
 name = bottom;
-position = "{200, 0}";
+position = "{132, 0}";
 },
 {
 name = bottomleft;
@@ -15012,7 +15012,7 @@ layerId = "E2314B6E-5E7F-4CD2-8B1C-CC369A56056B";
 width = 0;
 }
 );
-note = ".null";
+note = .null;
 unicode = 0000;
 },
 {
