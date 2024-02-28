@@ -3,7 +3,6 @@
 DisplayStrings = (
 "/tsere-hb",
 "/tsadi-hb",
-"/yod-hb",
 "/shin-hb",
 "/sindot-hb",
 "/shindot-hb",
@@ -2819,7 +2818,7 @@ unicode = 200F;
 },
 {
 glyphname = "vavvav-hb";
-lastChange = "2020-01-12 13:53:32 +0000";
+lastChange = "2024-02-27 19:26:35 +0000";
 layers = (
 {
 anchors = (
@@ -2852,14 +2851,14 @@ components = (
 {
 alignment = -1;
 name = "vav-hb";
-transform = "{1, 0, 0, 1, 224, 0}";
+transform = "{1, 0, 0, 1, 261, 0}";
 },
 {
 name = "vav-hb";
 }
 );
 layerId = "B853D75E-14CD-4000-B7A0-02101202F42C";
-width = 485;
+width = 522;
 },
 {
 anchors = (
@@ -2931,7 +2930,7 @@ components = (
 {
 alignment = -1;
 name = "vav-hb";
-transform = "{1, 0, 0, 1, 264, 0}";
+transform = "{1, 0, 0, 1, 282, 0}";
 },
 {
 alignment = -1;
@@ -2939,7 +2938,7 @@ name = "vav-hb";
 }
 );
 layerId = "E2314B6E-5E7F-4CD2-8B1C-CC369A56056B";
-width = 545.25301;
+width = 564;
 }
 );
 note = vavvav;
@@ -2947,7 +2946,7 @@ unicode = 05F0;
 },
 {
 glyphname = "vavyod-hb";
-lastChange = "2020-01-12 13:53:32 +0000";
+lastChange = "2024-02-27 18:51:21 +0000";
 layers = (
 {
 anchors = (
@@ -2960,14 +2959,14 @@ components = (
 {
 alignment = -1;
 name = "vav-hb";
-transform = "{1, 0, 0, 1, 210, 0}";
+transform = "{1, 0, 0, 1, 240, 0}";
 },
 {
 name = "yod-hb";
 }
 );
 layerId = "B853D75E-14CD-4000-B7A0-02101202F42C";
-width = 471;
+width = 501;
 },
 {
 anchors = (
@@ -2999,7 +2998,7 @@ components = (
 {
 alignment = -1;
 name = "vav-hb";
-transform = "{1, 0, 0, 1, 254, 0}";
+transform = "{1, 0, 0, 1, 268, 0}";
 },
 {
 alignment = -1;
@@ -3007,7 +3006,7 @@ name = "yod-hb";
 }
 );
 layerId = "E2314B6E-5E7F-4CD2-8B1C-CC369A56056B";
-width = 535.27015;
+width = 550;
 }
 );
 note = vavyod;
@@ -3015,7 +3014,7 @@ unicode = 05F1;
 },
 {
 glyphname = "yodyod-hb";
-lastChange = "2021-07-05 00:36:29 +0000";
+lastChange = "2024-02-27 19:50:07 +0000";
 layers = (
 {
 anchors = (
@@ -3028,14 +3027,14 @@ components = (
 {
 alignment = -1;
 name = "yod-hb";
-transform = "{1, 0, 0, 1, 210, 0}";
+transform = "{1, 0, 0, 1, 240, 0}";
 },
 {
 name = "yod-hb";
 }
 );
 layerId = "B853D75E-14CD-4000-B7A0-02101202F42C";
-width = 440;
+width = 480;
 },
 {
 anchors = (
@@ -4394,7 +4393,7 @@ unicode = 05D4;
 },
 {
 glyphname = "vav-hb";
-lastChange = "2024-02-27 00:22:22 +0000";
+lastChange = "2024-02-27 18:20:34 +0000";
 layers = (
 {
 anchors = (
@@ -4574,7 +4573,7 @@ nodes = (
 );
 }
 );
-width = 281.62789;
+width = 282;
 }
 );
 unicode = 05D5;
@@ -5398,7 +5397,7 @@ unicode = 05D8;
 },
 {
 glyphname = "yod-hb";
-lastChange = "2023-11-23 13:32:01 +0000";
+lastChange = "2024-02-27 18:36:08 +0000";
 layers = (
 {
 anchors = (
@@ -5632,7 +5631,7 @@ nodes = (
 );
 }
 );
-width = 268.23911;
+width = 268;
 }
 );
 unicode = 05D9;
