@@ -25255,13 +25255,13 @@ width = 547;
 },
 {
 glyphname = "vavvav-hb";
-lastChange = "2024-02-28 01:29:31 +0000";
+lastChange = "2024-02-28 22:25:16 +0000";
 layers = (
 {
 anchors = (
 {
 name = bottom;
-position = "{103, 0}";
+position = "{206, 0}";
 },
 {
 name = bottomleft;
@@ -25311,7 +25311,7 @@ width = 412;
 anchors = (
 {
 name = bottom;
-position = "{130, 0}";
+position = "{260, 0}";
 },
 {
 name = bottomleft;
@@ -25361,7 +25361,7 @@ width = 520;
 anchors = (
 {
 name = bottom;
-position = "{155, 0}";
+position = "{310, 0}";
 },
 {
 name = bottomleft;
@@ -25411,7 +25411,7 @@ width = 620;
 anchors = (
 {
 name = bottom;
-position = "{166, 0}";
+position = "{332, 0}";
 },
 {
 name = bottomleft;
@@ -25461,7 +25461,7 @@ width = 664;
 anchors = (
 {
 name = bottom;
-position = "{88, 0}";
+position = "{176, 0}";
 },
 {
 name = bottomleft;
@@ -25511,7 +25511,7 @@ width = 352;
 anchors = (
 {
 name = bottom;
-position = "{110, 0}";
+position = "{214, 0}";
 },
 {
 name = bottomleft;
@@ -25561,7 +25561,7 @@ width = 428;
 anchors = (
 {
 name = bottom;
-position = "{135, 0}";
+position = "{257, 0}";
 },
 {
 name = bottomleft;
@@ -25611,7 +25611,7 @@ width = 514;
 anchors = (
 {
 name = bottom;
-position = "{151, 0}";
+position = "{280, 0}";
 },
 {
 name = bottomleft;
@@ -25823,10 +25823,14 @@ unicode = 05F1;
 },
 {
 glyphname = "yodyod-hb";
-lastChange = "2016-07-07 18:36:03 +0000";
+lastChange = "2024-02-28 22:21:03 +0000";
 layers = (
 {
 anchors = (
+{
+name = bottom;
+position = "{184, 0}";
+},
 {
 name = caret_1;
 position = "{176, 0}";
@@ -25847,6 +25851,10 @@ width = 362;
 {
 anchors = (
 {
+name = bottom;
+position = "{238, 0}";
+},
+{
 name = caret_1;
 position = "{250, 0}";
 }
@@ -25865,6 +25873,10 @@ width = 470;
 },
 {
 anchors = (
+{
+name = bottom;
+position = "{288, 0}";
+},
 {
 name = caret_1;
 position = "{250, 0}";
@@ -25885,6 +25897,10 @@ width = 570;
 {
 anchors = (
 {
+name = bottom;
+position = "{310, 0}";
+},
+{
 name = caret_1;
 position = "{250, 0}";
 }
@@ -25903,6 +25919,10 @@ width = 614;
 },
 {
 anchors = (
+{
+name = bottom;
+position = "{154, 0}";
+},
 {
 name = caret_1;
 position = "{176, 0}";
@@ -25923,6 +25943,10 @@ width = 302;
 {
 anchors = (
 {
+name = bottom;
+position = "{198, 0}";
+},
+{
 name = caret_1;
 position = "{250, 0}";
 }
@@ -25942,6 +25966,10 @@ width = 390;
 {
 anchors = (
 {
+name = bottom;
+position = "{241, 0}";
+},
+{
 name = caret_1;
 position = "{250, 0}";
 }
@@ -25960,6 +25988,10 @@ width = 464;
 },
 {
 anchors = (
+{
+name = bottom;
+position = "{258, 0}";
+},
 {
 name = caret_1;
 position = "{250, 0}";
