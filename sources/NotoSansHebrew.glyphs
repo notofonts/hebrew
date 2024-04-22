@@ -3,7 +3,7 @@
 .formatVersion = 3;
 DisplayStrings = (
 "ﬠ",
-"יׯ "
+"יהיּהי "
 );
 axes = (
 {
@@ -228,12 +228,19 @@ tag = dlig;
 code = "sub hatafsegol-hb uni200D siluqleft-hb by hatafsegol_zerowidthjoiner_siluqleft-hb;
 sub hatafpatah-hb uni200D siluqleft-hb by hatafpatah_zerowidthjoiner_siluqleft-hb;
 sub hatafqamats-hb uni200D siluqleft-hb by hatafqamats_zerowidthjoiner_siluqleft-hb;
-";
+
+sub yod-hb dagesh-hb by yoddagesh-hb;
+sub zayin-hb dagesh-hb by zayindagesh-hb;";
 tag = ccmp;
 },
 {
 code = "sub lamed-hb qamats-hb hiriq-hb' finalmem-hb' by finalmem-hb_hiriq-hb.alt;";
 tag = calt;
+},
+{
+code = "# Automatic code start
+";
+tag = kern;
 }
 );
 fontMaster = (
@@ -6548,7 +6555,7 @@ unicode = 1494;
 },
 {
 glyphname = "zayindagesh-hb";
-lastChange = "2016-07-07 18:36:03 +0000";
+lastChange = "2024-04-22 08:55:36 +0000";
 layers = (
 {
 layerId = "1F954AD7-537E-453D-9D07-161C7E95D0AA";
@@ -6567,27 +6574,29 @@ width = 276;
 layerId = "0C04772A-F31D-4E86-90EF-3402D1EA39CA";
 shapes = (
 {
+pos = (-11,0);
 ref = "zayin-hb";
 },
 {
-pos = (-94,0);
+pos = (-54,0);
 ref = "dagesh-hb";
 }
 );
-width = 300;
+width = 289;
 },
 {
 layerId = "3FB868F8-5CDC-4A46-BA32-95627737ABE0";
 shapes = (
 {
+pos = (-2,0);
 ref = "zayin-hb";
 },
 {
-pos = (-106,0);
+pos = (-90,0);
 ref = "dagesh-hb";
 }
 );
-width = 372;
+width = 370;
 },
 {
 layerId = "BD31AAF9-E65B-4A30-ACC0-7018B0C27C60";
@@ -6606,27 +6615,29 @@ width = 171;
 layerId = "E193C3F6-581C-4255-BA06-39B2C55FEA85";
 shapes = (
 {
+pos = (-10,0);
 ref = "zayin-hb";
 },
 {
-pos = (-86,0);
+pos = (-82,0);
 ref = "dagesh-hb";
 }
 );
-width = 224;
+width = 214;
 },
 {
 layerId = "AD6F6DAA-2D58-4E1D-98AF-ACAAF76D7B9E";
 shapes = (
 {
+pos = (30,0);
 ref = "zayin-hb";
 },
 {
-pos = (-132,0);
+pos = (-82,0);
 ref = "dagesh-hb";
 }
 );
-width = 300;
+width = 330;
 }
 );
 unicode = 64310;
@@ -7615,85 +7626,91 @@ unicode = 1497;
 },
 {
 glyphname = "yoddagesh-hb";
-lastChange = "2016-07-07 18:36:03 +0000";
+lastChange = "2024-04-22 08:58:52 +0000";
 layers = (
 {
 layerId = "1F954AD7-537E-453D-9D07-161C7E95D0AA";
 shapes = (
 {
+pos = (-20,0);
 ref = "yod-hb";
 },
 {
-pos = (-55,131);
+pos = (-75,131);
 ref = "dagesh-hb";
 }
 );
-width = 181;
+width = 161;
 },
 {
 layerId = "0C04772A-F31D-4E86-90EF-3402D1EA39CA";
 shapes = (
 {
+pos = (-14,0);
 ref = "yod-hb";
 },
 {
-pos = (-75,108);
+pos = (-89,108);
 ref = "dagesh-hb";
 }
 );
-width = 235;
+width = 221;
 },
 {
 layerId = "3FB868F8-5CDC-4A46-BA32-95627737ABE0";
 shapes = (
 {
+pos = (16,0);
 ref = "yod-hb";
 },
 {
-pos = (-116,98);
+pos = (-100,98);
 ref = "dagesh-hb";
 }
 );
-width = 307;
+width = 323;
 },
 {
 layerId = "BD31AAF9-E65B-4A30-ACC0-7018B0C27C60";
 shapes = (
 {
+pos = (-17,0);
 ref = "yod-hb";
 },
 {
-pos = (-60,131);
+pos = (-77,131);
 ref = "dagesh-hb";
 }
 );
-width = 151;
+width = 134;
 },
 {
 layerId = "E193C3F6-581C-4255-BA06-39B2C55FEA85";
 shapes = (
 {
+pos = (1,0);
 ref = "yod-hb";
 },
 {
-pos = (-93,108);
+pos = (-92,108);
 ref = "dagesh-hb";
 }
 );
-width = 195;
+width = 196;
 },
 {
 layerId = "AD6F6DAA-2D58-4E1D-98AF-ACAAF76D7B9E";
 shapes = (
 {
+pos = (33,0);
 ref = "yod-hb";
 },
 {
-pos = (-127,98);
+pos = (-94,98);
 ref = "dagesh-hb";
 }
 );
-width = 255;
+width = 288;
 }
 );
 unicode = 64313;
