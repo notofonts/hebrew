@@ -2,7 +2,8 @@
 .appVersion = "3243";
 .formatVersion = 3;
 DisplayStrings = (
-"ﬠ"
+"ﬠ",
+"יׯ "
 );
 axes = (
 {
@@ -18172,6 +18173,201 @@ width = 586;
 );
 note = aleflamed;
 unicode = 64335;
+},
+{
+glyphname = "yodyodyod-hb";
+lastChange = "2024-04-22 08:40:57 +0000";
+layers = (
+{
+anchors = (
+{
+name = bottom;
+pos = (184,0);
+},
+{
+name = caret_1;
+pos = (138,0);
+},
+{
+name = caret_2;
+pos = (230,0);
+}
+);
+layerId = "1F954AD7-537E-453D-9D07-161C7E95D0AA";
+shapes = (
+{
+pos = (90,118);
+ref = "yod-hb";
+},
+{
+ref = "yod-hb";
+},
+{
+pos = (181,0);
+ref = "yod-hb";
+}
+);
+width = 362;
+},
+{
+anchors = (
+{
+name = bottom;
+pos = (238,0);
+},
+{
+name = caret_1;
+pos = (187,0);
+},
+{
+name = caret_2;
+pos = (280,0);
+}
+);
+layerId = "0C04772A-F31D-4E86-90EF-3402D1EA39CA";
+shapes = (
+{
+pos = (118,122);
+ref = "yod-hb";
+},
+{
+ref = "yod-hb";
+},
+{
+pos = (235,0);
+ref = "yod-hb";
+}
+);
+width = 470;
+},
+{
+anchors = (
+{
+name = bottom;
+pos = (365,0);
+},
+{
+name = caret_1;
+pos = (260,0);
+},
+{
+name = caret_2;
+pos = (454,0);
+}
+);
+layerId = "3FB868F8-5CDC-4A46-BA32-95627737ABE0";
+shapes = (
+{
+pos = (209,107);
+ref = "yod-hb";
+},
+{
+ref = "yod-hb";
+},
+{
+pos = (419,0);
+ref = "yod-hb";
+}
+);
+width = 731;
+},
+{
+anchors = (
+{
+name = bottom;
+pos = (154,0);
+},
+{
+name = caret_1;
+pos = (121,0);
+},
+{
+name = caret_2;
+pos = (190,0);
+}
+);
+layerId = "BD31AAF9-E65B-4A30-ACC0-7018B0C27C60";
+shapes = (
+{
+pos = (75,119);
+ref = "yod-hb";
+},
+{
+ref = "yod-hb";
+},
+{
+pos = (151,0);
+ref = "yod-hb";
+}
+);
+width = 302;
+},
+{
+anchors = (
+{
+name = bottom;
+pos = (198,0);
+},
+{
+name = caret_1;
+pos = (143,0);
+},
+{
+name = caret_2;
+pos = (249,0);
+}
+);
+layerId = "E193C3F6-581C-4255-BA06-39B2C55FEA85";
+shapes = (
+{
+pos = (97,122);
+ref = "yod-hb";
+},
+{
+ref = "yod-hb";
+},
+{
+pos = (195,0);
+ref = "yod-hb";
+}
+);
+width = 390;
+},
+{
+anchors = (
+{
+name = bottom;
+pos = (304,0);
+},
+{
+name = caret_1;
+pos = (207,0);
+},
+{
+name = caret_2;
+pos = (386,0);
+}
+);
+layerId = "AD6F6DAA-2D58-4E1D-98AF-ACAAF76D7B9E";
+shapes = (
+{
+pos = (175,105);
+ref = "yod-hb";
+},
+{
+ref = "yod-hb";
+},
+{
+pos = (349,0);
+ref = "yod-hb";
+}
+);
+width = 609;
+}
+);
+note = yodyod;
+production = uni05EF;
+unicode = 1519;
 },
 {
 glyphname = nbspace;
