@@ -218,7 +218,7 @@ value = GOOG;
 },
 {
 name = versionString;
-value = "Version 1.006";
+value = "Version 1.007";
 },
 {
 name = Axes;
@@ -25242,5 +25242,5 @@ manufacturer = "Google LLC";
 manufacturerURL = "http://www.google.com/get/noto/";
 unitsPerEm = 1000;
 versionMajor = 1;
-versionMinor = 6;
+versionMinor = 7;
 }
