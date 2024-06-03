@@ -1,8 +1,0 @@
-buildVariable: true
-familyName: Noto Sans Hebrew New
-googleFonts: true
-includeSubsets:
-- from: Noto Sans
-  name: GF_Latin_Core
-sources:
-- NotoSansHebrewNew.glyphs
