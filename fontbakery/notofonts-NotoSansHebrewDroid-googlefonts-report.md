@@ -1,6 +1,6 @@
 ## FontBakery report
 
-fontbakery version: 0.12.3
+fontbakery version: 0.12.6
 
 
 
@@ -21,7 +21,7 @@ These won't break the CI job for now, but will become effective after some time 
 
 
 
-* ⚠️ **WARN** <p>Family metadata at fonts/NotoSansHebrewDroid/googlefonts/variable does not have an article.</p>
+* ⚠️ **WARN** <p>Family metadata at fonts/NotoSansHebrewDroid/googlefonts/variable-ttf does not have an article.</p>
  [code: lacks-article]
 
 
@@ -40,6 +40,75 @@ These won't break the CI job for now, but will become effective after some time 
 
 <details><summary>[13] NotoSansHebrewDroid[wght].ttf</summary>
 <div>
+<details>
+    <summary>🔥 <b>FAIL</b> Ensure dotted circle glyph is present and can attach marks. <a href="https://fontbakery.readthedocs.io/en/stable/fontbakery/checks/shaping.html#"></a></summary>
+    <div>
+
+
+
+
+
+
+
+* 🔥 **FAIL** <p>The following glyphs could not be attached to the dotted circle glyph:</p>
+<pre><code>- acutecomb
+
+- gravecomb
+
+- tildecomb
+
+- uni0302
+
+- uni0304
+
+- uni0306
+
+- uni0307
+
+- uni0308
+
+- uni030A
+
+- uni030B
+
+- uni030C
+
+- uni0326
+
+- uni0327
+
+- uni0328
+</code></pre>
+ [code: unattached-dotted-circle-marks]
+
+
+
+</div>
+</details>
+
+<details>
+    <summary>🔥 <b>FAIL</b> Check for presence of an ARTICLE.en_us.html file <a href="https://fontbakery.readthedocs.io/en/stable/fontbakery/checks/googlefonts.description.html#"></a></summary>
+    <div>
+
+
+
+
+
+
+
+* 🔥 **FAIL** <p>This is a Noto font but it lacks an ARTICLE.en_us.html file.</p>
+ [code: missing-article]
+
+
+
+* 🔥 **FAIL** <p>This is a Noto font but it lacks a DESCRIPTION.en_us.html file.</p>
+ [code: missing-description]
+
+
+
+</div>
+</details>
+
 <details>
     <summary>⚠️ <b>WARN</b> Detect any interpolation issues in the font. <a href="https://fontbakery.readthedocs.io/en/stable/fontbakery/checks/universal.html#"></a></summary>
     <div>
@@ -114,135 +183,49 @@ minus</p>
 
 
 * ⚠️ **WARN** <p>The following glyphs have on-curve points which have potentially incorrect y coordinates:</p>
-<pre><code>* exclam (U+0021): X=177.5,Y=2.0 (should be at baseline 0?)
+<pre><code>* G (U+0047): X=537.0,Y=-1.0 (should be at baseline 0?)
 
-* exclam (U+0021): X=90.0,Y=2.0 (should be at baseline 0?)
+* Gbreve (U+011E): X=537.0,Y=-1.0 (should be at baseline 0?)
 
-* period (U+002E): X=177.5,Y=2.0 (should be at baseline 0?)
+* uni0122 (U+0122): X=537.0,Y=-1.0 (should be at baseline 0?)
 
-* period (U+002E): X=90.0,Y=2.0 (should be at baseline 0?)
+* Gdotaccent (U+0120): X=537.0,Y=-1.0 (should be at baseline 0?)
 
-* three (U+0033): X=137.0,Y=-1.5 (should be at baseline 0?)
+* uni1E9E (U+1E9E): X=326.5,Y=-1.5 (should be at baseline 0?)
+
+* S (U+0053): X=136.0,Y=-1.0 (should be at baseline 0?)
+
+* Sacute (U+015A): X=136.0,Y=-1.0 (should be at baseline 0?)
+
+* Scaron (U+0160): X=136.0,Y=-1.0 (should be at baseline 0?)
+
+* Scedilla (U+015E): X=136.0,Y=-1.0 (should be at baseline 0?)
+
+* uni0218 (U+0218): X=136.0,Y=-1.0 (should be at baseline 0?)
+
+* Uogonek (U+0172): X=449.0,Y=1.0 (should be at baseline 0?)
+
+* ae (U+00E6): X=710.5,Y=-1.5 (should be at baseline 0?)
+
+* braceleft (U+007B): X=150.0,Y=1.0 (should be at baseline 0?)
 
 * colon (U+003A): X=177.5,Y=2.0 (should be at baseline 0?)
 
 * colon (U+003A): X=90.0,Y=2.0 (should be at baseline 0?)
 
-* question (U+003F): X=222.0,Y=2.0 (should be at baseline 0?)
-
-* question (U+003F): X=134.5,Y=2.0 (should be at baseline 0?)
-
-* G (U+0047): X=537.0,Y=-1.0 (should be at baseline 0?)
-
-* S (U+0053): X=136.0,Y=-1.0 (should be at baseline 0?)
-
 * e (U+0065): X=408.0,Y=-1.5 (should be at baseline 0?)
 
-* f (U+0066): X=327.0,Y=688.0 (should be at x-height 686?)
-
-* s (U+0073): X=123.5,Y=-1.0 (should be at baseline 0?)
-
-* w (U+0077): X=258.0,Y=1.0 (should be at baseline 0?)
-
-* w (U+0077): X=158.0,Y=1.0 (should be at baseline 0?)
-
-* w (U+0077): X=626.0,Y=1.0 (should be at baseline 0?)
-
-* w (U+0077): X=523.0,Y=1.0 (should be at baseline 0?)
-
-* y (U+0079): X=217.0,Y=-2.0 (should be at baseline 0?)
-
-* braceleft (U+007B): X=150.0,Y=1.0 (should be at baseline 0?)
-
-* germandbls (U+00DF): X=317.0,Y=-1.0 (should be at baseline 0?)
-
-* ae (U+00E6): X=710.5,Y=-1.5 (should be at baseline 0?)
-
-* egrave (U+00E8): X=408.0,Y=-1.5 (should be at baseline 0?)
-
 * eacute (U+00E9): X=408.0,Y=-1.5 (should be at baseline 0?)
+
+* ecaron (U+011B): X=408.0,Y=-1.5 (should be at baseline 0?)
 
 * ecircumflex (U+00EA): X=408.0,Y=-1.5 (should be at baseline 0?)
 
 * edieresis (U+00EB): X=408.0,Y=-1.5 (should be at baseline 0?)
 
-* oslash (U+00F8): X=232.0,Y=-1.5 (should be at baseline 0?)
-
-* yacute (U+00FD): X=217.0,Y=-2.0 (should be at baseline 0?)
-
-* ydieresis (U+00FF): X=217.0,Y=-2.0 (should be at baseline 0?)
-
-* emacron (U+0113): X=408.0,Y=-1.5 (should be at baseline 0?)
-
 * edotaccent (U+0117): X=408.0,Y=-1.5 (should be at baseline 0?)
 
-* eogonek (U+0119): X=408.0,Y=-1.5 (should be at baseline 0?)
-
-* ecaron (U+011B): X=408.0,Y=-1.5 (should be at baseline 0?)
-
-* Gbreve (U+011E): X=537.0,Y=-1.0 (should be at baseline 0?)
-
-* Gdotaccent (U+0120): X=537.0,Y=-1.0 (should be at baseline 0?)
-
-* uni0122 (U+0122): X=537.0,Y=-1.0 (should be at baseline 0?)
-
-* oe (U+0153): X=791.0,Y=-1.5 (should be at baseline 0?)
-
-* Sacute (U+015A): X=136.0,Y=-1.0 (should be at baseline 0?)
-
-* sacute (U+015B): X=123.5,Y=-1.0 (should be at baseline 0?)
-
-* Scedilla (U+015E): X=136.0,Y=-1.0 (should be at baseline 0?)
-
-* scedilla (U+015F): X=123.5,Y=-1.0 (should be at baseline 0?)
-
-* Scaron (U+0160): X=136.0,Y=-1.0 (should be at baseline 0?)
-
-* scaron (U+0161): X=123.5,Y=-1.0 (should be at baseline 0?)
-
-* Uogonek (U+0172): X=449.0,Y=1.0 (should be at baseline 0?)
-
-* wcircumflex (U+0175): X=258.0,Y=1.0 (should be at baseline 0?)
-
-* wcircumflex (U+0175): X=158.0,Y=1.0 (should be at baseline 0?)
-
-* wcircumflex (U+0175): X=626.0,Y=1.0 (should be at baseline 0?)
-
-* wcircumflex (U+0175): X=523.0,Y=1.0 (should be at baseline 0?)
-
-* ycircumflex (U+0177): X=217.0,Y=-2.0 (should be at baseline 0?)
-
-* uni0218 (U+0218): X=136.0,Y=-1.0 (should be at baseline 0?)
-
-* uni0219 (U+0219): X=123.5,Y=-1.0 (should be at baseline 0?)
-
-* wgrave (U+1E81): X=258.0,Y=1.0 (should be at baseline 0?)
-
-* wgrave (U+1E81): X=158.0,Y=1.0 (should be at baseline 0?)
-
-* wgrave (U+1E81): X=626.0,Y=1.0 (should be at baseline 0?)
-
-* wgrave (U+1E81): X=523.0,Y=1.0 (should be at baseline 0?)
-
-* wacute (U+1E83): X=258.0,Y=1.0 (should be at baseline 0?)
-
-* wacute (U+1E83): X=158.0,Y=1.0 (should be at baseline 0?)
-
-* wacute (U+1E83): X=626.0,Y=1.0 (should be at baseline 0?)
-
-* wacute (U+1E83): X=523.0,Y=1.0 (should be at baseline 0?)
-
-* wdieresis (U+1E85): X=258.0,Y=1.0 (should be at baseline 0?)
-
-* wdieresis (U+1E85): X=158.0,Y=1.0 (should be at baseline 0?)
-
-* wdieresis (U+1E85): X=626.0,Y=1.0 (should be at baseline 0?)
-
-* wdieresis (U+1E85): X=523.0,Y=1.0 (should be at baseline 0?)
-
-* uni1E9E (U+1E9E): X=326.5,Y=-1.5 (should be at baseline 0?)
-
-* ygrave (U+1EF3): X=217.0,Y=-2.0 (should be at baseline 0?)
+* egrave (U+00E8): X=408.0,Y=-1.5 (should be at baseline 0?)
 
 * ellipsis (U+2026): X=177.5,Y=2.0 (should be at baseline 0?)
 
@@ -256,7 +239,93 @@ minus</p>
 
 * ellipsis (U+2026): X=613.0,Y=2.0 (should be at baseline 0?)
 
+* emacron (U+0113): X=408.0,Y=-1.5 (should be at baseline 0?)
+
+* eogonek (U+0119): X=408.0,Y=-1.5 (should be at baseline 0?)
+
 * Euro (U+20AC): X=468.5,Y=-0.5 (should be at baseline 0?)
+
+* exclam (U+0021): X=177.5,Y=2.0 (should be at baseline 0?)
+
+* exclam (U+0021): X=90.0,Y=2.0 (should be at baseline 0?)
+
+* f (U+0066): X=327.0,Y=688.0 (should be at x-height 686?)
+
+* germandbls (U+00DF): X=317.0,Y=-1.0 (should be at baseline 0?)
+
+* oe (U+0153): X=791.0,Y=-1.5 (should be at baseline 0?)
+
+* oslash (U+00F8): X=232.0,Y=-1.5 (should be at baseline 0?)
+
+* period (U+002E): X=177.5,Y=2.0 (should be at baseline 0?)
+
+* period (U+002E): X=90.0,Y=2.0 (should be at baseline 0?)
+
+* question (U+003F): X=222.0,Y=2.0 (should be at baseline 0?)
+
+* question (U+003F): X=134.5,Y=2.0 (should be at baseline 0?)
+
+* s (U+0073): X=123.5,Y=-1.0 (should be at baseline 0?)
+
+* sacute (U+015B): X=123.5,Y=-1.0 (should be at baseline 0?)
+
+* scaron (U+0161): X=123.5,Y=-1.0 (should be at baseline 0?)
+
+* scedilla (U+015F): X=123.5,Y=-1.0 (should be at baseline 0?)
+
+* uni0219 (U+0219): X=123.5,Y=-1.0 (should be at baseline 0?)
+
+* three (U+0033): X=137.0,Y=-1.5 (should be at baseline 0?)
+
+* w (U+0077): X=258.0,Y=1.0 (should be at baseline 0?)
+
+* w (U+0077): X=158.0,Y=1.0 (should be at baseline 0?)
+
+* w (U+0077): X=626.0,Y=1.0 (should be at baseline 0?)
+
+* w (U+0077): X=523.0,Y=1.0 (should be at baseline 0?)
+
+* wacute (U+1E83): X=258.0,Y=1.0 (should be at baseline 0?)
+
+* wacute (U+1E83): X=158.0,Y=1.0 (should be at baseline 0?)
+
+* wacute (U+1E83): X=626.0,Y=1.0 (should be at baseline 0?)
+
+* wacute (U+1E83): X=523.0,Y=1.0 (should be at baseline 0?)
+
+* wcircumflex (U+0175): X=258.0,Y=1.0 (should be at baseline 0?)
+
+* wcircumflex (U+0175): X=158.0,Y=1.0 (should be at baseline 0?)
+
+* wcircumflex (U+0175): X=626.0,Y=1.0 (should be at baseline 0?)
+
+* wcircumflex (U+0175): X=523.0,Y=1.0 (should be at baseline 0?)
+
+* wdieresis (U+1E85): X=258.0,Y=1.0 (should be at baseline 0?)
+
+* wdieresis (U+1E85): X=158.0,Y=1.0 (should be at baseline 0?)
+
+* wdieresis (U+1E85): X=626.0,Y=1.0 (should be at baseline 0?)
+
+* wdieresis (U+1E85): X=523.0,Y=1.0 (should be at baseline 0?)
+
+* wgrave (U+1E81): X=258.0,Y=1.0 (should be at baseline 0?)
+
+* wgrave (U+1E81): X=158.0,Y=1.0 (should be at baseline 0?)
+
+* wgrave (U+1E81): X=626.0,Y=1.0 (should be at baseline 0?)
+
+* wgrave (U+1E81): X=523.0,Y=1.0 (should be at baseline 0?)
+
+* y (U+0079): X=217.0,Y=-2.0 (should be at baseline 0?)
+
+* yacute (U+00FD): X=217.0,Y=-2.0 (should be at baseline 0?)
+
+* ycircumflex (U+0177): X=217.0,Y=-2.0 (should be at baseline 0?)
+
+* ydieresis (U+00FF): X=217.0,Y=-2.0 (should be at baseline 0?)
+
+* ygrave (U+1EF3): X=217.0,Y=-2.0 (should be at baseline 0?)
 </code></pre>
  [code: found-misalignments]
 
@@ -278,7 +347,7 @@ minus</p>
 * ⚠️ **WARN** <p>The dot of soft dotted characters used in orthographies <em>must</em> disappear in the following strings: į̀ į́ į̂ į̃ į̄ į̌</p>
 <p>The dot of soft dotted characters <em>should</em> disappear in other cases, for example: į̆ į̇ į̈ į̊ į̋ į̦̀ į̦́ į̦̂ į̦̃ į̦̄ į̦̆ į̦̇ į̦̈ į̦̊ į̦̋ į̦̌ į̧̀ į̧́ į̧̂ į̧̃</p>
 <p>Your font fully covers the following languages that require the soft-dotted feature: Lithuanian (Latn, 2,357,094 speakers), Dutch (Latn, 31,709,104 speakers).</p>
-<p>Your font does <em>not</em> cover the following languages that require the soft-dotted feature: Ebira (Latn, 2,200,000 speakers), Gulay (Latn, 250,478 speakers), Basaa (Latn, 332,940 speakers), Zapotec (Latn, 490,000 speakers), Dan (Latn, 1,099,244 speakers), Cicipu (Latn, 44,000 speakers), Fur (Latn, 1,230,163 speakers), Ejagham (Latn, 120,000 speakers), Mundani (Latn, 34,000 speakers), South Central Banda (Latn, 244,000 speakers), Kpelle, Guinea (Latn, 622,000 speakers), Lugbara (Latn, 2,200,000 speakers), Ngbaka (Latn, 1,020,000 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Mfumte (Latn, 79,000 speakers), Dii (Latn, 71,000 speakers), Mango (Latn, 77,000 speakers), Ma’di (Latn, 584,000 speakers), Koonzime (Latn, 40,000 speakers), Belarusian (Cyrl, 10,064,517 speakers), Aghem (Latn, 38,843 speakers), Makaa (Latn, 221,000 speakers), Avokaya (Latn, 100,000 speakers), Bete-Bendi (Latn, 100,000 speakers), Navajo (Latn, 166,319 speakers), Ijo, Southeast (Latn, 2,471,000 speakers), Southern Kisi (Latn, 360,000 speakers), Kom (Latn, 360,685 speakers), Ekpeye (Latn, 226,000 speakers), Yala (Latn, 200,000 speakers), Igbo (Latn, 27,823,640 speakers), Nateni (Latn, 100,000 speakers), Sar (Latn, 500,000 speakers), Nzakara (Latn, 50,000 speakers), Bafut (Latn, 158,146 speakers).</p>
+<p>Your font does <em>not</em> cover the following languages that require the soft-dotted feature: Ekpeye (Latn, 226,000 speakers), Bete-Bendi (Latn, 100,000 speakers), Navajo (Latn, 166,319 speakers), Zapotec (Latn, 490,000 speakers), Mfumte (Latn, 79,000 speakers), Nateni (Latn, 100,000 speakers), Makaa (Latn, 221,000 speakers), Mango (Latn, 77,000 speakers), Koonzime (Latn, 40,000 speakers), Dan (Latn, 1,099,244 speakers), Igbo (Latn, 27,823,640 speakers), Fur (Latn, 1,230,163 speakers), Sar (Latn, 500,000 speakers), Ijo, Southeast (Latn, 2,471,000 speakers), Cicipu (Latn, 44,000 speakers), Lugbara (Latn, 2,200,000 speakers), Mundani (Latn, 34,000 speakers), Nzakara (Latn, 50,000 speakers), Dii (Latn, 71,000 speakers), Gulay (Latn, 250,478 speakers), Ngbaka (Latn, 1,020,000 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Ebira (Latn, 2,200,000 speakers), Kom (Latn, 360,685 speakers), Aghem (Latn, 38,843 speakers), Ma’di (Latn, 584,000 speakers), Southern Kisi (Latn, 360,000 speakers), Basaa (Latn, 332,940 speakers), Belarusian (Cyrl, 10,064,517 speakers), Yala (Latn, 200,000 speakers), South Central Banda (Latn, 244,000 speakers), Bafut (Latn, 158,146 speakers), Avokaya (Latn, 100,000 speakers), Kpelle, Guinea (Latn, 622,000 speakers), Ejagham (Latn, 120,000 speakers), Vute (Latn, 21,000 speakers).</p>
  [code: soft-dotted]
 
 
@@ -302,23 +371,23 @@ be served. You can solve this by either manually adding additional
 subset declarations to METADATA.pb, or by editing the glyphset
 definitions.</p>
 <ul>
-<li>U+02C7 CARON: try adding one of: canadian-aboriginal, tifinagh, yi</li>
+<li>U+02C7 CARON: try adding one of: yi, tifinagh, canadian-aboriginal</li>
 <li>U+02C9 MODIFIER LETTER MACRON: not included in any glyphset definition</li>
-<li>U+02D8 BREVE: try adding one of: canadian-aboriginal, yi</li>
-<li>U+02D9 DOT ABOVE: try adding one of: canadian-aboriginal, yi</li>
-<li>U+02DB OGONEK: try adding one of: canadian-aboriginal, yi</li>
+<li>U+02D8 BREVE: try adding one of: yi, canadian-aboriginal</li>
+<li>U+02D9 DOT ABOVE: try adding one of: yi, canadian-aboriginal</li>
+<li>U+02DB OGONEK: try adding one of: yi, canadian-aboriginal</li>
 <li>U+02DD DOUBLE ACUTE ACCENT: not included in any glyphset definition</li>
-<li>U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: coptic, math, tifinagh, cherokee</li>
+<li>U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: math, coptic, cherokee, tifinagh</li>
 <li>U+0306 COMBINING BREVE: try adding one of: tifinagh, old-permic</li>
-<li>U+0307 COMBINING DOT ABOVE: try adding one of: canadian-aboriginal, coptic, old-permic, syriac, malayalam, tifinagh, tai-le, math</li>
+<li>U+0307 COMBINING DOT ABOVE: try adding one of: canadian-aboriginal, malayalam, old-permic, math, tai-le, tifinagh, syriac, coptic</li>
 <li>U+030A COMBINING RING ABOVE: try adding syriac</li>
-<li>U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: osage, cherokee</li>
+<li>U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: cherokee, osage</li>
 <li>U+030C COMBINING CARON: try adding one of: tai-le, cherokee</li>
 <li>U+0326 COMBINING COMMA BELOW: not included in any glyphset definition</li>
 <li>U+0327 COMBINING CEDILLA: not included in any glyphset definition</li>
 <li>U+0328 COMBINING OGONEK: not included in any glyphset definition</li>
 </ul>
-<p>Or you can add the above codepoints to one of the subsets supported by the font: <code>cyrillic-ext</code>, <code>greek-ext</code>, <code>hebrew</code>, <code>latin</code>, <code>latin-ext</code></p>
+<p>Or you can add the above codepoints to one of the subsets supported by the font: <code>hebrew</code>, <code>latin</code>, <code>latin-ext</code></p>
  [code: unreachable-subsetting]
 
 
@@ -421,75 +490,6 @@ definitions.</p>
 
 </div>
 </details>
-
-<details>
-    <summary>🔥 <b>FAIL</b> Ensure dotted circle glyph is present and can attach marks. <a href="https://fontbakery.readthedocs.io/en/stable/fontbakery/checks/shaping.html#"></a></summary>
-    <div>
-
-
-
-
-
-
-
-* 🔥 **FAIL** <p>The following glyphs could not be attached to the dotted circle glyph:</p>
-<pre><code>- acutecomb
-
-- gravecomb
-
-- tildecomb
-
-- uni0302
-
-- uni0304
-
-- uni0306
-
-- uni0307
-
-- uni0308
-
-- uni030A
-
-- uni030B
-
-- uni030C
-
-- uni0326
-
-- uni0327
-
-- uni0328
-</code></pre>
- [code: unattached-dotted-circle-marks]
-
-
-
-</div>
-</details>
-
-<details>
-    <summary>🔥 <b>FAIL</b> Check for presence of an ARTICLE.en_us.html file <a href="https://fontbakery.readthedocs.io/en/stable/fontbakery/checks/googlefonts.description.html#"></a></summary>
-    <div>
-
-
-
-
-
-
-
-* 🔥 **FAIL** <p>This is a Noto font but it lacks an ARTICLE.en_us.html file</p>
- [code: missing-article]
-
-
-
-* 🔥 **FAIL** <p>This is a Noto font but it lacks a DESCRIPTION.en_us.html file</p>
- [code: empty-description]
-
-
-
-</div>
-</details>
 </div>
 </details>
 
@@ -505,7 +505,7 @@ definitions.</p>
 
 
 
-* 🔥 **FAIL** <p>OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSansHebrewDroid/googlefonts/variable/NotoSansHebrewDroid[wght].ttf'].</p>
+* 🔥 **FAIL** <p>OS/2.fsSelection bit 7 (USE_TYPO_METRICS) wasNOT set in the following fonts: ['fonts/NotoSansHebrewDroid/googlefonts/variable-ttf/NotoSansHebrewDroid[wght].ttf'].</p>
  [code: missing-os2-fsselection-bit7]
 
 
@@ -522,7 +522,7 @@ definitions.</p>
 
 | 💥 ERROR | ☠ FATAL | 🔥 FAIL | ⚠️ WARN | ⏩ SKIP | ℹ️ INFO | ✅ PASS | 🔎 DEBUG | 
 | ---|---|---|---|---|---|---|---|
-| 0 | 0 | 3 | 12 | 95 | 7 | 132 | 0 | 
+| 0 | 0 | 3 | 12 | 95 | 7 | 134 | 0 | 
 | 0% | 0% | 1% | 5% | 38% | 3% | 53% | 0% | 
 
 
