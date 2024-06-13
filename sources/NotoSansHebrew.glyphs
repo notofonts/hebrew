@@ -2,7 +2,7 @@
 .appVersion = "3243";
 .formatVersion = 3;
 DisplayStrings = (
-"◌"
+"ױיו"
 );
 axes = (
 {
@@ -23617,13 +23617,13 @@ unicode = 64331;
 {
 category = Letter;
 glyphname = "vavvav-hb";
-lastChange = "2024-06-03 10:12:26 +0000";
+lastChange = "2024-06-13 08:09:54 +0000";
 layers = (
 {
 anchors = (
 {
 name = bottom;
-pos = (256,0);
+pos = (264,0);
 },
 {
 name = bottomleft;
@@ -23649,7 +23649,7 @@ layerId = master01;
 shapes = (
 {
 alignment = -1;
-pos = (254,0);
+pos = (264,0);
 ref = "vav-hb";
 },
 {
@@ -23657,13 +23657,13 @@ alignment = -1;
 ref = "vav-hb";
 }
 );
-width = 508;
+width = 528;
 },
 {
 anchors = (
 {
 name = bottom;
-pos = (364,0);
+pos = (362,0);
 },
 {
 name = bottomleft;
@@ -23702,7 +23702,7 @@ width = 724;
 anchors = (
 {
 name = bottom;
-pos = (207,0);
+pos = (210,0);
 },
 {
 name = bottomleft;
@@ -23728,7 +23728,7 @@ layerId = master03;
 shapes = (
 {
 alignment = -1;
-pos = (212,0);
+pos = (210,0);
 ref = "vav-hb";
 },
 {
@@ -23736,40 +23736,40 @@ alignment = -1;
 ref = "vav-hb";
 }
 );
-width = 424;
+width = 420;
 },
 {
 anchors = (
 {
 name = bottom;
-pos = (350,0);
+pos = (348,0);
 },
 {
 name = bottomleft;
-pos = (20,0);
+pos = (18,0);
 },
 {
 name = caret_1;
-pos = (347,0);
+pos = (345,0);
 },
 {
 name = center;
-pos = (-23,306);
+pos = (-25,306);
 },
 {
 name = top;
-pos = (171,553);
+pos = (169,553);
 },
 {
 name = topleft;
-pos = (119,553);
+pos = (117,553);
 }
 );
 layerId = master04;
 shapes = (
 {
 alignment = -1;
-pos = (347,0);
+pos = (333,0);
 ref = "vav-hb";
 },
 {
@@ -23777,9 +23777,12 @@ alignment = -1;
 ref = "vav-hb";
 }
 );
-width = 694;
+width = 666;
 }
 );
+metricLeft = "=vav-hb";
+metricRight = "=vav-hb";
+metricWidth = "=vav-hb*2";
 note = "
 vavvav
 ";
@@ -23788,6 +23791,7 @@ unicode = 1520;
 },
 {
 glyphname = "vavyod-hb";
+lastChange = "2024-06-13 08:18:28 +0000";
 layers = (
 {
 anchors = (
@@ -23840,7 +23844,7 @@ layerId = master01;
 shapes = (
 {
 alignment = -1;
-pos = (247,0);
+pos = (264,0);
 ref = "vav-hb";
 },
 {
@@ -23848,7 +23852,7 @@ alignment = -1;
 ref = "yod-hb";
 }
 );
-width = 501;
+width = 521;
 },
 {
 anchors = (
@@ -23874,7 +23878,7 @@ pos = (384.5,0);
 },
 {
 name = center_1;
-pos = (416,306);
+pos = (377,306);
 },
 {
 name = center_2;
@@ -23901,7 +23905,7 @@ layerId = master02;
 shapes = (
 {
 alignment = -1;
-pos = (387,0);
+pos = (362,0);
 ref = "vav-hb";
 },
 {
@@ -23909,68 +23913,69 @@ alignment = -1;
 ref = "yod-hb";
 }
 );
-width = 769;
+width = 719;
 },
 {
 anchors = (
 {
 name = bottom_1;
-pos = (339,0);
+pos = (344,0);
 },
 {
 name = bottom_2;
-pos = (120,0);
+pos = (125,0);
 },
 {
 name = bottomleft_1;
-pos = (267,0);
+pos = (272,0);
 },
 {
 name = bottomleft_2;
-pos = (35,0);
+pos = (40,0);
 },
 {
 name = caret_1;
-pos = (191,0);
+pos = (196,0);
 },
 {
 name = center_1;
-pos = (247,296);
+pos = (210,296);
 },
 {
 name = center_2;
-pos = (24,427);
+pos = (29,427);
 },
 {
 name = top_1;
-pos = (339,528);
+pos = (344,528);
 },
 {
 name = top_2;
-pos = (120,528);
+pos = (125,528);
 },
 {
 name = topleft_1;
-pos = (339,528);
+pos = (344,528);
 },
 {
 name = topleft_2;
-pos = (107,528);
+pos = (112,528);
 }
 );
 layerId = master03;
 shapes = (
 {
 alignment = -1;
-pos = (212,0);
+pos = (205,0);
 ref = "vav-hb";
 },
 {
 alignment = -1;
+pos = (5,0);
 ref = "yod-hb";
 }
 );
-width = 424;
+width = 420;
 },
 {
 anchors = (
@@ -23996,7 +24001,7 @@ pos = (344.5,0);
 },
 {
 name = center_1;
-pos = (366,306);
+pos = (330,306);
 },
 {
 name = center_2;
@@ -24023,7 +24028,7 @@ layerId = master04;
 shapes = (
 {
 alignment = -1;
-pos = (342,0);
+pos = (333,0);
 ref = "vav-hb";
 },
 {
@@ -24031,9 +24036,11 @@ alignment = -1;
 ref = "yod-hb";
 }
 );
-width = 689;
+width = 661;
 }
 );
+metricLeft = "=vav-hb";
+metricRight = "=yod-hb";
 note = "
 vavyod
 ";
@@ -25834,13 +25841,13 @@ unicode = 64285;
 {
 category = Letter;
 glyphname = "yodyod-hb";
-lastChange = "2024-06-03 10:17:01 +0000";
+lastChange = "2024-06-13 08:15:00 +0000";
 layers = (
 {
 anchors = (
 {
 name = bottom;
-pos = (263,0);
+pos = (257,0);
 },
 {
 name = bottomleft;
@@ -25848,11 +25855,11 @@ pos = (71,0);
 },
 {
 name = center;
-pos = (263,427);
+pos = (257,427);
 },
 {
 name = top;
-pos = (263,528);
+pos = (257,528);
 },
 {
 name = topleft;
@@ -25863,7 +25870,7 @@ layerId = master01;
 shapes = (
 {
 alignment = -1;
-pos = (247,0);
+pos = (257,0);
 ref = "yod-hb";
 },
 {
@@ -25871,13 +25878,13 @@ alignment = -1;
 ref = "yod-hb";
 }
 );
-width = 494;
+width = 514;
 },
 {
 anchors = (
 {
 name = bottom;
-pos = (397,0);
+pos = (392,0);
 },
 {
 name = bottomleft;
@@ -25885,11 +25892,11 @@ pos = (10,0);
 },
 {
 name = center;
-pos = (395,350);
+pos = (357,350);
 },
 {
 name = top;
-pos = (381,553);
+pos = (357,553);
 },
 {
 name = topleft;
@@ -25900,7 +25907,7 @@ layerId = master02;
 shapes = (
 {
 alignment = -1;
-pos = (387,0);
+pos = (357,0);
 ref = "yod-hb";
 },
 {
@@ -25908,13 +25915,13 @@ alignment = -1;
 ref = "yod-hb";
 }
 );
-width = 774;
+width = 714;
 },
 {
 anchors = (
 {
 name = bottom;
-pos = (231,0);
+pos = (210,0);
 },
 {
 name = bottomleft;
@@ -25922,11 +25929,11 @@ pos = (35,0);
 },
 {
 name = center;
-pos = (236,427);
+pos = (210,427);
 },
 {
 name = top;
-pos = (242,528);
+pos = (210,528);
 },
 {
 name = topleft;
@@ -25937,7 +25944,7 @@ layerId = master03;
 shapes = (
 {
 alignment = -1;
-pos = (212,0);
+pos = (210,0);
 ref = "yod-hb";
 },
 {
@@ -25945,13 +25952,13 @@ alignment = -1;
 ref = "yod-hb";
 }
 );
-width = 424;
+width = 420;
 },
 {
 anchors = (
 {
 name = bottom;
-pos = (339,0);
+pos = (328,0);
 },
 {
 name = bottomleft;
@@ -25959,11 +25966,11 @@ pos = (37,0);
 },
 {
 name = center;
-pos = (352,374);
+pos = (328,374);
 },
 {
 name = top;
-pos = (339,553);
+pos = (328,553);
 },
 {
 name = topleft;
@@ -25974,7 +25981,7 @@ layerId = master04;
 shapes = (
 {
 alignment = -1;
-pos = (342,0);
+pos = (328,0);
 ref = "yod-hb";
 },
 {
@@ -25982,9 +25989,12 @@ alignment = -1;
 ref = "yod-hb";
 }
 );
-width = 684;
+width = 656;
 }
 );
+metricLeft = "=yod-hb";
+metricRight = "=yod-hb";
+metricWidth = "=yod-hb*2";
 note = "
 yodyod
 ";
