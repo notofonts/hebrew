@@ -23617,13 +23617,13 @@ unicode = 64331;
 {
 category = Letter;
 glyphname = "vavvav-hb";
-lastChange = "2024-06-13 08:09:54 +0000";
+lastChange = "2024-06-14 17:44:30 +0000";
 layers = (
 {
 anchors = (
 {
 name = bottom;
-pos = (264,0);
+pos = (286,0);
 },
 {
 name = bottomleft;
@@ -23663,7 +23663,7 @@ width = 528;
 anchors = (
 {
 name = bottom;
-pos = (362,0);
+pos = (387,0);
 },
 {
 name = bottomleft;
@@ -23702,7 +23702,7 @@ width = 724;
 anchors = (
 {
 name = bottom;
-pos = (210,0);
+pos = (232,0);
 },
 {
 name = bottomleft;
@@ -23742,7 +23742,7 @@ width = 420;
 anchors = (
 {
 name = bottom;
-pos = (348,0);
+pos = (366,0);
 },
 {
 name = bottomleft;
@@ -25841,13 +25841,13 @@ unicode = 64285;
 {
 category = Letter;
 glyphname = "yodyod-hb";
-lastChange = "2024-06-13 08:15:00 +0000";
+lastChange = "2024-06-14 17:35:33 +0000";
 layers = (
 {
 anchors = (
 {
 name = bottom;
-pos = (257,0);
+pos = (275,0);
 },
 {
 name = bottomleft;
@@ -25884,7 +25884,7 @@ width = 514;
 anchors = (
 {
 name = bottom;
-pos = (392,0);
+pos = (385,0);
 },
 {
 name = bottomleft;
@@ -25921,7 +25921,7 @@ width = 714;
 anchors = (
 {
 name = bottom;
-pos = (210,0);
+pos = (225,0);
 },
 {
 name = bottomleft;
@@ -25958,7 +25958,7 @@ width = 420;
 anchors = (
 {
 name = bottom;
-pos = (328,0);
+pos = (364,0);
 },
 {
 name = bottomleft;
@@ -26003,6 +26003,7 @@ unicode = 1522;
 },
 {
 glyphname = "yodyodpatah-hb";
+lastChange = "2024-06-17 03:34:29 +0000";
 layers = (
 {
 anchors = (
@@ -26058,7 +26059,7 @@ ref = "yod-hb";
 },
 {
 alignment = -1;
-pos = (149,227);
+pos = (151,227);
 ref = "patah-hb";
 }
 );
@@ -26111,7 +26112,7 @@ layerId = master02;
 shapes = (
 {
 alignment = -1;
-pos = (387,0);
+pos = (357,0);
 ref = "yod-hb";
 },
 {
@@ -26124,7 +26125,7 @@ pos = (219,227);
 ref = "patah-hb";
 }
 );
-width = 774;
+width = 714;
 },
 {
 anchors = (
@@ -26180,7 +26181,7 @@ ref = "yod-hb";
 },
 {
 alignment = -1;
-pos = (125,227);
+pos = (121,227);
 ref = "patah-hb";
 }
 );
@@ -26240,13 +26241,16 @@ ref = "yod-hb";
 },
 {
 alignment = -1;
-pos = (156,227);
+pos = (198,227);
 ref = "patah-hb";
 }
 );
 width = 656;
 }
 );
+metricLeft = "=yod-hb";
+metricRight = "=yod-hb";
+metricWidth = "=yod-hb*2";
 note = "
 yodyod_patah
 ";
