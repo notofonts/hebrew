@@ -26003,6 +26003,7 @@ unicode = 1522;
 },
 {
 glyphname = "yodyodpatah-hb";
+lastChange = "2024-06-17 03:34:29 +0000";
 layers = (
 {
 anchors = (
@@ -26058,7 +26059,7 @@ ref = "yod-hb";
 },
 {
 alignment = -1;
-pos = (149,227);
+pos = (151,227);
 ref = "patah-hb";
 }
 );
@@ -26111,7 +26112,7 @@ layerId = master02;
 shapes = (
 {
 alignment = -1;
-pos = (387,0);
+pos = (357,0);
 ref = "yod-hb";
 },
 {
@@ -26124,7 +26125,7 @@ pos = (219,227);
 ref = "patah-hb";
 }
 );
-width = 774;
+width = 714;
 },
 {
 anchors = (
@@ -26180,7 +26181,7 @@ ref = "yod-hb";
 },
 {
 alignment = -1;
-pos = (125,227);
+pos = (121,227);
 ref = "patah-hb";
 }
 );
@@ -26240,13 +26241,16 @@ ref = "yod-hb";
 },
 {
 alignment = -1;
-pos = (156,227);
+pos = (198,227);
 ref = "patah-hb";
 }
 );
 width = 656;
 }
 );
+metricLeft = "=yod-hb";
+metricRight = "=yod-hb";
+metricWidth = "=yod-hb*2";
 note = "
 yodyod_patah
 ";
