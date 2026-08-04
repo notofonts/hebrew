@@ -14122,7 +14122,7 @@ layers = (
 anchors = (
 {
 name = _bottom;
-pos = (97,0);
+pos = (125,0);
 }
 );
 layerId = master01;
@@ -14130,19 +14130,19 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(108,-161,l),
-(108,-107,l),
-(141,-107,l),
-(141,-82,l),
+(137,-235,l),
+(137,-107,l),
+(199,-107,l),
+(199,-82,l),
 (50,-82,l),
 (50,-107,l),
-(83,-107,l),
-(83,-161,l)
+(112,-107,l),
+(112,-235,l)
 );
 }
 );
 userData = {
-com.schriftgestaltung.Glyphs.originalWidth = 191;
+com.schriftgestaltung.Glyphs.originalWidth = 249;
 };
 width = 0;
 },
@@ -14150,7 +14150,7 @@ width = 0;
 anchors = (
 {
 name = _bottom;
-pos = (146,0);
+pos = (166,0);
 }
 );
 layerId = master02;
@@ -14158,19 +14158,19 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(176,-210,l),
-(176,-136,l),
-(237,-136,l),
-(237,-74,l),
+(196,-270,l),
+(196,-136,l),
+(277,-136,l),
+(277,-74,l),
 (55,-74,l),
 (55,-136,l),
-(115,-136,l),
-(115,-210,l)
+(135,-136,l),
+(135,-270,l)
 );
 }
 );
 userData = {
-com.schriftgestaltung.Glyphs.originalWidth = 292;
+com.schriftgestaltung.Glyphs.originalWidth = 332;
 };
 width = 0;
 },
@@ -14178,7 +14178,7 @@ width = 0;
 anchors = (
 {
 name = _bottom;
-pos = (97,0);
+pos = (105,0);
 }
 );
 layerId = master03;
@@ -14186,19 +14186,19 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(108,-161,l),
-(108,-107,l),
-(141,-107,l),
-(141,-82,l),
+(117,-235,l),
+(117,-107,l),
+(159,-107,l),
+(159,-82,l),
 (50,-82,l),
 (50,-107,l),
-(83,-107,l),
-(83,-161,l)
+(92,-107,l),
+(92,-235,l)
 );
 }
 );
 userData = {
-com.schriftgestaltung.Glyphs.originalWidth = 191;
+com.schriftgestaltung.Glyphs.originalWidth = 209;
 };
 width = 0;
 },
@@ -14206,7 +14206,7 @@ width = 0;
 anchors = (
 {
 name = _bottom;
-pos = (146,0);
+pos = (166,0);
 }
 );
 layerId = master04;
@@ -14214,19 +14214,19 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(172,-192,l),
-(172,-127,l),
-(225,-127,l),
-(225,-74,l),
-(67,-74,l),
-(67,-127,l),
-(119,-127,l),
-(119,-192,l)
+(192,-244,l),
+(192,-127,l),
+(263,-127,l),
+(263,-74,l),
+(69,-74,l),
+(69,-127,l),
+(139,-127,l),
+(139,-244,l)
 );
 }
 );
 userData = {
-com.schriftgestaltung.Glyphs.originalWidth = 292;
+com.schriftgestaltung.Glyphs.originalWidth = 332;
 };
 width = 0;
 }
